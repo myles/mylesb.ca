@@ -1,3 +1,5 @@
+_output/
+
 *.py[cod]
 
 # C extensions
