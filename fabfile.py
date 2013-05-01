@@ -1,7 +1,4 @@
 #!/usr/bin/env python
-"""
-Thanks Hristo: <http://git.io/uqZ2OQ>
-"""
 
 import os
 from glob import glob
