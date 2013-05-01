@@ -1,2 +1,4 @@
-mylesb.ca
+MylesB.ca
 =========
+
+My simple static web site.
