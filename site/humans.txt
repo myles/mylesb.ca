@@ -1,0 +1,27 @@
+/*
+    The Humans Responsible & Colophon
+    <http://humanstxt.org/>
+    ================================================================ */
+
+/*
+    TEAM
+    ---------------------------------------------------------------- */
+    Master Chief:           Myles Braithwaite
+    Site:                   <http://mylesbraithwaite.com/>
+    Contact:                me [at] mylesbraithwaite.com
+    Twitter:                @mylesb
+    From:                   Toronto, Ontario, Canada
+
+/*
+    THANKS
+    ---------------------------------------------------------------- */
+    Hristo Deshev:          <https://github.com/hdeshev>
+
+/*
+    SITE
+    ---------------------------------------------------------------- */
+    Language:               English
+    Standards:              HTML5, CSS3
+    Copyright:              2006-{{ now.strftime('%Y') }}
+    Licensed:               Creative Commons License
+    Last Updated:           {{ now.strftime('%Y-%m-%d') }}

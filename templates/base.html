@@ -7,6 +7,8 @@
 		<meta name="description" content="">
 		<meta name="author" content="Myles Braithwaite">
 		
+		<link type="text/plain" rel="author" href="{{ site_url }}/humans.txt">
+		
 		<!-- Le styles -->
 		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
 		<style type="text/css">
@@ -93,6 +95,10 @@
 				</div> <!-- .span6 -->
 				{% endblock marketing %}
 			</div> <!-- .row-fluid .marketing -->
+			
+			<div class="footer">
+				<p>Lasted updated on {{ now.strftime('%Y-%m-%d') }}.</p>
+			</div> <!-- .footer -->
 			
 		</div> <!-- .container-narrow -->
 		
