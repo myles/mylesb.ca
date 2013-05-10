@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /btci.html
+Disallow: /btrcl.html
+Disallow: /bgi.html
+Disallow: /btcl.html

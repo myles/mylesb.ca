@@ -2,34 +2,15 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Myles Braithwaite</title>
+		<title>{% block title %}Myles Braithwaite{% endblock %}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
+		<meta name="description" content="{% block meta_description %}Hoping for the Best, Imagining the Worst.{% endblock meta_description %}">
 		<meta name="author" content="Myles Braithwaite">
 		
 		<link type="text/plain" rel="author" href="{{ site_url }}/humans.txt">
 		
 		<!-- Le styles -->
 		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-		<style type="text/css">
-			body { padding-top: 20px; padding-bottom: 40px; text-align: justified; }
-			
-			/* Custom container */
-			.container-narrow { margin: 0 auto; max-width: 700px; }
-			.container-narrow > hr { margin: 30px 0; }
-			
-			/* Main marketing message and sign up button */
-			.jumbotron { margin: 60px 0; text-align: center; }
-			.jumbotron h1 { font-size: 72px; line-height: 1; }
-			.jumbotron .btn { font-size: 21px; padding: 14px 24px; }
-			
-			/* Supporting marketing content */
-			.marketing { margin: 60px 10px; }
-			.marketing p + h3 { margin-top: 28px; }
-			.marketing img { margin: auto 0; }
-			.marketing dt { width: 60px; text-align: left; }
-			.marketing dd { margin-left: 80px; }
-		</style>
 		
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if IE]>
@@ -45,62 +26,20 @@
 	</head>
 	
 	<body>
-		<div class="container-narrow">
+		
+		<div class="container">
 			
-			<div class="masthead">
-				{% block masthead %}
-				<ul class="nav nav-pills pull-right">
-					{% block nav_personal %}
-					<li class="">
-						<a href="index.html">Personal</a>
-					</li>
-					{% endblock nav_personal %}
-					{% block nav_work %}
-					<li class="">
-						<a href="work.html">Work</a>
-					</li>
-					{% endblock nav_work %}
-				</ul>
-				<h3 class="muted">Myles Braithwaite</h3>
-				{% endblock masthead %}
-			</div> <!-- .masthead -->
-			
-			<hr>
-			
-			<div class="jumbotron">
-				{% block jumbotron %}
-				<h1>
-					{% block jumbotron_heading %}
-					Myles Braithwaite
-					{% endblock jumbotron_heading %}
-				</h1>
-				<p class="lead">
-					{% block jumbotron_lead %}
-					Hoping for the Best, Imagining the Worst.
-					{% endblock jumbotron_lead %}
-				</p>
-				{% endblock jumbotron %}
-			</div> <!-- .jumbotron -->
-			
-			<hr>
-			
-			<div class="row-fluid marketing">
-				{% block marketing %}
-				<div class="span6">
-					{% block marketing_left %}{% endblock marketing_left %}
-				</div> <!-- .span6 -->
+			<div class="row well">
+				<div class="span4">
+					{% block page_left %}{% endblock page_left %}
+				</div> <!-- .span4 -->
 				
 				<div class="span6">
-					{% block marketing_right %}{% endblock marketing_right %}
+					{% block page_right %}{% endblock page_right %}
 				</div> <!-- .span6 -->
-				{% endblock marketing %}
-			</div> <!-- .row-fluid .marketing -->
+			</div>
 			
-			<div class="footer">
-				<p>Lasted updated on {{ now.strftime('%Y-%m-%d') }}.</p>
-			</div> <!-- .footer -->
-			
-		</div> <!-- .container-narrow -->
+		</div> <!-- .container -->
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 		<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>

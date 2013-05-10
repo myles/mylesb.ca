@@ -1,41 +1,28 @@
 {% extends "base.html" %}
 
-{% block nav_personal %}
-<li class="active"><a href="index.html">Personal</a></li>
-{% endblock nav_personal %}
+{% block nav_index %}<li class="active"><a href="index.html">Personal</a></li>{% endblock %}
 
-{% block marketing_left %}
-<h4>About Me</h4>
-<p class="lead">I am Myles Braithwaite, a 20-something, Canadian, programmer, open source code releasing, amateur photographer, subway taker, monkey in my soul, and comic book reader.</p>
-{% endblock marketing_left %}
+{% block page_left %}
+	<img src="static/img/avatar.png" class="img-polaroid pull-right">
+{% endblock page_left %}
 
-{% block marketing_right %}
-<h4>Contact Me</h4>
-
-<dl class="dl-horizontal">
-	<a href="mailto:me@mylesbraithwaite.com">
+{% block page_right %}
+	<h1>Myles Braithwaite</h1>
+	<p class="lead">Hoping for the Best, Imagining the Worst.</p>
+	
+	<dl class="dl-horizontal" id="contact-info">
 		<dt>Email</dt>
-		<dd>me@mylesbraithwaite.com</dd>
-	</a>
+		<dd><a href="mailto:me@mylesbraithwaite.com">me@mylesbraithwaite.com</a></dd>
+		
+		<dt>Phone</dt>
+		<dd><a href="tel:+1-647-931-1562">+1 (647) 931-1562</a></dd>
+		
+		<dt>Homepage</dt>
+		<dd><a href="http://mylesbraithwaite.com/">http://mylesbraithwaite.com</a></dd>
+	</dl>
+	
+	<p>
+		<a href="https://www.twitter.com/mylesb">Twitter</a> &bull; <a href="https://www.facebook.com/mylesbraithwaite">Facebook</a>
+	</p>
 
-	<a href="https://www.github.com/myles">
-		<dt>GitHub</dt>
-		<dd>myles</dd>
-	</a>
-
-	<a href="https://www.twitter.com/mylesb">
-		<dt>Twitter</dt>
-		<dd>@mylesb</dd>
-	</a>
-
-	<a href="https://plus.google.com/101051575949997777035">
-		<dt>Google+</dt>
-		<dd>+MylesBraithwaite</dd>
-	</a>
-
-	<a href="https://www.facebook.com/mylesbraithwaite">
-		<dt>Facebook</dt>
-		<dd>mylesbraithwaite</dd>
-	</a>
-</dl>
-{% endblock marketing_right %}
+{% endblock page_right %}
