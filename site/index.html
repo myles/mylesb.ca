@@ -2,6 +2,8 @@
 
 {% block meta_robots %}index, follow{% endblock meta_robots %}
 
+{% block body_id %}personal-{{ super() }}{% endblock %}
+
 {% block page_left %}
 	<img itemprop="image" src="static/img/avatar.png" class="img-polaroid pull-right">
 {% endblock page_left %}

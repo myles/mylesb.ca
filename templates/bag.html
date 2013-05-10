@@ -1,3 +1,5 @@
 {% extends "base.html" %}
 
 {% block meta_robots %}noindex, nofollow{% endblock meta_robots %}
+
+{% block body_id %}braithwaite-{{ super() }}{% endblock %}
