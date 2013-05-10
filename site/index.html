@@ -1,28 +1,34 @@
 {% extends "base.html" %}
 
-{% block nav_index %}<li class="active"><a href="index.html">Personal</a></li>{% endblock %}
+{% block meta_robots %}index, follow{% endblock meta_robots %}
 
 {% block page_left %}
-	<img src="static/img/avatar.png" class="img-polaroid pull-right">
+	<img itemprop="image" src="static/img/avatar.png" class="img-polaroid pull-right">
 {% endblock page_left %}
 
 {% block page_right %}
-	<h1>Myles Braithwaite</h1>
+	<h1 itemprop="name"><span itemprop="givenName">Myles</span> <span itemprop="familyName" class="muted hidden-phone">Braithwaite</span></h1>
 	<p class="lead">Hoping for the Best, Imagining the Worst.</p>
+
+	<p>I am Myles Braithwaite, a 20-something, living in Toronto, and working as a <span itemprop="jobTitle">computer programmer</span> for <a href="http://monkeyinyoursoul.com/" itemprop="brand">Monkey in your Soul</a>.</p>
 	
 	<dl class="dl-horizontal" id="contact-info">
 		<dt>Email</dt>
-		<dd><a href="mailto:me@mylesbraithwaite.com">me@mylesbraithwaite.com</a></dd>
+		<dd><a href="mailto:me@mylesbraithwaite.com" itemprop="email">me@mylesbraithwaite.com</a></dd>
 		
 		<dt>Phone</dt>
-		<dd><a href="tel:+1-647-931-1562">+1 (647) 931-1562</a></dd>
+		<dd itemprop="telephone"><a href="tel:+1-647-931-1562">+1 (647) 931-1562</a></dd>
 		
 		<dt>Homepage</dt>
-		<dd><a href="http://mylesbraithwaite.com/">http://mylesbraithwaite.com</a></dd>
+		<dd><a href="http://mylesbraithwaite.com/" itemprop="url"><span class="muted">http://</span>mylesbraithwaite.com<span class="muted">/</span></a></dd>
 	</dl>
 	
-	<p>
-		<a href="https://www.twitter.com/mylesb">Twitter</a> &bull; <a href="https://www.facebook.com/mylesbraithwaite">Facebook</a>
-	</p>
+	<ul class="inline text-center" id="social-networks">
+		<li><a href="https://www.twitter.com/mylesb">Twitter</a></li>
+		<li><a href="https://plus.google.com/101051575949997777035" rel="author">Google+</a></li>
+		<li><a href="http://tumblr.mylesbraithwaite.com/" rel="author">Tumblr</a></li>
+		<li><a href="https://www.facebook.com/mylesbraithwaite">Facebook</a></li>
+		<li><a href="https://alpha.app.net/mylesb">App.net</a></li>
+	</ul>
 
 {% endblock page_right %}

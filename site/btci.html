@@ -1,17 +1,31 @@
 {% extends "bag.html" %}
 
-{% block nav_btci %}<li class="active"><a href="btci.html">Canada</a></li>{% endblock %}
+{% block page_left %}
+	<!--
+		TODO: Add my avatar here.
+	-->
+{% endblock page_left %}
 
-{% block top_left %}
-	
-{% endblock top_left %}
-
-{% block top_right %}
-	<h1>Myles Braithwaite</h1>
-	<p class="lead">Braithwaite Technology Consultants Inc.</p>
+{% block page_right %}
+	<h1 itemprop="name"><span itemprop="givenName">Myles</span> <span itemprop="familyName" class="muted hidden-phone">Braithwaite</span></h1>
+	<p class="lead" itemprop="brand">Braithwaite&nbsp;Technology Consultants&nbsp;Inc.</p>
 	
 	<dl class="dl-horizontal">
 		<dt>Email</dt>
-		<dd><a href="mailto:mbraithwaite@braithwaite.ca">mbraithwaite@braithwaite.ca</a></dd>
+		<dd><a href="mailto:mbraithwaite@braithwaite.ca" itemprop="email">mbraithwaite@braithwaite.ca</a></dd>
+		
+		<dt>Phone</dt>
+		<dd><a href="tel:+1-416-499-2861,,309" itemprop="telephone">+1 (416) 499-2861</a> extension 309</dd>
+		
+		<dt>Fax</dt>
+		<dd><a href="tel:+1-416-499-8543" itemprop="faxNumber">+1 (416) 499-8543</a></dd>
+		
+		<dt>Address</dt>
+		<dd>
+			<address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<span itemprop="streetAddress">2235 Sheppard Ave. East, Suite 906</span><br/>
+				<span itemprop="addressLocality">Toronto</span>, <span itemprop="addressRegion">Ontario</span> <span itemprop="postalCode">M2J 5B5</span>
+			</address>
+		</dd>
 	</dl>
-{% endblock top_right %}
+{% endblock page_right %}

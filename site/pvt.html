@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block page_left %}
+	<img src="static/img/avatar.png" class="img-polaroid pull-right">
+{% endblock page_left %}
+
+{% block page_right %}
+	<h1 itemprop="name"><span itemprop="givenName">Myles</span> <span itemprop="familyName" class="muted hidden-phone">Braithwaite</span></h1>
+	<p class="lead">Hoping for the Best, Imagining the Worst.</p>
+	
+	<dl class="dl-horizontal" id="contact-info">
+		<dt>Email</dt>
+		<dd><a href="mailto:me@mylesbraithwaite.com">me@mylesbraithwaite.com</a></dd>
+		
+		<dt>Homepage</dt>
+		<dd><a href="http://mylesbraithwaite.com/"><span class="muted">http://</span>mylesbraithwaite.com</a><span class="muted">/</span></dd>
+	</dl>
+{% endblock page_right %}
+
+{% block extra_body %}
+	<script src="static/js/sjcl.js"></script>
+	<script>
+		var encrypted_data = '{"iv":"YEziXz37bLKwoazUMbiBRQ","v":1,"iter":1000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"a35GjIvvnzI","ct":"5aGiS1W4/DhSmPWajJvb/p+8GWnoWjMrs00y2pr+0Z4+Aw2P8rngfRC1DgYHWmib9FS5aPVbh9utiTwJkYNfVONvXJcMrXzgNBRCYXP5P+bG8wzbQhSUpad6tT6O5jDmDKtqgyo2OLF4L3aE39m9BBaBvdIqc2u5GBzhR6JzxGDhOTy6uzGwidOFnkJRFgcRO5rm2ou4HUAleAOdLn0sKP2MNyT8qsI6sxzbQf22J+yRlg8HdVMOkoO7kLIjx1wzMudRP7mpjjcpqcGBygY5s6qb7CozkvdQ3+sD9c28cd1XKU1LdEftw3ET4zqc+QXjFIzJQViwrnpVMbVfrT1qjcwrC60V9QZobMvzX6IGcjzT17ypmeYpAS3eZ3pY+VbbyIbE9a2GB/k2u/U"}';
+		
+		$.urlParam = function(name) {
+			var sPageURL = window.location.search.substring(1);
+			var sURLVariables = sPageURL.split('&');
+			for (var i = 0; i < sURLVariables.length; i++) {
+				var sParameterName = sURLVariables[i].split('=');
+				if (sParameterName[0] == name) {
+					return sParameterName[1];
+				};
+			};
+		};
+		
+		$(document).ready(function () {
+			var passcode = $.urlParam('passcode');
+			if (passcode) {
+				try {
+					var data = sjcl.json.decrypt(passcode, encrypted_data);
+					$('#contact-info').replaceWith(data);
+				} catch(e) {
+					console.log("Decryption failed: " + e);
+				};
+			};
+		});
+	</script>
+{% endblock extra_body %}

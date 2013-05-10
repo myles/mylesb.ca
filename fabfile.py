@@ -44,8 +44,26 @@ def render_site():
 	for template in files_grabbed:
 		filename = os.path.basename(template)
 		render(filename, os.path.join(env.output_path, filename))
+
+def compile_js():
+	local("mkdir -p %s/static/js/" % env.output_path)
+	local("cat %(static_path)s/js/bootstrap/bootstrap-transition.js %(static_path)s/js/bootstrap/bootstrap-alert.js %(static_path)s/js/bootstrap/bootstrap-button.js %(static_path)s/js/bootstrap/bootstrap-carousel.js %(static_path)s/js/bootstrap/bootstrap-collapse.js %(static_path)s/js/bootstrap/bootstrap-dropdown.js %(static_path)s/js/bootstrap/bootstrap-modal.js %(static_path)s/js/bootstrap/bootstrap-tooltip.js %(static_path)s/js/bootstrap/bootstrap-popover.js %(static_path)s/js/bootstrap/bootstrap-scrollspy.js %(static_path)s/js/bootstrap/bootstrap-tab.js %(static_path)s/js/bootstrap/bootstrap-typeahead.js %(static_path)s/js/bootstrap/bootstrap-affix.js > %(output_path)s/static/js/bootstrap.js" % { 'static_path': env.static_path, 'output_path': env.output_path })
+
+def compile_css():
+	local("mkdir -p %s/static/css/" % env.output_path)
+	local("lessc %s/less/style.less > %s/static/css/style.css" % (env.static_path, env.output_path))
+
+@task(name="Copy/Compile all the static assests.")
+@hosts('localhost')
+def copy_static_dir():
+	local("mkdir -p %s/static/img/" % env.output_path)
+	local("cp %s/img/* %s/static/img/" % (env.static_path, env.output_path))
 	
-	local("cp -r %s %s" % (env.static_path, env.output_path))
+	compile_js()
+	compile_css()
+
+def copy_htaccess():
+	local ("cp %s/htaccess.htaccess %s/.htaccess" % (env.site_path, env.output_path))
 
 def clean():
 	local("rm -fr %s/*" % env.output_path)
@@ -56,6 +74,8 @@ def build_html():
 	clean()
 	local("mkdir -p %s" % env.output_path)
 	render_site()
+	copy_static_dir()
+	copy_htaccess()
 
 @task(name="Deploy web site.")
 @hosts('nfs-myles-myles')
