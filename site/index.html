@@ -5,11 +5,12 @@
 {% block body_id %}personal-{{ super() }}{% endblock %}
 
 {% block page_left %}
-	<img itemprop="image" src="static/img/avatar.png" class="img-polaroid pull-right">
+	<img src="static/img/avatar-small.png" class="img-polaroid pull-right" itemprop="image">
 {% endblock page_left %}
 
 {% block page_right %}
 	<h1 itemprop="name"><span itemprop="givenName">Myles</span> <span itemprop="familyName" class="muted hidden-phone">Braithwaite</span></h1>
+	
 	<p class="lead">Hoping for the Best, Imagining the Worst.</p>
 
 	<p>I am Myles Braithwaite, a 20-something, living in Toronto, and working as a <span itemprop="jobTitle">computer programmer</span> for <a href="http://monkeyinyoursoul.com/" itemprop="brand">Monkey in your Soul</a>.</p>
@@ -29,8 +30,8 @@
 		<li><a href="https://www.twitter.com/mylesb">Twitter</a></li>
 		<li><a href="https://plus.google.com/101051575949997777035" rel="author">Google+</a></li>
 		<li><a href="http://tumblr.mylesbraithwaite.com/" rel="author">Tumblr</a></li>
+		<li><a href="http://www.flickr.com/photos/mylesbraithwaite" rel="author">Flickr</a></li>
 		<li><a href="https://www.facebook.com/mylesbraithwaite">Facebook</a></li>
 		<li><a href="https://alpha.app.net/mylesb">App.net</a></li>
 	</ul>
-
 {% endblock page_right %}

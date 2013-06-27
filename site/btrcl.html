@@ -1,0 +1,23 @@
+{% extends "bag.html" %}
+
+{% block page_left %}
+	<img src="static/img/avatar-small.png" class="img-polaroid pull-right" itemprop="image">
+{% endblock page_left %}
+
+{% block page_right %}
+	<h1 itemprop="name"><span itemprop="givenName">Myles</span> <span itemprop="familyName" class="muted hidden-phone">Braithwaite</span></h1>
+	<p class="lead" itemprop="brand">Braithwaite&nbsp;Tax Recovery&nbsp;Consultants&nbsp;Ltd.</p>
+	
+	<dl class="dl-horizontal">
+		<dt>Email</dt>
+		<dd><a href="mailto:mbraithwaite@btrcl.co.uk" itemprop="email">mbraithwaite@trcl.co.uk</a></dd>
+		
+		<dt>Address</dt>
+		<dd>
+			<address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<span itemprop="streetAddress">Suite 106, Hill House, 210 Upper Richmond Road</span><br/>
+				<span itemprop="addressLocality">London</span> <span itemprop="postalCode">SW15 6NP</span>
+			</address>
+		</dd>
+	</dl>
+{% endblock page_right %}

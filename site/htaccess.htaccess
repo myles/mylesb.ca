@@ -3,8 +3,21 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} ^[nc]
 RewriteRule ^(.*)$ http://www./$1 [r=301,nc]
 
-Redirect 301 /e/pvt /pvt.html?passcode=hoping-for-the-best-imagining-the-worst
-Redirect 301 /e/me /
+Redirect 301 /e			/index.html?utm_source=email&utm_medium=email&utm_campaign=email
+Redirect 301 /t			/index.html?utm_source=twitter&utm_medium=twitter&utm_campaign=twitter
+Redirect 301 /g			/index.html?utm_source=google-plus&utm_medium=google-plus&utm_campaign=google-plus
+Redirect 301 /f			/index.html?utm_source=facebook&utm_medium=facebook&utm_campaign=facebook
+
+Redirect 301 /e/bcorp	/b-corp.html?utm_source=email&utm_medium=email&utm_campaign=email
+
+Redirect 301 /e/miys	/miys.html?utm_source=email&utm_medium=email&utm_campaign=email
+
+Redirect 301 /e/b-ca	/btci.html?utm_source=email&utm_medium=email&utm_campaign=email
+Redirect 301 /e/b-uk	/btrcl.html?utm_source=email&utm_medium=email&utm_campaign=email
+Redirect 301 /e/b-ir	/btcl.html?utm_source=email&utm_medium=email&utm_campaign=email
+Redirect 301 /e/b-us	/bgi.html?utm_source=email&utm_medium=email&utm_campaign=email
+
+Redirect 301 /e/pvt /pvt.html?passcode=hoping-for-the-best-imagining-the-worst&utm_source=email&utm_medium=email&utm_campaign=email
 
 RewriteEngine On 
 RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR]

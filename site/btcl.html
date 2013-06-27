@@ -1,0 +1,29 @@
+{% extends "bag.html" %}
+
+{% block page_left %}
+	<img src="static/img/avatar-small.png" class="img-polaroid pull-right" itemprop="image">
+{% endblock page_left %}
+
+{% block page_right %}
+	<h1 itemprop="name"><span itemprop="givenName">Myles</span> <span itemprop="familyName" class="muted hidden-phone">Braithwaite</span></h1>
+	<p class="lead" itemprop="brand">Braithwaite&nbsp;Technology Consultants&nbsp;Limited</p>
+	
+	<dl class="dl-horizontal">
+		<dt>Email</dt>
+		<dd><a href="mailto:mbraithwaite@braithwaite.ie" itemprop="email">mbraithwaite@braithwaite.ie</a></dd>
+		
+		<dt>Phone</dt>
+		<dd><a href="tel:+353-1-653-0199,,309" itemprop="telephone">+353 1 653 0199</a> extension 309</dd>
+		
+		<dt>Fax</dt>
+		<dd><a href="tel:+353-1-653-0199" itemprop="faxNumber">+353 1 653 0199</a></dd>
+		
+		<dt>Address</dt>
+		<dd>
+			<address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<span itemprop="streetAddress">28-32 Upper Pembroke Street</span><br/>
+				<span itemprop="addressLocality">Dublin 2</span>
+			</address>
+		</dd>
+	</dl>
+{% endblock page_right %}

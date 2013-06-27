@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="{% block meta_description %}Hoping for the Best, Imagining the Worst.{% endblock meta_description %}">
 		<meta name="author" content="Myles Braithwaite">
-		<meta name="robots" content="{% block meta_robots %}noindex, follow{% endblock meta_robots %}">
+		<meta name="robots" content="{% block meta_robots %}index, follow{% endblock meta_robots %}">
 		
 		<link type="text/plain" rel="author" href="{{ site_url }}/humans.txt">
 		
@@ -25,9 +25,8 @@
 		<link rel="apple-touch-icon-precomposed" href="">
 		<link rel="shortcut icon" href="">
 		
-		<script>				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		<script>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 			ga('create', 'UA-1642439-32', 'mylesb.ca');
 			ga('send', 'pageview');
 		</script>
@@ -39,22 +38,22 @@
 		{% block extra_head %}{% endblock extra_head %}
 	</head>
 	
-	<body id="{% block body_id %}myles_ca{% endblock %}">
+	<body id="{% block body_id %}mylesb-ca{% endblock %}">
 		
 		<div class="container" itemscope itemtype="http://schema.org/Person">
-			
-			<div class="row well">
-				{% block page %}
-				<div class="span4">
-					{% block page_left %}{% endblock page_left %}
-				</div> <!-- .span4 -->
-				
-				<div class="span6">
-					{% block page_right %}{% endblock page_right %}
-				</div> <!-- .span6 -->
-				{% endblock page %}
-			</div> <!-- .row .well -->
-			
+			<div clas="span10">
+				<div class="row well">
+					{% block page %}
+					<div class="span4">
+						{% block page_left %}{% endblock page_left %}
+					</div> <!-- .span4 -->
+					
+					<div class="span6">
+						{% block page_right %}{% endblock page_right %}
+					</div> <!-- .span6 -->
+					{% endblock page %}
+				</div> <!-- .row .well -->
+			</div> <!-- .span10 -->
 		</div> <!-- .container -->
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>

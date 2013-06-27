@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block meta_robots %}noindex, nofollow{% endblock meta_robots %}
+
+{% block body_id %}sitemap-{{ super() }}{% endblock %}
+
+{% block page %}
+	<h1>Sitemap</h1>
+
+	<ul>
+		<li><a href="index.html">Personal</a></li>
+		<li><a href="miys.html">Monkey in your Soul</a></li>
+	</ul>
+{% endblock %}

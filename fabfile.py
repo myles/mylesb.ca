@@ -21,6 +21,8 @@ env.template_context = {
 	'now': datetime.datetime.now()
 }
 
+
+
 def render(template, destination, **kwargs):
 	jenv = Environment(loader=FileSystemLoader([env.template_path, env.site_path]))
 	
@@ -34,7 +36,7 @@ def render(template, destination, **kwargs):
 		output.write(text.encode("utf-8"))
 
 def render_site():
-	file_types = ('**.html', '**.txt')
+	file_types = ('**.html', '**.txt', '**.xml')
 	
 	files_grabbed = []
 	

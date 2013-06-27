@@ -1,20 +1,31 @@
 {% extends "base.html" %}
 
+{% block meta_robots %}noindex, nofollow{% endblock meta_robots %}
+
 {% block body_id %}bcorp-{{ super() }}{% endblock %}
 
-
 {% block page_left %}
-	<!--
-		TODO: Add my avatar here.
-	-->
+	<img src="static/img/avatar-suite-small.png" class="img-polaroid pull-right" itemprop="image">
 {% endblock page_left %}
 
 {% block page_right %}
-	<h1 itemprop="name"><span itemprop="givenName">Myles</span> <span itemprop="familyName" class="muted hidden-phone">Braithwaite</span></h1>
-	<p class="lead"><a href="http://braithwaite.co/rp/" itemprop="brand">Braithwaite Corp</a>.</p>
+	<h1 itemprop="name">
+		<span itemprop="givenName">Myles</span>
+		<span itemprop="familyName" class="muted hidden-phone">Braithwaite</span>
+	</h1>
+
+	<p class="lead"><span itemprop="jobTitle">El Presidente</span> at <a href="http://braithwaite.co/rp/" itemprop="brand">Braithwaite Corp</a>.</p>
+
+	<p>Braithwaite Corp. is a consultanting company located in Toronto.</p>
 	
 	<dl class="dl-horizontal">
 		<dt>Email</dt>
 		<dd><a href="mailto:mbraithwaite@braithwaitecorp.com" itemprop="email">mbraithwaite@braithwaitecorp.com</a></dd>
+
+		<dt>Phone</dt>
+		<dd itemprop="telephone"><a href="tel:+1-647-931-1562">+1 (647) 931-1562</a></dd>
+		
+		<dt>Homepage</dt>
+		<dd><a href="http://braithwaitecorp.com/" itemprop="url"><span class="muted">http://</span>braithwaitecorp.com<span class="muted">/</span></a></dd>
 	</dl>
 {% endblock page_right %}
