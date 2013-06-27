@@ -7,6 +7,7 @@ Redirect 301 /e			/index.html?utm_source=email&utm_medium=email&utm_campaign=ema
 Redirect 301 /t			/index.html?utm_source=twitter&utm_medium=twitter&utm_campaign=twitter
 Redirect 301 /g			/index.html?utm_source=google-plus&utm_medium=google-plus&utm_campaign=google-plus
 Redirect 301 /f			/index.html?utm_source=facebook&utm_medium=facebook&utm_campaign=facebook
+Redirect 301 /i			/index.html?utm_source=ios&utm_medium=ios&utm_campaign=ios
 
 Redirect 301 /e/bcorp	/b-corp.html?utm_source=email&utm_medium=email&utm_campaign=email
 
