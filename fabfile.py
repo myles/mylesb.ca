@@ -4,14 +4,13 @@ import os
 import datetime
 from glob import glob
 
-from fabric.api import env, puts, local, task, hosts
 from fabric.contrib.project import rsync_project
+from fabric.api import env, puts, local, task, hosts, execute, runs_once
 
 from jinja2 import Environment, FileSystemLoader
 
-env.hosts = ['nfs-myles-myles']
+env.hosts = ['nfs-myles-myles', 'panda',]
 env.use_ssh_config = True
-env.remote_path = '/home/public'
 env.output_path = os.path.abspath('./_output/')
 env.site_path = os.path.abspath('./site/')
 env.static_path = os.path.abspath('./static/')
@@ -20,8 +19,6 @@ env.template_context = {
 	'site_url': 'http://mylesb.ca/',
 	'now': datetime.datetime.now()
 }
-
-
 
 def render(template, destination, **kwargs):
 	jenv = Environment(loader=FileSystemLoader([env.template_path, env.site_path]))
@@ -79,14 +76,28 @@ def build_html():
 	copy_static_dir()
 	copy_htaccess()
 
-@task(name="Deploy web site.")
 @hosts('nfs-myles-myles')
-def deploy():
-	build_html()
-	
+def deploy_nfs():
 	rsync_project(
 		local_dir=env.output_path + "/",
-		remote_dir=env.remote_path,
+		remote_dir='/home/public',
 		delete=True,
 		extra_opts='--exclude=".DS_Store"'
 	)
+
+@hosts('panda')
+def deploy_panda():
+	env.user = 'myles'
+	rsync_project(
+		local_dir=env.output_path + "/",
+		remote_dir='/srv/www/ca_mylesb_www/html',
+		delete=True,
+		extra_opts='--exclude=".DS_Store"'
+	)
+
+@task(name="Deploy web site.")
+@runs_once
+def deploy():
+	build_html()
+	execute(deploy_panda)
+	execute(deploy_nfs)
