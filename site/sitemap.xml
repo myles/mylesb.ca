@@ -11,4 +11,10 @@
 		<lastmod>{{ now.strftime('%Y-%m-%d') }}</lastmod>
 		<changefreq>always</changefreq>
 	</url>
+	
+	<url>
+		<loc>http://mylesb.ca/b-corp.html</loc>
+		<lastmod>{{ now.strftime('%Y-%m-%d') }}</lastmod>
+		<changefreq>always</changefreq>
+	</url>
 </urlset>
