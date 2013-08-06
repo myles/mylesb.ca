@@ -5,11 +5,11 @@
 {% block body_id %}personal-{{ super() }}{% endblock %}
 
 {% block page_left %}
-	<img src="static/img/avatar-small.png" class="img-polaroid pull-right" itemprop="image">
+	<img src="static/img/avatar-small.png" class="img-thumbnail pull-right" itemprop="image">
 {% endblock page_left %}
 
 {% block page_right %}
-	<h1 itemprop="name"><span itemprop="givenName">Myles</span> <span itemprop="familyName" class="muted hidden-phone">Braithwaite</span></h1>
+	<h1 itemprop="name" class="margin-base-vertical"><span itemprop="givenName">Myles</span> <span itemprop="familyName" class="muted hidden-phone">Braithwaite</span></h1>
 	
 	<p class="lead">Hoping for the Best, Imagining the Worst.</p>
 
@@ -26,7 +26,7 @@
 		<dd><a href="http://mylesbraithwaite.com/" itemprop="url"><span class="muted">http://</span>mylesbraithwaite.com<span class="muted">/</span></a></dd>
 	</dl>
 	
-	<ul class="inline text-center" id="social-networks">
+	<ul class="list-inline text-center" id="social-networks">
 		<li><a href="https://www.twitter.com/mylesb">Twitter</a></li>
 		<li><a href="https://plus.google.com/101051575949997777035" rel="author">Google+</a></li>
 		<li><a href="http://tumblr.mylesbraithwaite.com/" rel="author">Tumblr</a></li>

@@ -41,19 +41,17 @@
 	<body id="{% block body_id %}mylesb-ca{% endblock %}">
 		
 		<div class="container" itemscope itemtype="http://schema.org/Person">
-			<div clas="span10">
-				<div class="row well">
-					{% block page %}
-					<div class="span4">
-						{% block page_left %}{% endblock page_left %}
-					</div> <!-- .span4 -->
-					
-					<div class="span6">
-						{% block page_right %}{% endblock page_right %}
-					</div> <!-- .span6 -->
-					{% endblock page %}
-				</div> <!-- .row .well -->
-			</div> <!-- .span10 -->
+			<div class="row">
+				{% block page %}
+				<div class="col-lg-2 col-offset-2">
+					{% block page_left %}{% endblock page_left %}
+				</div> <!-- .col-lg-4 -->
+				
+				<div class="col-lg-6">
+					{% block page_right %}{% endblock page_right %}
+				</div> <!-- .col-lg-6 -->
+				{% endblock page %}
+			</div> <!-- .row -->
 		</div> <!-- .container -->
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>

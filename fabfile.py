@@ -46,7 +46,7 @@ def render_site():
 
 def compile_js():
 	local("mkdir -p %s/static/js/" % env.output_path)
-	local("cat %(static_path)s/js/bootstrap/bootstrap-transition.js %(static_path)s/js/bootstrap/bootstrap-alert.js %(static_path)s/js/bootstrap/bootstrap-button.js %(static_path)s/js/bootstrap/bootstrap-carousel.js %(static_path)s/js/bootstrap/bootstrap-collapse.js %(static_path)s/js/bootstrap/bootstrap-dropdown.js %(static_path)s/js/bootstrap/bootstrap-modal.js %(static_path)s/js/bootstrap/bootstrap-tooltip.js %(static_path)s/js/bootstrap/bootstrap-popover.js %(static_path)s/js/bootstrap/bootstrap-scrollspy.js %(static_path)s/js/bootstrap/bootstrap-tab.js %(static_path)s/js/bootstrap/bootstrap-typeahead.js %(static_path)s/js/bootstrap/bootstrap-affix.js > %(output_path)s/static/js/bootstrap.js" % { 'static_path': env.static_path, 'output_path': env.output_path })
+	local("cat %(static_path)s/js/bootstrap/transition.js %(static_path)s/js/bootstrap/alert.js %(static_path)s/js/bootstrap/button.js %(static_path)s/js/bootstrap/carousel.js %(static_path)s/js/bootstrap/collapse.js %(static_path)s/js/bootstrap/dropdown.js %(static_path)s/js/bootstrap/modal.js %(static_path)s/js/bootstrap/tooltip.js %(static_path)s/js/bootstrap/popover.js %(static_path)s/js/bootstrap/scrollspy.js %(static_path)s/js/bootstrap/tab.js %(static_path)s/js/bootstrap/affix.js > %(output_path)s/static/js/bootstrap.js" % { 'static_path': env.static_path, 'output_path': env.output_path })
 
 def compile_css():
 	local("mkdir -p %s/static/css/" % env.output_path)
@@ -67,7 +67,7 @@ def copy_htaccess():
 def clean():
 	local("rm -fr %s/*" % env.output_path)
 
-@task(aliases=['build', 'build_html'], name="Build web site to HTML")
+@task(aliases=['build', 'build_html'])
 @hosts('localhost')
 def build_html():
 	clean()
@@ -95,7 +95,7 @@ def deploy_panda():
 		extra_opts='--exclude=".DS_Store"'
 	)
 
-@task(name="Deploy web site.")
+@task
 @runs_once
 def deploy():
 	build_html()

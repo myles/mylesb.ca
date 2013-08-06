@@ -2,13 +2,32 @@
 @import url(http://fonts.googleapis.com/css?family=Francois+One);
 
 @import "bootstrap/bootstrap.less";
-@import "bootstrap/responsive.less";
 
 @sansFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* @font-size-base: 16px; */
 
-h1 { margin-top: 0; }
+html {
+	background: url(../img/skyline.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 
-.container { margin-top: @baseLineHeight; }
+body {
+	padding-top: 20px;
+	background-color: transparent;
+}
+
+h1 { margin: 0; }
+
+.container {
+	.row {
+		margin: 20px 0;
+		padding: 20px 0;
+		background-color: rgba(255, 255, 255, 0.9);
+	}
+}
 
 #personal-mylesb-ca {
 	h1, p.lead { font-family: 'Josefin Sans', @sansFontFamily; }
