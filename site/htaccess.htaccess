@@ -1,24 +1,31 @@
 Options +FollowSymLinks
 RewriteEngine on
+RewriteBase /
 RewriteCond %{HTTP_HOST} ^[nc]
 RewriteRule ^(.*)$ http://www./$1 [r=301,nc]
 
-Redirect 301 /e			/index.html?utm_source=email&utm_medium=email&utm_campaign=email
-Redirect 301 /t			/index.html?utm_source=twitter&utm_medium=twitter&utm_campaign=twitter
-Redirect 301 /g			/index.html?utm_source=google-plus&utm_medium=google-plus&utm_campaign=google-plus
-Redirect 301 /f			/index.html?utm_source=facebook&utm_medium=facebook&utm_campaign=facebook
-Redirect 301 /i			/index.html?utm_source=ios&utm_medium=ios&utm_campaign=ios
+# Social Network Links
+RewriteRule ^t$			/index.html?utm_source=twitter&utm_medium=twitter&utm_campaign=twitter [R,L]
+RewriteRule ^g$			/index.html?utm_source=google-plus&utm_medium=google-plus&utm_campaign=google-plus [R,L]
+RewriteRule ^f$			/index.html?utm_source=facebook&utm_medium=facebook&utm_campaign=facebook [R,L]
+RewriteRule ^a$			/index.html?utm_source=app_net&utm_medium=app_net&utm_campaign=app_net [R,L]
 
-Redirect 301 /e/bcorp	/b-corp.html?utm_source=email&utm_medium=email&utm_campaign=email
+# Phones
+RewriteRule ^i$			/index.html?utm_source=ios&utm_medium=ios&utm_campaign=ios [R,L]
 
-Redirect 301 /e/miys	/miys.html?utm_source=email&utm_medium=email&utm_campaign=email
+# Email Links
+RewriteRule ^e$			/index.html?utm_source=email&utm_medium=email&utm_campaign=email [R,L]
+RewriteRule ^e/pvt$		/pvt.html?passcode=hoping-for-the-best-imagining-the-worst&utm_source=email&utm_medium=email&utm_campaign=email [R,L]
 
-Redirect 301 /e/b-ca	/btci.html?utm_source=email&utm_medium=email&utm_campaign=email
-Redirect 301 /e/b-uk	/btrcl.html?utm_source=email&utm_medium=email&utm_campaign=email
-Redirect 301 /e/b-ir	/btcl.html?utm_source=email&utm_medium=email&utm_campaign=email
-Redirect 301 /e/b-us	/bgi.html?utm_source=email&utm_medium=email&utm_campaign=email
+## Work
+RewriteRule ^e/bcorp$	/b-corp.html?utm_source=email&utm_medium=email&utm_campaign=email [R,L]
+RewriteRule ^e/miys$	/miys.html?utm_source=email&utm_medium=email&utm_campaign=email [R,L]
 
-Redirect 301 /e/pvt /pvt.html?passcode=hoping-for-the-best-imagining-the-worst&utm_source=email&utm_medium=email&utm_campaign=email
+## Braithwaite
+RewriteRule ^e/b-ca$	/btci.html?utm_source=email&utm_medium=email&utm_campaign=email [R,L]
+RewriteRule ^e/b-uk$	/btrcl.html?utm_source=email&utm_medium=email&utm_campaign=email [R,L]
+RewriteRule ^e/b-ir$	/btcl.html?utm_source=email&utm_medium=email&utm_campaign=email [R,L]
+RewriteRule ^e/b-us$	/bgi.html?utm_source=email&utm_medium=email&utm_campaign=email [R,L]
 
 RewriteEngine On 
 RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR]

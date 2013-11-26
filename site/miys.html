@@ -2,11 +2,15 @@
 
 {% block body_id %}miys-{{ super() }}{% endblock %}
 
-{% block page_left %}
-	<img itemprop="image" src="static/img/monkey.png" class="img-thumbnail pull-right">
-{% endblock page_left %}
+{% block page %}
+<div class="col-lg-2 col-offset-2" id="photo">
+	{% block page_left %}
+	<img src="static/img/avatar-suite-small.png" class="img-thumbnail pull-right" itemprop="image">
+	{% endblock page_left %}
+</div> <!-- .col-lg-4 -->
 
-{% block page_right %}
+<div class="col-lg-4" id="content">
+	{% block page_center %}
 	<h1 itemprop="name"><span itemprop="givenName">Myles</span> <span itemprop="familyName" class="muted hidden-phone">Braithwaite</span></h1>
 
 	<p class="lead"><span itemprop="jobTitle">El Presidente</span> at <a href="http://monkeyinyoursoul.com/" itemprop="brand">Monkey in your Soul</a>.</p>
@@ -20,4 +24,12 @@
 		<dt>Phone</dt>
 		<dd itemprop="telephone"><a href="tel:+1-647-931-1562">+1 (647) 931-1562</a></dd>
 	</dl>
-{% endblock page_right %}
+	{% endblock page_center %}
+</div> <!-- .col-lg-6 -->
+
+<div class="col-lg-2" id="photo">
+	{% block page_right %}
+	<img itemprop="image" src="static/img/monkey.png" class="img-thumbnail pull-right">
+	{% endblock page_right %}
+</div> <!-- .col-lg-4 -->
+{% endblock page %}

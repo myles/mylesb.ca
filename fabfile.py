@@ -18,7 +18,7 @@ env.static_path = os.path.abspath('./static/')
 env.template_path = os.path.abspath('./templates/')
 env.template_context = {
     'site_url': 'http://mylesb.ca/',
-    'static_url': 'http://mylesb.ca/static/',
+    'static_url': '/static',
     'now': datetime.datetime.now()
 }
 
