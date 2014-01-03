@@ -5,13 +5,13 @@
 {% block body_id %}bcorp-{{ super() }}{% endblock %}
 
 {% block page_left %}
-	<img src="static/img/avatar-suite-small.png" class="img-thumbnail pull-right" itemprop="image">
+	<img src="static/img/avatar-suite-small.png" itemprop="image">
 {% endblock page_left %}
 
 {% block page_right %}
 	<h1 itemprop="name">
 		<span itemprop="givenName">Myles</span>
-		<span itemprop="familyName" class="muted hidden-phone">Braithwaite</span>
+		<span itemprop="familyName">Braithwaite</span>
 	</h1>
 
 	<p class="lead"><span itemprop="jobTitle">El Presidente</span> at <a href="http://braithwaite.co/rp/" itemprop="brand">Braithwaite Corp</a>.</p>
@@ -26,6 +26,6 @@
 		<dd itemprop="telephone"><a href="tel:+1-647-931-1562">+1 (647) 931-1562</a></dd>
 		
 		<dt>Homepage</dt>
-		<dd><a href="http://braithwaitecorp.com/" itemprop="url"><span class="muted">http://</span>braithwaitecorp.com<span class="muted">/</span></a></dd>
+		<dd><a href="http://braithwaitecorp.com/" itemprop="url"><span class="text-muted">http://</span>braithwaitecorp.com<span class="text-muted">/</span></a></dd>
 	</dl>
 {% endblock page_right %}

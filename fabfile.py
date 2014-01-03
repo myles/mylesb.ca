@@ -65,11 +65,13 @@ def compile_js():
         'output_path': env.output_path
     })
 
+@task
+@hosts('localhost')
 def compile_css():
     local("mkdir -p %s/static/css/" % env.output_path)
     local("lessc %s/less/style.less > %s/static/css/style.css" % (env.static_path, env.output_path))
 
-@task(name="Copy/Compile all the static assests.")
+@task
 @hosts('localhost')
 def copy_static_dir():
     local("mkdir -p %s/static/img/" % env.output_path)

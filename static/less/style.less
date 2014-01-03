@@ -9,6 +9,18 @@
 body {
 	padding-top: 20px;
 	background-color: transparent;
+	
+	&#personal-mylesb-ca {
+		h1, p.lead { font-family: 'Josefin Sans', @sansFontFamily; }
+	}
+
+	&#bcorp-mylesb-ca {
+		h1, p.lead { font-family: 'Francois One', @sansFontFamily; }
+	}
+
+	&#miys-mylesb-ca {
+		h1, p.lead { font-family: Futura, @sansFontFamily; }
+	}
 }
 
 h1 { margin: 0; }
@@ -18,15 +30,52 @@ h1 { margin: 0; }
 
 		margin: 20px 0;
 		padding: 20px 0;
+		
+		#photo {
+			.make-column(2);
+			.make-column-offset(2);
+			
+			img {
+				.img-thumbnail;
+			}
+		}
 
 		#content {
+			.make-column(6);
+			
 			padding: 1em;
 			background-color: rgba(255, 255, 255, 0.9);
+			
+			h1 {
+				[itemprop=familyName] {
+					.text-muted;
+				}
+			}
+			
+			p {
+				[itemprop=jobTitle] {
+					.text-info;
+				}
+				
+				[itemprop=brand] {
+					.text-primary;
+				}
+			}
+			
+			ul#social-networks {
+				.list-inline;
+				.text-center;
+			}
 		}
 	}
 }
 
-@media (min-width: @screen-tablet) {
+@media (min-width: @screen-medium) {
+	#photo img { .pull-right; }
+	dl#contact-info { .dl-horizontal; }
+}
+
+@media (min-width: @screen-small) {
 	html {
 		background: url(../img/skyline.jpg) no-repeat center center fixed;
 		-webkit-background-size: cover;
@@ -36,47 +85,46 @@ h1 { margin: 0; }
 	}
 }
 
-@media (max-width: @screen-tablet-max) {
-
-	.container .row #content { background-color: transparent;}
-
-	.container .row { background-color: rgba(255, 255, 255, 0.9); }
-}
-
-@media (max-width: @screen-tiny) {
-
-	body {
-		padding-top: 0;
-	}
-
+@media (max-width: @screen-small-max) {
+	
+	body { padding-top: 0; }
+	
 	.container {
 		.row {
 			margin: 0;
 			padding: 0;
-		}
-	}
-
-	.dl-horizontal {
-		dt {
-			float: none;
-			clear: none;
-			width: auto;
-			text-align: left;
-		}
-		dd {
-			margin-left: 0;
+			
+			background-color: rgba(255, 255, 255, 0.9);
+			
+			#content {
+				background-color: transparent;
+			}
 		}
 	}
 }
 
-#personal-mylesb-ca {
-	h1, p.lead { font-family: 'Josefin Sans', @sansFontFamily; }
-}
-
-#bcorp-mylesb-ca {
-	h1, p.lead { font-family: 'Francois One', @sansFontFamily; }
-}
-
-#miys-mylesb-ca {
-	h1, p.lead { font-family: Futura, @sansFontFamily; }
+@media (max-width: @screen-tiny) {
+	
+	.container {
+		.row {
+			
+			#photo, #content {
+				.make-column(12);
+			}
+			
+			#photo {
+				img {
+					.center-block;
+					.text-center;
+				}
+			}
+	
+			#content {
+				h1, p.lead {
+					.text-center;
+				}
+			}
+			
+		}
+	}
 }

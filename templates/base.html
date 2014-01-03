@@ -42,18 +42,18 @@
 		<div class="container" itemscope itemtype="http://schema.org/Person">
 			<div class="row">
 				{% block page %}
-				<div class="col-lg-2 col-offset-2" id="photo">
+				<div id="photo">
 					{% block page_left %}{% endblock page_left %}
 				</div> <!-- .col-lg-4 -->
 				
-				<div class="col-lg-6" id="content">
+				<div id="content">
 					{% block page_right %}{% endblock page_right %}
 				</div> <!-- .col-lg-6 -->
 				{% endblock page %}
 			</div> <!-- .row -->
 		</div> <!-- .container -->
 		
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
 		<!-- <script src="{{ static_url }}/js/bootstrap.js"></script> -->
 		{% block extra_body %}{% endblock extra_body %}
 	</body>
