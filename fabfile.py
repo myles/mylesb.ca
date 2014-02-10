@@ -10,7 +10,7 @@ from fabric.api import env, puts, local, task, hosts, execute, runs_once
 
 from jinja2 import Environment, FileSystemLoader
 
-env.hosts = ['nfs-myles-myles', 'panda',]
+env.hosts = ['nfs-myles-myles', 'panda', 'webfaction']
 env.use_ssh_config = True
 env.output_path = os.path.abspath('./_output/')
 env.site_path = os.path.abspath('./site/')
@@ -75,7 +75,7 @@ def compile_css():
 @hosts('localhost')
 def copy_static_dir():
     local("mkdir -p %s/static/img/" % env.output_path)
-    local("cp %s/img/* %s/static/img/" % (env.static_path, env.output_path))
+    local("cp -r %s/img/* %s/static/img/" % (env.static_path, env.output_path))
     
     compile_js()
     compile_css()
@@ -88,9 +88,9 @@ def copy_htaccess():
 def clean():
     local("rm -fr %s/*" % env.output_path)
 
-@task(aliases=['build', 'build_html'])
+@task
 @hosts('localhost')
-def build_site():
+def build():
     clean()
     local("mkdir -p %s" % env.output_path)
     render_site()
@@ -129,7 +129,7 @@ def deploy_webfaction():
 @task
 @runs_once
 def deploy():
-    build_site()
+    build()
     execute(deploy_panda)
     execute(deploy_nfs)
     execute(deploy_webfaction)
