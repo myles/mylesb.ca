@@ -72,17 +72,23 @@ h1 { margin: 0; }
 					display: inline-block;
 					width: 32px;
 					height: 32px;
-					text-indent: 100%;
-					white-space: nowrap;
-					overflow: hidden;
+					.hide-text();
+					
+					&:hover {
+						background-color: @link-color;
+						.border-top-radius(5px);
+						.border-right-radius(5px);
+						.border-bottom-radius(5px);
+						.border-left-radius(5px);
+					}
 				}
 				
-				.sn-appnet { background-image: url(../img/social-icons/appdotnet.png); }
-				.sn-facebook { background-image: url(../img/social-icons/facebook.png); }
-				.sn-flickr { background-image: url(../img/social-icons/flickr.png); }
-				.sn-gplus { background-image: url(../img/social-icons/googleplus.png); }
-				.sn-tumblr { background-image: url(../img/social-icons/tumblr.png); }
-				.sn-twitter { background-image: url(../img/social-icons/twitter.png); }
+				.sn-appnet { .img-retina('../img/social-icons/appdotnet.png', '../img/social-icons/appdotnet-2x.png', 32, 32); }
+				.sn-facebook { .img-retina('../img/social-icons/facebook.png', '../img/social-icons/facebook-2x.png', 32, 32) }
+				.sn-flickr { .img-retina('../img/social-icons/flickr.png', '../img/social-icons/flickr-2x.png', 32, 32) }
+				.sn-gplus { .img-retina('../img/social-icons/googleplus.png', '../img/social-icons/googleplus-2x.png', 32, 32) }
+				.sn-tumblr { .img-retina('../img/social-icons/tumblr.png', '../img/social-icons/tumblr-2x.png', 32, 32) }
+				.sn-twitter { .img-retina('../img/social-icons/twitter.png', '../img/social-icons/twitter-2x.png', 32, 32) }
 				
 			}
 			
@@ -90,6 +96,17 @@ h1 { margin: 0; }
 				white-space: normal;
 			}
 		}
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+	ul#social-networks {
+		.sn-appnet { background-image: url(); }
+		.sn-facebook { background-image: url(../img/social-icons/facebook-2x.png); }
+		.sn-flickr { background-image: url(../img/social-icons/flickr-2x.png); }
+		.sn-gplus { background-image: url(../img/social-icons/googleplus-2x.png); }
+		.sn-tumblr { background-image: url(../img/social-icons/tumblr-2x.png); }
+		.sn-twitter { background-image: url(../img/social-icons/twitter-2x.png); }
 	}
 }
 
