@@ -81,6 +81,8 @@ def copy_static_dir():
     compile_css()
     
     local("cp %s/js/sjcl.js %s/static/js/" % (env.static_path, env.output_path))
+	
+	local("cp -r %s/uploads/* %s/static/uploads/"  % (env.static_path, env.output_path))
 
 def copy_htaccess():
     local ("cp %s/htaccess.htaccess %s/.htaccess" % (env.site_path, env.output_path))
