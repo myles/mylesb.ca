@@ -134,5 +134,5 @@ def deploy():
     build()
     execute(deploy_panda)
     execute(deploy_nfs)
-    execute(deploy_webfaction)
+    # execute(deploy_webfaction)
 
