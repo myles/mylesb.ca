@@ -1,7 +1,25 @@
 @import "bootstrap/bootstrap.less";
 
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
-@import url(http://fonts.googleapis.com/css?family=Francois+One);
+@font-face {
+	font-family: 'Josefin Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Josefin Sans'), local('JosefinSans'), url(../fonts/Josefin_Sans/JosefinSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Josefin Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(../fonts/Josefin_Sans/JosefinSans-Bold.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Francois One';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Francois One Regular'), local('FrancoisOne-Regular'), url(../fonts/Francois_One/FrancoisOne.ttf) format('truetype');
+}
 
 @font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 /* @font-size-base: 16px; */
@@ -39,21 +57,11 @@ h1 { margin: 0; }
 			.make-md-column-offset(2);
 			
 			img {
-				.img-thumbnail;
+				.img-thumbnail();
 			}
 			
 			[class^="avatar-"] {
 				.img-thumbnail();
-				width: 100px;
-				height: 100px;
-			}
-			
-			.avatar-personal {
-				background-image: url(../img/avatar-small.png);
-			}
-			
-			.avatar-suite {
-				background-image: url(../img/avatar-suite.png);
 			}
 		}
 
@@ -115,6 +123,37 @@ h1 { margin: 0; }
 	}
 }
 
+@media (max-width: @screen-xs-max) {
+	.container {
+		.row {
+			
+			#photo {
+				[class^="avatar-"] {
+					.center-block;
+					.text-center;
+					width: 500px;
+					height: 500px;
+				}
+			
+				.avatar-personal {
+					.img-retina('../img/avatar/default/500.png', '../img/avatar/default/500-x2.png', 500px, 500px);
+				}
+			
+				.avatar-suite {
+					.img-retina('../img/avatar/suit/500.png', '../img/avatar/suit/500-x2.png', 500px, 500px);
+				}
+			}
+	
+			#content {
+				h1, p.lead {
+					.text-center;
+				}
+			}
+			
+		}
+	}
+}
+
 @media (min-width: @screen-xs-min) and (max-width: @screen-sm-max) {
 	html {
 		background: url(../img/skyline/sm.jpg) no-repeat center center fixed;
@@ -129,8 +168,17 @@ h1 { margin: 0; }
 			
 			margin-bottom: 1em;
 			
-			img, [class^="avatar-"] {
-				.center-block();
+			[class^="avatar-"] {
+				width: 500px;
+				height: 500px;
+			}
+			
+			.avatar-personal {
+				.img-retina('../img/avatar/default/500.png', '../img/avatar/default/500-x2.png', 500px, 500px);
+			}
+			
+			.avatar-suite {
+				.img-retina('../img/avatar/suit/500.png', '../img/avatar/suit/500-x2.png', 500px, 500px);
 			}
 		}
 		
@@ -149,6 +197,44 @@ h1 { margin: 0; }
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
+	}
+	
+	.container .row {
+		#photo {
+			[class^="avatar-"] {
+				width: 164px;
+				height: 164px;
+			}
+			
+			.avatar-personal {
+				.img-retina('../img/avatar/default/164.png', '../img/avatar/default/164-x2.png', 164px, 164px);
+			}
+			
+			.avatar-suite {
+				.img-retina('../img/avatar/suit/164.png', '../img/avatar/suit/164-x2.png', 164px, 164px);
+			}
+		}
+	}
+}
+
+@media (min-width: @screen-md-min) {
+	.container .row {
+		#photo {
+			[class^="avatar-"] {
+				.pull-right();
+				
+				width: 200px;
+				height: 200px;
+			}
+			
+			.avatar-personal {
+				.img-retina('../img/avatar/default/200.png', '../img/avatar/default/200-x2.png', 200px, 200px);
+			}
+			
+			.avatar-suite {
+				.img-retina('../img/avatar/suit/200.png', '../img/avatar/suit/200-x2.png', 200px, 200px);
+			}
+		}
 	}
 }
 
@@ -169,30 +255,5 @@ h1 { margin: 0; }
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
-	}
-}
-
-@media (min-width: @screen-md-min) {
-	#photo img { .pull-right; }
-}
-
-@media (max-width: @screen-xs-max) {
-	.container {
-		.row {
-			
-			#photo {
-				img, [class^="avatar-"] {
-					.center-block;
-					.text-center;
-				}
-			}
-	
-			#content {
-				h1, p.lead {
-					.text-center;
-				}
-			}
-			
-		}
 	}
 }
