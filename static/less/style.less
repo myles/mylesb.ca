@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Francois+One);
 
-@sansFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 /* @font-size-base: 16px; */
 
 @component-offset-horizontal: 140px;
@@ -13,15 +13,15 @@ body {
 	background-color: transparent;
 	
 	&#personal-mylesb-ca {
-		h1, p.lead { font-family: 'Josefin Sans', @sansFontFamily; }
+		h1, p.lead { font-family: 'Josefin Sans', @font-family-sans-serif; }
 	}
 
 	&#bcorp-mylesb-ca {
-		h1, p.lead { font-family: 'Francois One', @sansFontFamily; }
+		h1, p.lead { font-family: 'Francois One', @font-family-sans-serif; }
 	}
 
 	&#miys-mylesb-ca {
-		h1, p.lead { font-family: Futura, @sansFontFamily; }
+		h1, p.lead { font-family: Futura, @font-family-sans-serif; }
 	}
 }
 
@@ -34,8 +34,9 @@ h1 { margin: 0; }
 		padding: 20px 0;
 		
 		#photo {
-			.make-column(2);
-			.make-column-offset(2);
+			.make-sm-column(4);
+			.make-md-column(2);
+			.make-md-column-offset(2);
 			
 			img {
 				.img-thumbnail;
@@ -43,7 +44,8 @@ h1 { margin: 0; }
 		}
 
 		#content {
-			.make-column(6);
+			.make-sm-column(8);
+			.make-md-column(6);
 			
 			padding: 1em;
 			background-color: rgba(255, 255, 255, 0.9);
@@ -99,42 +101,7 @@ h1 { margin: 0; }
 	}
 }
 
-@media (min-width: @screen-small) and (max-width: @screen-medium) {
-	html {
-		background: url(../img/skyline-medium.jpg) no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
-}
-
-@media (min-width: @screen-medium) and (max-width: @screen-large) {
-	html {
-		background: url(../img/skyline-large.jpg) no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
-}
-
-@media (min-width: @screen-large) {
-	html {
-		background: url(../img/skyline.jpg) no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
-}
-
-@media (min-width: @screen-medium) {
-	#photo img { .pull-right; }
-	dl#contact-info { .dl-horizontal; }
-}
-
-@media (min-width: @screen-tiny) and (max-width: @screen-small-max) {
+@media (min-width: @screen-xs-min) and (max-width: @screen-sm-max) {
 	html {
 		background: url(../img/skyline-small.jpg) no-repeat center center fixed;
 		-webkit-background-size: cover;
@@ -161,14 +128,44 @@ h1 { margin: 0; }
 	}
 }
 
-@media (max-width: @screen-tiny) {
+@media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+	html {
+		background: url(../img/skyline-medium.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-lg) {
+	html {
+		background: url(../img/skyline-large.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+
+@media (min-width: @screen-lg-min) {
+	html {
+		background: url(../img/skyline.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+
+@media (min-width: @screen-md-min) {
+	#photo img { .pull-right; }
+}
+
+@media (max-width: @screen-xs-max) {
 	
 	.container {
 		.row {
-			
-			#photo, #content {
-				.make-column(12);
-			}
 			
 			#photo {
 				img {
