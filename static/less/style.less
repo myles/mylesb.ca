@@ -134,19 +134,28 @@ h1 { margin: 0; }
 	dl#contact-info { .dl-horizontal; }
 }
 
-@media (max-width: @screen-small-max) {
+@media (min-width: @screen-tiny) and (max-width: @screen-small-max) {
+	html {
+		background: url(../img/skyline-small.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
 	
-	body { padding-top: 0; }
-	
-	.container {
-		.row {
-			margin: 0;
-			padding: 0;
+	.container .row {
+		#photo {
 			
-			background-color: rgba(255, 255, 255, 0.9);
+			margin-bottom: 1em;
 			
-			#content {
-				background-color: transparent;
+			img {
+				.center-block();
+			}
+		}
+		
+		#content {
+			h1, p.lead {
+				.text-center;
 			}
 		}
 	}
