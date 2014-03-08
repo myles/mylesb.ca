@@ -207,9 +207,9 @@ h1 { margin: 0; }
 	
 	.container .row {
 		#photo {
+			@avatar-medium-size: 164px - @grid-gutter-width;
+			
 			[class^="avatar-"] {
-				@avatar-medium-size: 164px - @grid-gutter-width;
-				
 				width: @avatar-medium-size;
 				height: @avatar-medium-size;
 				background-size: @avatar-medium-size @avatar-medium-size;
@@ -218,11 +218,11 @@ h1 { margin: 0; }
 			}
 			
 			.avatar-personal {
-				.img-retina('../img/avatar/default/164.png', '../img/avatar/default/164-x2.png', 164px, 164px);
+				.img-retina('../img/avatar/default/164.png', '../img/avatar/default/164-x2.png', @avatar-medium-size, @avatar-medium-size);
 			}
 			
 			.avatar-suite {
-				.img-retina('../img/avatar/suit/164.png', '../img/avatar/suit/164-x2.png', 164px, 164px);
+				.img-retina('../img/avatar/suit/164.png', '../img/avatar/suit/164-x2.png', @avatar-medium-size, @avatar-medium-size);
 			}
 		}
 	}
@@ -231,9 +231,9 @@ h1 { margin: 0; }
 @media (min-width: @screen-md-min) {
 	.container .row {
 		#photo {
+			@avatar-large-size: 200px - @grid-gutter-width;
+			
 			[class^="avatar-"] {
-				@avatar-large-size: 200px - @grid-gutter-width;
-				
 				width: @avatar-large-size;
 				height: @avatar-large-size;
 				background-size: @avatar-large-size @avatar-large-size;
@@ -242,11 +242,11 @@ h1 { margin: 0; }
 			}
 			
 			.avatar-personal {
-				.img-retina('../img/avatar/default/200.png', '../img/avatar/default/200-x2.png', 200px, 200px);
+				.img-retina('../img/avatar/default/200.png', '../img/avatar/default/200-x2.png', @avatar-large-size, @avatar-large-size);
 			}
 			
 			.avatar-suite {
-				.img-retina('../img/avatar/suit/200.png', '../img/avatar/suit/200-x2.png', 200px, 200px);
+				.img-retina('../img/avatar/suit/200.png', '../img/avatar/suit/200-x2.png', @avatar-large-size, @avatar-large-size);
 			}
 		}
 	}
