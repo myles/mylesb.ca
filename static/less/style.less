@@ -62,6 +62,7 @@ h1 { margin: 0; }
 			
 			[class^="avatar-"] {
 				.img-thumbnail();
+                background-position: center center;
 			}
 		}
 
@@ -124,23 +125,28 @@ h1 { margin: 0; }
 }
 
 @media (max-width: @screen-xs-max) {
+	body {
+		padding-top: 0;
+	}
+	
 	.container {
 		.row {
+			padding-top: 0;
+			margin-top: 0;
 			
 			#photo {
 				[class^="avatar-"] {
 					.center-block;
-					.text-center;
-					width: 500px;
-					height: 500px;
+					width: 400px;
+					height: 400px;
 				}
 			
 				.avatar-personal {
-					.img-retina('../img/avatar/default/500.png', '../img/avatar/default/500-x2.png', 500px, 500px);
+					.img-retina('../img/avatar/default/400.png', '../img/avatar/default/400-x2.png', 400px, 400px);
 				}
 			
 				.avatar-suite {
-					.img-retina('../img/avatar/suit/500.png', '../img/avatar/suit/500-x2.png', 500px, 500px);
+					.img-retina('../img/avatar/suit/400.png', '../img/avatar/suit/400-x2.png', 400px, 400px);
 				}
 			}
 	
@@ -169,16 +175,16 @@ h1 { margin: 0; }
 			margin-bottom: 1em;
 			
 			[class^="avatar-"] {
-				width: 500px;
-				height: 500px;
+				width: 256px;
+				height: 256px;
 			}
 			
 			.avatar-personal {
-				.img-retina('../img/avatar/default/500.png', '../img/avatar/default/500-x2.png', 500px, 500px);
+				.img-retina('../img/avatar/default/256.png', '../img/avatar/default/256-x2.png', 256px, 256px);
 			}
 			
 			.avatar-suite {
-				.img-retina('../img/avatar/suit/500.png', '../img/avatar/suit/500-x2.png', 500px, 500px);
+				.img-retina('../img/avatar/suit/256.png', '../img/avatar/suit/256-x2.png', 256px, 256px);
 			}
 		}
 		
@@ -202,8 +208,13 @@ h1 { margin: 0; }
 	.container .row {
 		#photo {
 			[class^="avatar-"] {
-				width: 164px;
-				height: 164px;
+				@avatar-medium-size: 164px - @grid-gutter-width;
+				
+				width: @avatar-medium-size;
+				height: @avatar-medium-size;
+				background-size: @avatar-medium-size @avatar-medium-size;
+				
+				.pull-right();
 			}
 			
 			.avatar-personal {
@@ -221,10 +232,13 @@ h1 { margin: 0; }
 	.container .row {
 		#photo {
 			[class^="avatar-"] {
-				.pull-right();
+				@avatar-large-size: 200px - @grid-gutter-width;
 				
-				width: 200px;
-				height: 200px;
+				width: @avatar-large-size;
+				height: @avatar-large-size;
+				background-size: @avatar-large-size @avatar-large-size;
+				
+				.pull-right();
 			}
 			
 			.avatar-personal {

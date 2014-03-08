@@ -36,25 +36,20 @@
 		
 		{% block extra_head %}{% endblock extra_head %}
 	</head>
-	
 	<body id="{% block body_id %}mylesb-ca{% endblock %}">
-		
 		<div class="container" itemscope itemtype="http://schema.org/Person">
 			<div class="row">
 				{% block page %}
 				<div id="photo">
 					{% block page_left %}{% endblock page_left %}
-				</div> <!-- .col-lg-4 -->
+				</div>
 				
 				<div id="content">
 					{% block page_right %}{% endblock page_right %}
-				</div> <!-- .col-lg-6 -->
+				</div>
 				{% endblock page %}
-			</div> <!-- .row -->
-		</div> <!-- .container -->
-		
-		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
-		<!-- <script src="{{ static_url }}/js/bootstrap.js"></script> -->
+			</div>
+		</div>
 		{% block extra_body %}{% endblock extra_body %}
 	</body>
 </html>

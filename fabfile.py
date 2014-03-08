@@ -82,8 +82,8 @@ def copy_static_dir():
     
     local("cp %s/js/sjcl.js %s/static/js/" % (env.static_path, env.output_path))
     
-	local("cp -r %s/fonts %s/static/" % (env.static_path, env.output_path))
-	
+    local("cp -r %s/fonts %s/static/" % (env.static_path, env.output_path))
+    
     local("cp -r %s/uploads %s/static/"  % (env.static_path, env.output_path))
 
 def copy_htaccess():
