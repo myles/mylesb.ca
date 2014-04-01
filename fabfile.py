@@ -94,6 +94,11 @@ def clean():
 
 @task
 @hosts('localhost')
+def export_gpg_public_key():
+	local("gpg --armor --export me@mylesbraithwaite.com > %s" % os.path.join(env.static_path, 'uploads/5A2FE7BF.asc'))
+
+@task
+@hosts('localhost')
 def build():
     clean()
     local("mkdir -p %s" % env.output_path)
