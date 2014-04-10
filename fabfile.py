@@ -6,7 +6,7 @@ from glob import glob
 from tempfile import tempdir
 
 from fabric.contrib.project import rsync_project
-from fabric.api import env, puts, local, task, hosts, execute, runs_once
+from fabric.api import env, puts, local, task, hosts, execute, runs_once, put, sudo
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -20,6 +20,7 @@ env.output_path = os.path.abspath('./_output/')
 env.site_path = os.path.abspath('./site/')
 env.static_path = os.path.abspath('./static/')
 env.template_path = os.path.abspath('./templates/')
+env.etc_path = os.path.abspath('./etc/')
 env.template_context = {
 	'site_url': 'http://mylesb.ca/',
 	'static_url': '/static',
@@ -39,16 +40,17 @@ def render(template, destination, **kwargs):
 		output.write(text.encode("utf-8"))
 
 def render_site():
-	file_types = ('**.html', '**.txt', '**.xml')
+	file_types = ('.html', '.txt', '.xml')
 	
-	files_grabbed = []
-	
-	for file_type in file_types:
-		files_grabbed.extend(glob("%s/%s" % (env.site_path, file_type)))
-	
-	for template in files_grabbed:
-		filename = os.path.basename(template)
-		render(filename, os.path.join(env.output_path, filename))
+	for root, dirs, docs in os.walk(env.site_path):
+		for directory in dirs:
+			directory = os.path.join(root, directory).replace(env.site_path, env.output_path)
+			local('mkdir -p %s' % directory)
+		
+		for doc in docs:
+			if doc.endswith(file_types):
+				doc_loc = os.path.join(root, doc).replace(env.site_path + '/', '')
+				render(doc_loc, os.path.join(env.output_path, doc_loc))
 
 def compile_js():
 	local("mkdir -p %s/static/js/" % env.output_path)
@@ -146,3 +148,13 @@ def deploy():
 	execute(deploy_panda)
 	execute(deploy_nfs)
 	# execute(deploy_webfaction)
+
+@task
+@hosts('panda')
+def update_nginx_config():
+	put(
+		local_path = os.path.join(env.etc_path, 'nginx.conf'),
+		remote_path = '/etc/nginx/sites-available/ca_mylesb_www',
+		use_sudo = True
+	)
+	sudo('/etc/init.d/nginx restart')

@@ -1,0 +1,64 @@
+==================================================================
+https://keybase.io/myles
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://mylesb.ca
+  * I am myles (https://keybase.io/myles) on keybase.
+  * I have a public key with fingerprint 45A5 ED20 B8E8 06FD 8CF8  ED1E 6A4C E837 5A2F E7BF
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "45a5ed20b8e806fd8cf8ed1e6a4ce8375a2fe7bf",
+            "host": "keybase.io",
+            "key_id": "6A4CE8375A2FE7BF",
+            "uid": "c98030d0d6b81c09fd2673bcd5e0fd00",
+            "username": "myles"
+        },
+        "service": {
+            "hostname": "mylesb.ca",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1397158318,
+    "expire_in": 157680000,
+    "prev": "73e21d404731965e560ea91e9c7b291df04bc68ea2aaa33d405de64f7bf18d13",
+    "seqno": 6,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFNUVtIFFEYnlU3y+iCPkSkG81DESw6l53bVtpqKy3VFkkFlrvN5Yw7qTu7M+um
+mIESaAW6hBWGsQ+ilGCJaJBiFqyV+FJaD1phJWKgZiVKomhnpKDzcjjf7f//80e2
+xCNxpkvHvzH5GVP9pqHn0wKSl/vzUQUqqFI5aq9Ai8D6JSv+QqAFNMUfQu2ojeIp
+IBGYwAIWo2WJFWUWSDigeZsIWJKheEIGjCCjVtSn6oYDxgi8DtIVFWLw4VUkiNIO
+W47T0DuIXCeTnQu50nVC5FiMxCRMogUWFzFOlgiaIQVRogAmSxhmCHWg+fkSANUl
+5cVARyutKITCigiMho26/9NCushDV0BTQ6qoFkPYFwoF7IYrVB4wZJeB4P0b4BUU
+vwQnhoYw0HRF9aN2HCrFkGIk4iTH4BRL4qwVBWUBRQNexVBQDM1i8BhlQBhGMiQg
+cMmG2RgS52gKUDQGeA4HnMgIBIdLMmYTRJoFPMHzPElCJSUB2ibDr8NZCSdRY6Sg
+X0XtNGyTL4SRulLo50OlGkArr5tSExBTHLLBHGfsDEnatP3fJluWElepsTdtBb+G
+E6fY+JGC+sxosLbro4upXbmVYkl7vXc60zWfevBhxs0XDW0LW9uL58KxL91jFHLl
+87G5XeOzzVnmyZOeGe/yjpyu0pr6vuiJ2NUPwcUj1WWdsnlzoOp966egp/376IPB
+jWvXHs9iF6nlZGf31xtzyJnT2r1B1oKcP7tzsd+60OPwvWytqao+nF827Inc7+78
+PfFuJNK4Nhnjx53LTfMOIrgYGW1wv13a7TlqfhJ92liXgq82n8paeuV+ltxb1GOv
+vLASTrLIvQOOCXdCR96e2249StpdsR9DTfvd+w7NT1kCHTMtvvY+1926NDn7Tomr
+/8C5bQP6Hw==
+=Nlnl
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/myles
+
+==================================================================
