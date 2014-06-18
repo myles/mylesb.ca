@@ -102,6 +102,7 @@ def clean():
 @hosts('localhost')
 def export_gpg_public_key():
 	local("gpg --armor --export me@mylesbraithwaite.com > %s" % os.path.join(env.static_path, 'uploads/5A2FE7BF.asc'))
+	local("gpg --armor --export mbraithwaite@braithwaite.ca > %s" % os.path.join(env.static_path, 'uploads/72C89F91.asc'))
 
 @task
 @hosts('localhost')
