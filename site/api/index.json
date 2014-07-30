@@ -1,0 +1,40 @@
+{
+	"@context": "http://schema.org",
+	"@type": "Person",
+	
+	"name": "Myles Braithwaite",
+	"alternateName": "Myles B.",
+	
+	"givenName": "Myles",
+	"additionalName": "Alden",
+	"familyName": "Braithwaite",
+	
+	"email": "mailto:me@mylesb.ca",
+	
+	"nationality": "Canadian",
+	"gender": "Guy",
+	
+	"address": {
+		"@type": "PostalAddress",
+		
+		"addressLocality": "Toronto",
+		"addressRegion": "ON"
+	},
+	
+	"worksFor": {
+		"@type": "Organization",
+		
+		"name": "Monkey in your Soul",
+		
+		"email": "mailto:myles@monkeyinyoursoul.com",
+		
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Toronto",
+			"addressRegion": "ON"
+		}
+	},
+	
+	"sameAs": "http://mylesbraithwaite.com/about/",
+	"image": "http://mylesb.ca/static/img/avatar/hipster/400.png"
+}

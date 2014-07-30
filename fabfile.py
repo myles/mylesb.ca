@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import json
 import datetime
 from glob import glob
 from tempfile import tempdir
@@ -13,7 +14,6 @@ from jinja2 import Environment, FileSystemLoader
 env.hosts = [
 	'nfs-myles-myles',
 	'panda',
-	# 'webfaction',
 ]
 env.use_ssh_config = True
 env.output_path = os.path.abspath('./_output/')
@@ -35,12 +35,15 @@ def render(template, destination, **kwargs):
 	
 	text = jenv.get_template(template).render(params)
 	
+	if template.endswith('.json'):
+		text = json.dumps(json.loads(text.encode("utf-8")), sort_keys=True)
+	
 	with open(destination, "w") as output:
 		puts("Rendering: {} to {}".format(template, destination))
 		output.write(text.encode("utf-8"))
 
 def render_site():
-	file_types = ('.html', '.txt', '.xml')
+	file_types = ('.html', '.txt', '.xml', '.json')
 	
 	for root, dirs, docs in os.walk(env.site_path):
 		for directory in dirs:
@@ -132,23 +135,12 @@ def deploy_panda():
 		extra_opts='--exclude=".DS_Store"'
 	)
 
-@hosts('webfaction')
-def deploy_webfaction():
-	env.user = 'myles'
-	rsync_project(
-		local_dir=env.output_path + "/",
-		remote_dir='/home/myles/webapps/myles',
-		delete=True,
-		extra_opts='--exclude=".DS_Store"'
-	)
-
 @task
 @runs_once
 def deploy():
 	build()
 	execute(deploy_panda)
 	execute(deploy_nfs)
-	# execute(deploy_webfaction)
 
 @task
 @hosts('panda')
