@@ -1,5 +1,6 @@
 @img-assets-dir: "/static/img/";
 
+/* Social Network Icons */
 @icon-dir: "@{img-assets-dir}icons/";
 @icon-app-net-hash: "44d0c989a20065bcfc8d1f11306ebfc0";
 @icon-facebook-hash: "68eb3b29e205780a9da02e48be7a4c23";
@@ -8,6 +9,7 @@
 @icon-tumblr-hash: "92929918995ae6c02acf3c833540253b";
 @icon-twitter-hash: "2766261fd348db216869dfd0743149a6";
 
+/* Avatars */
 @avatar-dir: "@{img-assets-dir}avatar/";
 
 @hipster-avatar-dir: "@{avatar-dir}hipster/";
@@ -15,8 +17,13 @@
 
 @default-avatar-dir: @hipster-avatar-dir;
 
-@background-dir: "@{img-assets-dir}skyline/";
-@background-org: "@{background-dir}org.jpg";
-@background-lg: "@{background-dir}lg.jpg";
-@background-md: "@{background-dir}md.jpg";
-@background-sm: "@{background-dir}sm.jpg";
+/* Backgrounds */
+@backgrounds-dir: "@{img-assets-dir}backgrounds/";
+@skyline-background-dir: "@{backgrounds-dir}skyline/";
+
+@default-background-dir: @skyline-background-dir;
+
+@background-org: "@{default-background-dir}org.jpg";
+@background-lg: "@{default-background-dir}lg.jpg";
+@background-md: "@{default-background-dir}md.jpg";
+@background-sm: "@{default-background-dir}sm.jpg";
