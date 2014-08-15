@@ -10,7 +10,7 @@ url: "http://mylesb.ca/"
 destination: ./_site
 static_dir: ./_static
 etc_dir: ./_etc
-include: [".htaccess", ".well-known/"]
+include: [".htaccess", ".well-known/keybase.txt"]
 exclude: ["README.md", "fabfile.py", "fabfile.pyc"]
 
 # Build settings
