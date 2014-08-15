@@ -1,0 +1,20 @@
+# Site settings
+title: Myles B.
+author: Myles Braithwaite
+email: me@mylesbraithwaite.com
+description: "Hoping for the Best, Imagining the Worst."
+baseurl: ""
+url: "http://mylesb.ca/"
+
+# Global Configuration
+source: ./_src
+destination: ./_site
+plugins: ./_plugins
+layouts: ./_layouts
+data_source: ./_data
+static_dir: ./_static
+etc_dir: ./_etc
+
+# Build settings
+markdown: kramdown
+permalink: pretty

@@ -1,18 +1,15 @@
-{% extends "base.html" %}
+---
+layout: page
+robots: "noindex, follow"
+body_id: gpg
+title: GPG Public Key
+---
 
-{% block meta_robots %}noindex, nofollow{% endblock meta_robots %}
+You can [download my GPG Public Key](/static/uploads/5A2FE7BF.asc "Myles Braithwaite's GPG Public Key") which has the fingerprint `45A5 ED20 B8E8 06FD 8CF8  ED1E 6A4C E837 5A2F E7BF`.
 
-{% block body_id %}gpg-{{ super() }}{% endblock %}
+## Proof of Identity
 
-{% block page %}
-<div class="col-lg-6 col-offset-4" id="content">
-<h2>GPG Public Key</h2>
-
-<p>You can <a href="/static/uploads/5A2FE7BF.asc" title="Myles Braithwaite's GPG Public Key">download my GPG Public Key</a> which has the fingerprint <code>45A5 ED20 B8E8 06FD 8CF8  ED1E 6A4C E837 5A2F E7BF</code>.</p>
-
-<h3>Proof of identity</h3>
-
-<pre>
+{% highlight %}
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
@@ -33,6 +30,4 @@ bj+JUPnYclBVVxiVVrlE4Wpco8Egw+K81jWf5F33d7ErA1M99ebOkwtAXxqkzv3w
 vWGDFoCjDvLD1jK7vjxPcYf1O1mZCcJZuBqq7pKqZtnZwbLOJGCQOEfC37N6f6c=
 =G0wx
 -----END PGP SIGNATURE-----
-</pre>
-{% endblock %}
-</div>
+{% endhighlight %}

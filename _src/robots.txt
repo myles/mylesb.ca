@@ -1,2 +1,5 @@
+---
+layout: nil
+---
 User-agent: *
 Allow: /

@@ -1,3 +1,6 @@
+---
+layout: nil
+---
 /*
     The Humans Responsible & Colophon
     <http://humanstxt.org/>
