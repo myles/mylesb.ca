@@ -20,12 +20,6 @@ env.output_path = os.path.abspath(env.config['destination'])
 env.static_path = os.path.abspath(env.config['static_dir'])
 env.etc_path = os.path.abspath(env.config['etc_dir'])
 
-env.template_context = {
-	'site_url': 'http://mylesb.ca/',
-	'static_url': '/static',
-	'now': datetime.datetime.now()
-}
-
 def compile_js():
 	local("mkdir -p %s/static/js/" % env.output_path)
 	local("""cat %(static_path)s/js/bootstrap/transition.js \

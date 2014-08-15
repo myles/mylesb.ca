@@ -7,7 +7,6 @@ baseurl: ""
 url: "http://mylesb.ca/"
 
 # Global Configuration
-source: ./_src
 destination: ./_site
 plugins: ./_plugins
 layouts: ./_layouts
