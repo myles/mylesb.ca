@@ -8,12 +8,10 @@ url: "http://mylesb.ca/"
 
 # Global Configuration
 destination: ./_site
-plugins: ./_plugins
-layouts: ./_layouts
-data_source: ./_data
 static_dir: ./_static
 etc_dir: ./_etc
+include: [".htaccess", ".well-known/"]
+exclude: ["README.md", "fabfile.py", "fabfile.pyc"]
 
 # Build settings
 markdown: kramdown
-permalink: pretty

@@ -71,14 +71,13 @@ def export_gpg_public_key():
 def build():
 	clean()
 	local("mkdir -p %s" % env.output_path)
-	copy_static_dir()
 	jekyll('build')
+	copy_static_dir()
 
 @task
 @hosts('localhost')
 def run():
 	local("mkdir -p %s" % env.output_path)
-	copy_static_dir()
 	jekyll('serve --watch')
 
 @hosts('nfs-myles-myles')
