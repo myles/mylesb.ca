@@ -107,6 +107,12 @@ def deploy():
 	execute(deploy_nfs)
 
 @task
+@hosts('localhost')
+def deploy_local():
+	build()
+	local("rsync --delete -pthrvz --exclude='.DS_Store' %(output_path)s/ /srv/www/ca_mylesb_www/html" % env)
+
+@task
 @hosts('panda')
 def update_nginx_config():
 	put(

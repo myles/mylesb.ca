@@ -1,23 +1,29 @@
 ---
-layout: nil
+layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
-		<loc>http://mylesb.ca/</loc>
-		<lastmod>{{ now.strftime('%Y-%m-%d') }}</lastmod>
+		<loc>{{ site.baseurl | prepend: site.url }}</loc>
+		<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
 		<changefreq>always</changefreq>
 	</url>
 
 	<url>
-		<loc>http://mylesb.ca/miys.html</loc>
-		<lastmod>{{ now.strftime('%Y-%m-%d') }}</lastmod>
+		<loc>{{ 'miys.html' | prepend: site.baseurl | prepend: site.url }}</loc>
+		<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
 		<changefreq>always</changefreq>
 	</url>
 	
 	<url>
-		<loc>http://mylesb.ca/b-corp.html</loc>
-		<lastmod>{{ now.strftime('%Y-%m-%d') }}</lastmod>
+		<loc>{{ 'b-corp.html' | prepend: site.baseurl | prepend: site.url }}</loc>
+		<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+		<changefreq>always</changefreq>
+	</url>
+	
+	<url>
+		<loc>{{ 'gpg.html' | prepend: site.baseurl | prepend: site.url }}</loc>
+		<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
 		<changefreq>always</changefreq>
 	</url>
 </urlset>
