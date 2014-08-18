@@ -16,12 +16,12 @@ env.hosts = [
 	'panda',
 ]
 
-env.output_path = os.path.abspath(env.config['destination'])
-env.static_path = os.path.abspath(env.config['static_dir'])
-env.etc_path = os.path.abspath(env.config['etc_dir'])
+env.output_path = env.config['destination']
+env.static_path = env.config['static_dir']
+env.etc_path = env.config['etc_dir']
 
 def compile_js():
-	local("mkdir -p %s/static/js/" % env.output_path)
+	local("mkdir -p ./static/js/")
 	local("""cat %(static_path)s/js/bootstrap/transition.js \
 					%(static_path)s/js/bootstrap/alert.js \
 					%(static_path)s/js/bootstrap/button.js \
@@ -34,7 +34,7 @@ def compile_js():
 					%(static_path)s/js/bootstrap/scrollspy.js \
 					%(static_path)s/js/bootstrap/tab.js \
 					%(static_path)s/js/bootstrap/affix.js \
-					> %(output_path)s/static/js/bootstrap.js""" % {
+					> ./static/js/bootstrap.js""" % {
 	    'static_path': env.static_path,
 	    'output_path': env.output_path
 	})
@@ -42,23 +42,23 @@ def compile_js():
 @task
 @hosts('localhost')
 def compile_css():
-	local("mkdir -p %s/static/css/" % env.output_path)
-	local("lessc %s/less/style.less > %s/static/css/style.css" % (env.static_path, env.output_path))
+	local("mkdir -p static/css/")
+	local("lessc -x %s/less/style.less > static/css/style.css" % env.static_path)
 
 @task
 @hosts('localhost')
 def copy_static_dir():
-	local("mkdir -p %s/static/img/" % env.output_path)
-	local("cp -r %s/img/* %s/static/img/" % (env.static_path, env.output_path))
+	local("mkdir -p static/img/")
+	local("cp -r %s/img/* static/img/" % env.static_path)
 	
 	compile_js()
 	compile_css()
 	
-	local("cp %s/js/sjcl.js %s/static/js/" % (env.static_path, env.output_path))
+	local("cp %s/js/sjcl.js static/js/" % env.static_path)
 	
-	local("cp -r %s/fonts %s/static/" % (env.static_path, env.output_path))
+	local("cp -r %s/fonts static/" % env.static_path)
 	
-	local("cp -r %s/uploads %s/static/"  % (env.static_path, env.output_path))
+	local("cp -r %s/uploads static/"  % env.static_path)
 
 @task
 @hosts('localhost')
@@ -70,14 +70,14 @@ def export_gpg_public_key():
 @hosts('localhost')
 def build():
 	clean()
-	local("mkdir -p %s" % env.output_path)
-	jekyll('build')
 	copy_static_dir()
+	
+	jekyll('build')
 
 @task
 @hosts('localhost')
 def run():
-	local("mkdir -p %s" % env.output_path)
+	copy_static_dir()
 	jekyll('serve --watch')
 
 @hosts('nfs-myles-myles')
@@ -100,17 +100,17 @@ def deploy_panda():
 	)
 
 @task
+@hosts('localhost')
+def deploy_local():
+	build()
+	local("rsync --delete -pthrvz --exclude='.DS_Store' %(output_path)s/ /srv/www/ca_mylesb_www/html" % env)
+
+@task
 @runs_once
 def deploy():
 	build()
 	execute(deploy_panda)
 	execute(deploy_nfs)
-
-@task
-@hosts('localhost')
-def deploy_local():
-	build()
-	local("rsync --delete -pthrvz --exclude='.DS_Store' %(output_path)s/ /srv/www/ca_mylesb_www/html" % env)
 
 @task
 @hosts('panda')
@@ -132,4 +132,5 @@ def clean():
   """
   This will clean the site directory.
   """
+  local('rm -fr static/')
   local('rm -fr %s' % os.path.abspath(env.config['destination']))
