@@ -21,3 +21,22 @@ exclude:
 
 # Build settings
 markdown: kramdown
+
+# jekyll-assets
+assets:
+  dirname: static
+  baseurl: /static/
+  
+  sources:
+    - _static/less
+    - _static/js
+    - _vendor/bower/bootstrap/less
+    - _vendor/bower/bootstrap/js
+    - _vendor/bower/bootstrap/fonts
+    - _vendor/bower/jquery/dist
+    - _vendor/bower/sjcl
+  
+  js_compressor: null
+  css_compressor: null
+  cachebust: none
+  gzip: [ text/css, application/javascript ]

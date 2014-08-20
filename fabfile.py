@@ -20,46 +20,6 @@ env.output_path = env.config['destination']
 env.static_path = env.config['static_dir']
 env.etc_path = env.config['etc_dir']
 
-def compile_js():
-	local("mkdir -p ./static/js/")
-	local("""cat %(static_path)s/js/bootstrap/transition.js \
-					%(static_path)s/js/bootstrap/alert.js \
-					%(static_path)s/js/bootstrap/button.js \
-					%(static_path)s/js/bootstrap/carousel.js \
-					%(static_path)s/js/bootstrap/collapse.js \
-					%(static_path)s/js/bootstrap/dropdown.js \
-					%(static_path)s/js/bootstrap/modal.js \
-					%(static_path)s/js/bootstrap/tooltip.js \
-					%(static_path)s/js/bootstrap/popover.js \
-					%(static_path)s/js/bootstrap/scrollspy.js \
-					%(static_path)s/js/bootstrap/tab.js \
-					%(static_path)s/js/bootstrap/affix.js \
-					> ./static/js/bootstrap.js""" % {
-	    'static_path': env.static_path,
-	    'output_path': env.output_path
-	})
-
-@task
-@hosts('localhost')
-def compile_css():
-	local("mkdir -p static/css/")
-	local("lessc -x %s/less/style.less > static/css/style.css" % env.static_path)
-
-@task
-@hosts('localhost')
-def copy_static_dir():
-	local("mkdir -p static/img/")
-	local("cp -r %s/img/* static/img/" % env.static_path)
-	
-	compile_js()
-	compile_css()
-	
-	local("cp %s/js/sjcl.js static/js/" % env.static_path)
-	
-	local("cp -r %s/fonts static/" % env.static_path)
-	
-	local("cp -r %s/uploads static/"  % env.static_path)
-
 @task
 @hosts('localhost')
 def export_gpg_public_key():
@@ -69,15 +29,12 @@ def export_gpg_public_key():
 @task
 @hosts('localhost')
 def build():
-	clean()
-	copy_static_dir()
-	
+	clean()	
 	jekyll('build')
 
 @task
 @hosts('localhost')
 def run():
-	copy_static_dir()
 	jekyll('serve --watch')
 
 @hosts('nfs-myles-myles')
@@ -126,11 +83,10 @@ def jekyll(directives=''):
   """
   A simple wrapper around the jekyll command.
   """
-  local('jekyll %s' % directives)
+  local('bundle exec jekyll %s' % directives)
 
 def clean():
   """
   This will clean the site directory.
   """
-  local('rm -fr static/')
   local('rm -fr %s' % os.path.abspath(env.config['destination']))
