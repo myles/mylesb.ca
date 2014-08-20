@@ -1,5 +1,7 @@
 _site/
+_vendor/
 static/
+
 
 *.py[cod]
 

@@ -11,7 +11,13 @@ destination: ./_site
 static_dir: ./_static
 etc_dir: ./_etc
 include: [".htaccess", ".well-known"]
-exclude: ["README.md", "fabfile.py", "fabfile.pyc"]
+exclude:
+- "README.md"
+- "fabfile.py"
+- "fabfile.pyc"
+- "Gemfile"
+- "Gemfile.lock"
+- "bower.json"
 
 # Build settings
 markdown: kramdown

@@ -1,0 +1,14 @@
+{
+  "name": "MylesB.ca",
+  "version": "0.1.0",
+  "homepage": "https://github.com/myles/mylesb.ca",
+  "authors": [
+    "Myles Braithwaite <me@mylesbraithwaite.com>"
+  ],
+  "description": "Myles Braithwaite's business card web site.",
+  "dependencies": {
+	  "bootstrap": ">=3.2.0",
+	  "jquery": ">=2.1.1",
+	  "sjcl": ">=1.0.0"
+  }
+}
