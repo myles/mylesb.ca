@@ -19,7 +19,8 @@ layout: null
     SITE
     ---------------------------------------------------------------- */
     Language:               English
-    Standards:              HTML5, CSS3
-    Copyright:              2006-{{ now.strftime('%Y') }}
+    Standards:              HTML5, CSS3, schema.org
+    Libraries:              Jekyll, Bootstrap, jQuery, SJCL
+    Copyright:              2006-{{ site.time | date: '%Y' }}
     Licensed:               Creative Commons License
-    Last Updated:           {{ now.strftime('%Y-%m-%d') }}
+    Last Updated:           {{ site.time | date: '%Y-%m-%d' }}
