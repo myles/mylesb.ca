@@ -34,6 +34,11 @@ def build():
 
 @task
 @hosts('localhost')
+def build_draft():
+	jekyll('build --future --drafts --destination /srv/www/ca_mylesb_draft/html/')
+
+@task
+@hosts('localhost')
 def run():
 	jekyll('serve --watch')
 
