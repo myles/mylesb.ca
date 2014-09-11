@@ -32,7 +32,6 @@ assets:
     - _static/js
     - _vendor/bower/bootstrap/less
     - _vendor/bower/bootstrap/js
-    - _vendor/bower/bootstrap/fonts
     - _vendor/bower/jquery/dist
     - _vendor/bower/sjcl
   
