@@ -18,6 +18,7 @@ exclude:
 - "Gemfile"
 - "Gemfile.lock"
 - "bower.json"
+- "divshot.json"
 
 # Build settings
 markdown: kramdown
