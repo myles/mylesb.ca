@@ -1,0 +1,10 @@
+.container {
+	@include outer-container;
+	
+	height: 100vh;
+}
+
+.content {
+	@include span-columns(12);
+	@include padding(1em);
+}

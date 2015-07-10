@@ -1,0 +1,52 @@
+
+// Colors
+$black:           #000000;
+$blue:            #1B75BB;
+$brown:           #c1b49a;
+$cyan:            #2A91A8;
+$gold:            #ab862a;
+$green:           #80B23C;
+$orange:          #f16522;
+$purple:          #4A46AA;
+$pink:            #ec297b;
+$red:             #DA3A35;
+$yellow:          #fcb400;
+
+// Helpers
+$color-primary:   lighten($black, 30%);
+$color-secondary: lighten($black, 70%);
+
+$color-1:         $brown;
+$color-2:         $purple;
+$color-3:         $blue;
+$color-4:         $green;
+$color-5:         $yellow;
+$color-6:         $orange;
+$color-7:         $red;
+$color-8:         $cyan;
+$color-9:         $gold;
+$color-10:        $pink;
+
+@mixin iconic-color($color) {
+  fill: $color;
+  stroke: $color;
+}
+
+/* Hide all icons that are waiting to be injected */
+img.iconic {
+  display: none;
+}
+
+/* Make sure filled and text elements only get fills */
+.iconic-property-fill, .iconic-property-text {
+  stroke: none !important;
+}
+
+/* Make sure stroked elements only get strokes */
+.iconic-property-stroke {
+  fill: none !important;
+}
+
+.iconic * {
+  @include iconic-color($color-primary);
+}

@@ -1,0 +1,15 @@
+footer {
+	background: #000;
+	color: #fff;
+	text-align: center;
+	
+  p {
+    .iconic {
+      width: 1em;
+      height: 1em;
+    }
+		.iconic-heart * {
+			@include iconic-color(#DA3A35);
+		}
+  }
+}

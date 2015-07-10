@@ -2,4 +2,113 @@
 title: MylesB.ca
 ---
 
-<h1>MylesB.ca</h1>
+<header>
+	<div class="wrapper">
+		<nav role="navigation">
+			<ul>
+				<li><a class="scoll-on-page-link" href="#home">Home</a></li>
+				<li><a class="scoll-on-page-link" href="#about">About</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div class="panel panel-home" id="home">
+	<div class="container">
+		<div class="content">
+			<!-- <img src="/assets/images/avatar.png"> -->
+			
+			<h1>{{ home.name }}</h1>
+			<h2>{{ home.mantra }}</h2>
+			
+			<p>{{ home.bio }}</p>
+			
+			<ul class="social-buttons">
+				<li class="email">
+					<a href="mailto:{{home.email}}" title="Email me @ {{home.email}}">
+						<img data-src="/assets/images/envelope.svg" class="iconic" data-type="" alt="Email me @ {{home.email}}">
+					</a>
+				</li>
+				{{#each home.social}}
+				<li class="{{slug}}">
+					<a href="{{url}}" title="{{name}}">
+						<img data-type="{{slug}}" data-src="/assets/images/social.svg" class="iconic" alt="{{name}}">
+					</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-about" id="about">
+	<div class="container">
+		<div class="content">
+			<h1>Myles Braithwaite</h1>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-contact">
+	<div class="container">
+		<div class="content">
+			<h1>Myles Braithwaite</h1>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-contact-form">
+	<div class="container">
+		<div class="content">
+			<h1>Contact Me</h1>
+			
+			<form action="index_submit" method="get" accept-charset="utf-8">
+				<fieldset>
+					<p>
+						<label for="id_name">Name</label>
+						<input type="text" id="id_name" name="name">
+					</p>
+					
+					<p>
+						<label for="id_email">Email</label>
+						<input type="email" id="id_email" name="email">
+					</p>
+					
+					<p>
+						<label for="id_message">Message</label>
+						<textarea type="message" id="id_message" name="message"></textarea>
+					</p>
+					
+					<p>
+						<label for="id_indian_jones">How many Indiana Jones films are there?</label>
+						<select name="indian_jones" id="id_indian_jones">
+							<option value="4">Four</option>
+							<option value="3">Three</option>
+						</select>
+					</p>
+					
+					<p><input type="submit" value="Send"></p>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<ul class="social-buttons">
+		<li class="email">
+			<a href="mailto:{{home.email}}" title="Email me @ {{home.email}}">
+				<img data-src="/assets/images/envelope.svg" class="iconic" data-type="" alt="Email me @ {{home.email}}">
+			</a>
+		</li>
+		{{#each home.social}}
+		<li class="{{slug}}">
+			<a href="{{url}}" title="{{name}}">
+				<img data-type="{{slug}}" data-src="/assets/images/social.svg" class="iconic" alt="{{name}}">
+			</a>
+		</li>
+		{{/each}}
+	</ul>
+	
+	<p>Made by <a href="http://mylesbraithwaite.com/">Myles Braithwaite</a> with <img data-src="/assets/images/heart.svg" class="iconic"> in Toronto.</p>
+</footer>

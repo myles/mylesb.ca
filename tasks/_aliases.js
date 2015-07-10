@@ -1,7 +1,10 @@
 module.exports = function (grunt) {
     grunt.registerTask('build', [
         'assemble',
-        'sass'
+        'sass',
+        'coffee',
+        'concat',
+        'copy'
     ]);
     
     grunt.registerTask('run', [

@@ -3,7 +3,8 @@ module.exports = function (grunt) {
         options: {
             layout: "source/layouts/default.hbs",
             flatten: true,
-            production: false
+            production: false,
+            data: 'source/data/*.yml'
         },
         pages: {
             files: {

@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		
 		<title>{{ title }}</title>
+		<!--
+			TODO Add some description and keyword meta data here.
+			<meta name="description" content="">
+			<meta name="keywords" content="">
+		-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!--
+			TODO Add the Favicon and apple-touch-icon here.
+			<link rel="apple-touch-icon" href="apple-touch-icon.png">
+			<link rel="shortcut favicon" href="favicon.ico">
+		-->
+		
+		<link rel="stylesheet" href="/assets/stylesheets/application.css">
 	</head>
 	<body>
-		{{> body }}
+		<div class="main">
+			{{> body }}
+		</div>
+		
+		<script type="text/javascript" src="/assets/javascript/vendor.js"></script>
+		<script type="text/javascript" src="/assets/javascript/application.js"></script>
 	</body>
 </html>

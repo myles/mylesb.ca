@@ -1,0 +1,17 @@
+.panel-home {
+	background: url('../images/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	
+	.container {
+	  @include align-items(center);
+	  @include display(flex);
+	  @include justify-content(center);
+	}
+	
+	.content {
+		text-align: center;
+	}
+}

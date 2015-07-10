@@ -1,0 +1,50 @@
+ul.social-buttons {
+	li {
+		display: inline;
+		
+		a {
+			.iconic {
+				@include padding(1em null);
+				@include margin(.5em null);
+				@include size(5em);
+				@include border-top-radius(5px);
+				@include border-right-radius(5px);
+				@include border-bottom-radius(5px);
+				@include border-left-radius(5px);
+			}
+			
+			&:hover .iconic {
+				@include background(#FFFFFF)
+			}
+		}
+		
+		.iconic-social-twitter {
+			display: none;
+		}
+	}
+	
+	li.email {
+		a:hover .iconic-envelope * {
+			@include iconic-color($color-1);
+		}
+	}
+	
+	@mixin social_icon ($slug, $colour) {
+		li.#{$slug} {
+			.iconic-social-#{$slug} {
+				display: inline;
+			}
+			
+			a:hover .iconic-social-#{$slug} * {
+				@include iconic-color($colour);
+			}
+		}
+	}
+	
+	@include social_icon('twitter', #00b4f3);
+	@include social_icon('instagram', #211f20);
+	@include social_icon('github', #333);
+	@include social_icon('facebook', #3c569a);
+	@include social_icon('google-plus', #df4a32);
+	@include social_icon('linkedin', #1984bf)
+}
