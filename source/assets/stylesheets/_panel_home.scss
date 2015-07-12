@@ -13,5 +13,9 @@
 	
 	.content {
 		text-align: center;
+		
+		img {
+			@include size(100px);
+		}
 	}
 }

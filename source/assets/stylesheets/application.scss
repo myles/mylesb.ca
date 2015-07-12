@@ -4,13 +4,16 @@
 @import "base/base";
 @import "neat";
 
-@import "iconic";
-
 @import "variables";
 @import "layout";
 @import "global";
+
+@import "iconic";
 
 @import "header";
 @import "footer";
 
 @import "panel_home";
+@import "panel_about";
+@import "panel_elsewhere";
+@import "panel_contact";

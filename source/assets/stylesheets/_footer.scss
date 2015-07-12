@@ -9,7 +9,7 @@ footer {
       height: 1em;
     }
 		.iconic-heart * {
-			@include iconic-color(#DA3A35);
+			@include iconic-color($heart-color);
 		}
   }
 }

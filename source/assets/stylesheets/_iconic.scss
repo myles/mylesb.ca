@@ -1,32 +1,3 @@
-
-// Colors
-$black:           #000000;
-$blue:            #1B75BB;
-$brown:           #c1b49a;
-$cyan:            #2A91A8;
-$gold:            #ab862a;
-$green:           #80B23C;
-$orange:          #f16522;
-$purple:          #4A46AA;
-$pink:            #ec297b;
-$red:             #DA3A35;
-$yellow:          #fcb400;
-
-// Helpers
-$color-primary:   lighten($black, 30%);
-$color-secondary: lighten($black, 70%);
-
-$color-1:         $brown;
-$color-2:         $purple;
-$color-3:         $blue;
-$color-4:         $green;
-$color-5:         $yellow;
-$color-6:         $orange;
-$color-7:         $red;
-$color-8:         $cyan;
-$color-9:         $gold;
-$color-10:        $pink;
-
 @mixin iconic-color($color) {
   fill: $color;
   stroke: $color;
@@ -48,5 +19,57 @@ img.iconic {
 }
 
 .iconic * {
-  @include iconic-color($color-primary);
+  @include iconic-color(#FFFFFF);
+}
+
+/* Social Media Buttons */
+ul.social-buttons {
+	li {
+		display: inline;
+		
+		a {
+			.iconic {
+				@include padding(1em null);
+				@include margin(.5em null);
+				@include size(5em);
+				@include border-top-radius(5px);
+				@include border-right-radius(5px);
+				@include border-bottom-radius(5px);
+				@include border-left-radius(5px);
+			}
+			
+			&:hover .iconic {
+				@include background(#FFFFFF)
+			}
+		}
+		
+		.iconic-social-twitter {
+			display: none;
+		}
+	}
+	
+	li.email {
+		a:hover .iconic-envelope * {
+			@include iconic-color($social-email-color);
+		}
+	}
+	
+	@mixin social_icon ($slug, $colour) {
+		li.#{$slug} {
+			.iconic-social-#{$slug} {
+				display: inline;
+			}
+			
+			a:hover .iconic-social-#{$slug} * {
+				@include iconic-color($colour);
+			}
+		}
+	}
+	
+	@include social_icon('twitter', $social-twitter-color);
+	@include social_icon('instagram', $social-instagram-color);
+	@include social_icon('github', $social-github-color);
+	@include social_icon('facebook', $social-facebook-color);
+	@include social_icon('google-plus', $social-google-plus-color);
+	@include social_icon('linkedin', $social-linkedin-color);
 }

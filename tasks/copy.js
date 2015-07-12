@@ -6,6 +6,16 @@ module.exports = function (grunt) {
             src: '**',
             dest: 'build/assets/images/',
             flatten: true
+        },
+        favicons: {
+            expand: true,
+            cwd: 'source/assets/images/',
+            src: [
+                'favicon.ico',
+                'apple-touch-icon-precomposed.png'
+            ],
+            dest: 'build/',
+            flatten: true
         }
     };
     

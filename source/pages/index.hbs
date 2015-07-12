@@ -2,26 +2,15 @@
 title: MylesB.ca
 ---
 
-<header>
-	<div class="wrapper">
-		<nav role="navigation">
-			<ul>
-				<li><a class="scoll-on-page-link" href="#home">Home</a></li>
-				<li><a class="scoll-on-page-link" href="#about">About</a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
-
 <div class="panel panel-home" id="home">
 	<div class="container">
 		<div class="content">
-			<!-- <img src="/assets/images/avatar.png"> -->
+			<img src="/assets/images/avatar.png">
 			
-			<h1>{{ home.name }}</h1>
-			<h2>{{ home.mantra }}</h2>
+			<h1>{{ site.author.name }}</h1>
+			<h2>{{ site.description }}</h2>
 			
-			<p>{{ home.bio }}</p>
+			{{#markdown }}{{ home.bio }}{{/markdown }}
 			
 			<ul class="social-buttons">
 				<li class="email">
@@ -44,20 +33,23 @@ title: MylesB.ca
 <div class="panel panel-about" id="about">
 	<div class="container">
 		<div class="content">
-			<h1>Myles Braithwaite</h1>
+			<article>
+				<h1>About <em>Myles Braithwaite</em></h1>
+				<p class="lead">{{ home.bio }}</p>
+			</article>
 		</div>
 	</div>
 </div>
 
-<div class="panel panel-contact">
+<div class="panel panel-elsewhere" id="elsewhere">
 	<div class="container">
 		<div class="content">
-			<h1>Myles Braithwaite</h1>
+			<h1>Elsewhere</h1>
 		</div>
 	</div>
 </div>
 
-<div class="panel panel-contact-form">
+<div class="panel panel-contact" id="contact">
 	<div class="container">
 		<div class="content">
 			<h1>Contact Me</h1>
@@ -93,22 +85,3 @@ title: MylesB.ca
 		</div>
 	</div>
 </div>
-
-<footer>
-	<ul class="social-buttons">
-		<li class="email">
-			<a href="mailto:{{home.email}}" title="Email me @ {{home.email}}">
-				<img data-src="/assets/images/envelope.svg" class="iconic" data-type="" alt="Email me @ {{home.email}}">
-			</a>
-		</li>
-		{{#each home.social}}
-		<li class="{{slug}}">
-			<a href="{{url}}" title="{{name}}">
-				<img data-type="{{slug}}" data-src="/assets/images/social.svg" class="iconic" alt="{{name}}">
-			</a>
-		</li>
-		{{/each}}
-	</ul>
-	
-	<p>Made by <a href="http://mylesbraithwaite.com/">Myles Braithwaite</a> with <img data-src="/assets/images/heart.svg" class="iconic"> in Toronto.</p>
-</footer>

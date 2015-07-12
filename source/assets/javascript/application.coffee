@@ -10,6 +10,8 @@ do (jQuery) ->
 			thespeed = 1000
 			offset = jQuery(target).offset().top
 			jQuery('html,body').animate { scrollTop: offset }, thespeed, 'swing'
+			window.location.href = target
+			document.title = jumpobj.attr('title')
 			e.preventDefault()
 			return
 	return
