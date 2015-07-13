@@ -13,9 +13,16 @@ module.exports = function (grunt) {
         'watch'
     ]);
     
+    grunt.registerTask('compress', [
+        'htmlmin',
+        'cssmin',
+        'uglify'
+    ]);
+    
     grunt.registerTask('deploy', [
         'clean',
-        'build'
+        'build',
+        'compress'
     ]);
 
     grunt.registerTask('default', [

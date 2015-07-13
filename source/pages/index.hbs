@@ -34,8 +34,13 @@ title: MylesB.ca
 	<div class="container">
 		<div class="content">
 			<article>
-				<h1>About <em>Myles Braithwaite</em></h1>
-				<p class="lead">{{ home.bio }}</p>
+				<h1>About <em>{{ site.author.name }}</em></h1>
+				
+				<p class="lead">{{ about.subheading }}</p>
+				
+				<hr>
+				
+				{{#markdown }}{{ about.body }}{{/markdown }}
 			</article>
 		</div>
 	</div>
