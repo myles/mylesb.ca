@@ -1,5 +1,5 @@
 .panel-home {
-	background: url('../images/background.jpg') no-repeat center center fixed;
+	background: url('../images/backgrounds/toronto-skyline.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -14,8 +14,9 @@
 	.content {
 		text-align: center;
 		
-		img {
-			@include size(100px);
+		.image-avatar-wrapper {
+			@include size(128px);
+			margin: 0 auto;
 		}
 	}
 }

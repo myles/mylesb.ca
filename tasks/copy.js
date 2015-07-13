@@ -4,8 +4,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'source/assets/images/',
             src: '**',
-            dest: 'build/assets/images/',
-            flatten: true
+            dest: 'build/assets/images/'
         },
         favicons: {
             expand: true,

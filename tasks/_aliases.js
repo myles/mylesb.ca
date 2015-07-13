@@ -4,7 +4,8 @@ module.exports = function (grunt) {
         'sass',
         'coffee',
         'concat',
-        'copy'
+        'copy',
+        'responsive_images'
     ]);
     
     grunt.registerTask('run', [
@@ -16,7 +17,8 @@ module.exports = function (grunt) {
     grunt.registerTask('compress', [
         'htmlmin',
         'cssmin',
-        'uglify'
+        'uglify',
+        'imagemin'
     ]);
     
     grunt.registerTask('deploy', [

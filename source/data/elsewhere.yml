@@ -1,0 +1,16 @@
+portfolio:
+  - name: Homepage
+    url: http://mylesbraithwaite.com/
+    image: https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png
+    copy: >
+      Hello, World!
+  - name: Myles.RED
+    url: http://myles.red/
+    image: https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png
+    copy: >
+      Hello, World!
+  - name: Myles.Coffee
+    url: http://myles.coffee/
+    image: https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png
+    copy: >
+      Hello, World!

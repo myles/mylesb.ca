@@ -5,7 +5,9 @@ title: MylesB.ca
 <div class="panel panel-home" id="home">
 	<div class="container">
 		<div class="content">
-			<img src="/assets/images/avatar.png">
+			<div class="image-avatar-wrapper">
+				<div class="image-avatar" data-src="/assets/images/avatars/hipster-{width}.png" data-alt="Avatar"></div>
+			</div>
 			
 			<h1>{{ site.author.name }}</h1>
 			<h2>{{ site.description }}</h2>
@@ -50,6 +52,22 @@ title: MylesB.ca
 	<div class="container">
 		<div class="content">
 			<h1>Elsewhere</h1>
+			
+			<div class="cards">
+				{{#each elsewhere.portfolio}}
+				<a href="{{url}}" class="card">
+					<div class="card-image">
+						<img src="{{image}}" alt="{{name}}">
+					</div>
+					<div class="card-header">
+						{{name}}
+					</div>
+					<div class="card-copy">
+						{{#markdown }}{{copy}}{{/markdown }}
+					</div>
+				</a>
+				{{/each}}
+			</div>
 		</div>
 	</div>
 </div>

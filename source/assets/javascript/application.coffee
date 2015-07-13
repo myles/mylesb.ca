@@ -16,6 +16,12 @@ do (jQuery) ->
 			return
 	return
 
+imgrAvatar = new Imager('.image-avatar',
+												availableWidths: [64, 128, 256, 320, 448, 512])
+
+imgrBackground = new Imager('.image-background')
+
+
 $(document).ready ->
 	jQuery.mark.jump()
 	SVGInjector jQuery('.iconic')
