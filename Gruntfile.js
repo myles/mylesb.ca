@@ -1,23 +1,6 @@
 module.exports = function(grunt) {
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        
-        assemble: {
-            options: {
-                layout: "source/layouts/default.hbs",
-                flatten: true,
-                production: false
-            },
-            pages: {
-                files: {
-                    'build/': [
-                        'source/pages/*.hbs',
-                        'source/pages/**/*.hbs'
-                    ]
-                }
-            }
-        },
-        
+        pkg: grunt.file.readJSON('package.json')
     });
     
     grunt.loadNpmTasks('assemble');
