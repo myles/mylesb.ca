@@ -16,13 +16,13 @@ title: MylesB.ca
 			
 			<ul class="social-buttons">
 				<li class="email">
-					<a href="mailto:{{home.email}}" title="Email me @ {{home.email}}">
+					<a href="mailto:{{home.email}}" title="Email me @ {{home.email}}" rel="me">
 						<img data-src="/assets/images/envelope.svg" class="iconic" data-type="" alt="Email me @ {{home.email}}">
 					</a>
 				</li>
 				{{#each home.social}}
 				<li class="{{slug}}">
-					<a href="{{url}}" title="{{name}}">
+					<a href="{{url}}" title="{{name}}" rel="me">
 						<img data-type="{{slug}}" data-src="/assets/images/social.svg" class="iconic" alt="{{name}}">
 					</a>
 				</li>
@@ -76,6 +76,12 @@ title: MylesB.ca
 	<div class="container">
 		<div class="content">
 			<h1>Contact Me</h1>
+			
+			<ul>
+				<li>Email Me: <a href="mailto:me@mylesbraithwaite.com">me@mylesbraithwaite.com</a></li>
+			</ul>
+			
+			<hr>
 			
 			<form action="index_submit" method="get" accept-charset="utf-8">
 				<fieldset>

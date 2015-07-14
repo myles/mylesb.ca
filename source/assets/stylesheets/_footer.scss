@@ -3,6 +3,15 @@ footer {
 	color: #fff;
 	text-align: center;
 	
+	a {
+		color: #fff;
+		
+		&:hover {
+			color: #ccc;
+			text-decoration: underline;
+		}
+	}
+	
   p {
     .iconic {
       width: 1em;
