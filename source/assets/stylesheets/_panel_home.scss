@@ -1,14 +1,4 @@
 .panel-home {
-	@each $background in $backgrounds {
-		&.background-#{$background} {
-			background: url('../images/backgrounds/#{$background}.jpg') no-repeat center center fixed;
-		  -webkit-background-size: cover;
-		  -moz-background-size: cover;
-		  -o-background-size: cover;
-		  background-size: cover;
-		}
-	}
-	
 	.container {
 	  @include align-items(center);
 	  @include display(flex);

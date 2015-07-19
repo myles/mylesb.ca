@@ -1,0 +1,19 @@
+<div class="panel panel-about background-{{about.background}}" id="about">
+	<div class="container">
+		<div class="content">
+			<article>
+				<p class="type">About</p>
+				
+				<h1>{{ site.author.name }}</h1>
+				
+				<h2>{{ about.subheading }}</h2>
+				
+				<p class="date">31 July, 2015</p>
+				
+				<hr>
+				
+				{{#markdown }}{{> about_body }}{{/markdown }}
+			</article>
+		</div>
+	</div>
+</div>

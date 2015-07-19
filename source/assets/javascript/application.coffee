@@ -19,7 +19,7 @@ do (jQuery) ->
 imgrAvatar = new Imager('.image-avatar',
                         availableWidths: [64, 128, 256, 320, 448, 512])
 
-imgrBackground = new Imager('.image-background',
+imgrBackground = new Imager('.background',
                             availableWidths: {
                               75: 'square-75',
                               150: 'square-150',

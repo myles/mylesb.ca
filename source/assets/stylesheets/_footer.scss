@@ -14,8 +14,8 @@ footer {
 	
   p {
     .iconic {
-      width: 1em;
-      height: 1em;
+			@include size(1.5em);
+			vertical-align: middle;
     }
 		.iconic-heart * {
 			@include iconic-color($heart-color);

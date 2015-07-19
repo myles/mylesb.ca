@@ -4,54 +4,26 @@
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		
-		<title>{{ title }}</title>
+		<title>{{ site.name }}</title>
 		
 		<meta name="author" content="{{ site.author.name }} ({{ site.author.email }})">
 		<meta name="description" content="{{ site.description }}">
-		<meta name="keywords" content="{{ site.keywords }}">
+		<meta name="keywords" content="{{#each site.keywords }}{{this}}{{#unless @last}}, {{/unless}}{{/each}}">
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
-		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+		<link rel="shortcut icon" href="/favicon.ico">
 		
 		<link rel="stylesheet" href="/assets/stylesheets/application.css">
 	</head>
 	<body>
 		<div class="main">
-			<header>
-				<div class="wrapper">
-					<nav role="navigation">
-						<ul>
-							<li><a class="scoll-on-page-link" href="#home" title="MylesB.ca">Home</a></li>
-							<li><a class="scoll-on-page-link" href="#about" title="About Myles Braithwaite">About</a></li>
-							<li><a class="scoll-on-page-link" href="#elsewhere" title="Where to find Myles Braithwaite on the Internet">Elsewhere</a></li>
-							<li><a class="scoll-on-page-link" href="#contact" title="Contact Myles Braithwaite">Contact</a></li>
-						</ul>
-					</nav>
-				</div>
-			</header>
+			{{> _header }}
 			
 			{{> body }}
 			
-			<footer>
-				<ul class="social-buttons">
-					<li class="email">
-						<a href="mailto:{{home.email}}" title="Email me @ {{home.email}}" rel="me">
-							<img data-src="/assets/images/envelope.svg" class="iconic" data-type="" alt="Email me @ {{home.email}}">
-						</a>
-					</li>
-					{{#each home.social}}
-					<li class="{{slug}}">
-						<a href="{{url}}" title="{{name}}" rel="me">
-							<img data-type="{{slug}}" data-src="/assets/images/social.svg" class="iconic" alt="{{name}}">
-						</a>
-					</li>
-					{{/each}}
-				</ul>
-	
-				<p>Made by <a href="http://mylesbraithwaite.com/">Myles Braithwaite</a> with <img data-src="/assets/images/heart.svg" class="iconic"> in Toronto.</p>
-			</footer>
+			{{> _footer }}
 		</div>
 		
 		<script type="text/javascript" src="/assets/javascript/vendor.js"></script>

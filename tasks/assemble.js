@@ -4,7 +4,11 @@ module.exports = function (grunt) {
             layout: "source/layouts/default.hbs",
             flatten: true,
             production: false,
-            data: 'source/data/*.yml'
+            data: 'source/data/*.yml',
+            partials: [
+                'source/partials/*.hbs',
+                'source/partials/*.md'
+            ]
         },
         pages: {
             files: {

@@ -1,4 +1,4 @@
-header {
+.mast-head {
 	min-height: $header-height;
 	background-color: $header-background-color;
 	@include position(fixed, 0 null null 0);
@@ -11,24 +11,34 @@ header {
 	
 	nav {
 		margin: 0 auto;
-		text-align: center;
+		padding-right: 1em;
 		
 		ul {
 			list-display: none;
 		}
 		
 		li {
-			display: inline;
 			@include padding(null 1em);
+			
+			display: inline;
 			line-height: $header-height;
+			color: $header-link-color;
 			
 			a {
 				color: $header-link-color;
-				
+			
 				&:focus, &:hover {
 					color: $header-link-color-hover;
 				}
 			}
+		}
+		
+		ul.site-info {
+			float: left;
+		}
+		
+		ul.site-links {
+			float: right;
 		}
 	}
 }

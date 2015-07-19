@@ -1,6 +1,8 @@
 .panel-elsewhere {
-	color: #000000;
-	background: #FFFFFF;
+	.content {
+		color: #000000;
+		background: #FFFFFF;
+	}
 	
 	.cards {
 	  @include display(flex);

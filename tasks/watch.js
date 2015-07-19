@@ -8,6 +8,8 @@ module.exports = function (grunt) {
                 'assemble'
             ],
             files: [
+                'source/partials/*.hbs',
+                'source/partials/*.md',
                 'source/layouts/*.hbs',
                 'source/pages/*.hbs',
                 'source/data/*.yml'

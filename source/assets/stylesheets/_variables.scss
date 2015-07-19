@@ -4,30 +4,30 @@
 
 
 // ## Home
-$backgrounds: "toronto-skyline";
+$backgrounds: "toronto-skyline", "IMG_0606", "IMG_2409", "IMG_0626";
 
 // ###########################
 // # Header
 // ###########################
 $header-height: 60px;
 
-$header-background-color: #000;
+$header-background-color: rgba(0, 0, 0, 0.3);
 
 $header-link-color: #FFF;
 $header-link-color-hover: darken(#FFF, 2);
 
 // ###########################
+// # Heart
+// ###########################
+$heart-color: #DA3A35;
+
+// ###########################
 // # Social Network Buttons
 // ###########################
-$social-email-color: #DA3A35;
+$social-email-color: $heart-color;
 $social-twitter-color: #00b4f3;
 $social-instagram-color: #211f20;
 $social-github-color: #333;
 $social-facebook-color: #3c569a;
 $social-google-plus-color: #df4a32;
 $social-linkedin-color: #1984bf;
-
-// ###########################
-// # Heart
-// ###########################
-$heart-color: #DA3A35;
