@@ -13,6 +13,13 @@ module.exports = function (grunt) {
         'connect:server',
         'watch'
     ]);
+	
+	grunt.registerTask('lint', [
+		'mdlint',
+		'htmllint',
+		'scsslint',
+		'coffeelint'
+	]);
     
     grunt.registerTask('compress', [
         'htmlmin',

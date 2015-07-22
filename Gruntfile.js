@@ -4,7 +4,10 @@ module.exports = function(grunt) {
     });
     
     grunt.loadNpmTasks('assemble');
+	grunt.loadNpmTasks('grunt-mdlint');
+	grunt.loadNpmTasks('grunt-htmllint');
     grunt.loadNpmTasks('grunt-scss-lint');
+	grunt.loadNpmTasks('grunt-coffeelint');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-clean');
