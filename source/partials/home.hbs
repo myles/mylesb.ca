@@ -1,31 +1,31 @@
 <div class="panel panel-home background-{{home.background}}" id="home">
-	<div class="container">
-		<div class="content">
-			<div class="image-avatar-wrapper">
-				<div class="image-avatar" data-src="/assets/images/avatars/{{site.avatar}}-{width}.png" data-alt="Avatar"></div>
-			</div>
-			
-			<h1>{{ site.author.name }}</h1>
-			<h2>{{ site.description }}</h2>
-			
-			<div class="bio">
-				{{#markdown }}{{ home.bio }}{{/markdown }}
-			</div>
-			
-			<ul class="social-buttons">
-				<li class="email">
-					<a href="mailto:{{home.email}}" title="Email me @ {{home.email}}" rel="me">
-						<img data-src="/assets/images/envelope.svg" class="iconic" data-type="" alt="Email me @ {{home.email}}">
-					</a>
-				</li>
-				{{#each home.social}}
-				<li class="{{slug}}">
-					<a href="{{url}}" title="{{name}}" rel="me">
-						<img data-type="{{slug}}" data-src="/assets/images/social.svg" class="iconic" alt="{{name}}">
-					</a>
-				</li>
-				{{/each}}
-			</ul>
-		</div>
-	</div>
+    <div class="container">
+        <div class="content">
+            <div class="image-avatar-wrapper">
+                <div class="image-avatar" data-src="/assets/images/avatars/{{site.avatar}}-{width}.png" data-alt="Avatar"></div>
+            </div>
+            
+            <h1>{{ site.author.name }}</h1>
+            <h2>{{ site.description }}</h2>
+            
+            <div class="bio">
+                {{#markdown }}{{ home.bio }}{{/markdown }}
+            </div>
+            
+            <ul class="social-buttons">
+                <li class="email">
+                    <a href="mailto:{{home.email}}" title="Email me @ {{home.email}}" rel="me">
+                        <img data-src="/assets/images/envelope.svg" class="iconic" data-type="" alt="Email me @ {{home.email}}">
+                    </a>
+                </li>
+                {{#each home.social}}
+                <li class="{{slug}}">
+                    <a href="{{url}}" title="{{name}}" rel="me">
+                        <img data-type="{{slug}}" data-src="/assets/images/social.svg" class="iconic" alt="{{name}}">
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
 </div>
