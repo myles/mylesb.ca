@@ -8,7 +8,9 @@
 			<h1>{{ site.author.name }}</h1>
 			<h2>{{ site.description }}</h2>
 			
-			{{#markdown }}{{ home.bio }}{{/markdown }}
+			<div class="bio">
+				{{#markdown }}{{ home.bio }}{{/markdown }}
+			</div>
 			
 			<ul class="social-buttons">
 				<li class="email">

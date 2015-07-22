@@ -1,24 +1,22 @@
 footer {
-	background: #000;
-	color: #fff;
-	text-align: center;
-	
-	a {
-		color: #fff;
-		
-		&:hover {
-			color: #ccc;
-			text-decoration: underline;
-		}
-	}
-	
-  p {
-    .iconic {
-			@include size(1.5em);
-			vertical-align: middle;
+  background: $footer-background-color;
+  color: $footer-color;
+  text-align: center;
+  
+  a {
+    color: $footer-link-color;
+    
+    &:hover {
+      color: $footer-link-color-hover;
     }
-		.iconic-heart * {
-			@include iconic-color($heart-color);
-		}
+  }
+  
+  .iconic {
+    @include size(1.5em);
+    vertical-align: middle;
+  }
+  
+  .iconic-heart * {
+    @include iconic-color($heart-color);
   }
 }

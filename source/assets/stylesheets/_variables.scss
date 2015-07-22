@@ -1,25 +1,61 @@
 // ###########################
-// # Panels
+// # Base
 // ###########################
+// Font Colors
+$base-font-color: $light-gray;
+$action-color: $blue;
 
-
-// ## Home
-$backgrounds: "toronto-skyline", "IMG_0606", "IMG_2409", "IMG_0626";
+// Background Colors
+$base-background-color: $dark-gray;
 
 // ###########################
 // # Header
 // ###########################
 $header-height: 60px;
 
-$header-background-color: rgba(0, 0, 0, 0.3);
+$header-background-color: rgba(0, 0, 0, .3);
 
-$header-link-color: #FFF;
-$header-link-color-hover: darken(#FFF, 2);
+$header-link-color: $light-gray;
+$header-link-color-hover: $medium-gray;
+
+// ###########################
+// # Footer
+// ###########################
+$footer-color: $light-gray;
+$footer-background-color: $dark-gray;
+
+$footer-link-color: $footer-color;
+$footer-link-color-hover: $medium-gray;
+
+// ###########################
+// # Panels
+// ###########################
+$panel-color: $dark-gray;
+$panel-background-color: #fff;
+
+$backgrounds: 'toronto-skyline', 'IMG_0606', 'IMG_2409', 'IMG_0626';
+$backgrounds-dir: '../images/backgrounds';
+
+// Home
+$panel-home-color: $panel-color;
+$panel-home-background-color: $panel-background-color;
+
+// About
+$panel-about-color: $panel-color;
+$panel-about-background-color: $panel-background-color;
+
+// Elsewhere
+$panel-elsewhere-color: $panel-color;
+$panel-elsewhere-background-color: $panel-background-color;
+
+// Contact
+$panel-contact-color: $panel-color;
+$panel-contact-background-color: $panel-background-color;
 
 // ###########################
 // # Heart
 // ###########################
-$heart-color: #DA3A35;
+$heart-color: #da3a35;
 
 // ###########################
 // # Social Network Buttons

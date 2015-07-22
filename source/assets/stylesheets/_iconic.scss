@@ -1,75 +1,77 @@
+// scss-lint:disable ImportantRule, SelectorDepth, NestingDepth
+
 @mixin iconic-color($color) {
   fill: $color;
   stroke: $color;
 }
 
-/* Hide all icons that are waiting to be injected */
-img.iconic {
-  display: none;
+@mixin social-icon ($slug, $colour) {
+  li.#{$slug} {
+    .iconic-social-#{$slug} {
+      display: inline;
+    }
+    
+    a:hover .iconic-social-#{$slug} * {
+      @include iconic-color($colour);
+    }
+  }
 }
 
-/* Make sure filled and text elements only get fills */
-.iconic-property-fill, .iconic-property-text {
+.iconic {
+  display: none;
+  
+  * {
+    @include iconic-color($light-gray);
+  }
+}
+
+// Make sure filled and text elements only get fills
+.iconic-property-fill,
+.iconic-property-text {
   stroke: none !important;
 }
 
-/* Make sure stroked elements only get strokes */
+// Make sure stroked elements only get strokes
 .iconic-property-stroke {
   fill: none !important;
 }
 
-.iconic * {
-  @include iconic-color(#FFFFFF);
-}
-
-/* Social Media Buttons */
-ul.social-buttons {
-	li {
-		display: inline;
-		
-		a {
-			.iconic {
-				@include padding(1em null);
-				@include margin(.5em null);
-				@include size(5em);
-				@include border-top-radius(5px);
-				@include border-right-radius(5px);
-				@include border-bottom-radius(5px);
-				@include border-left-radius(5px);
-			}
-			
-			&:hover .iconic {
-				@include background(#FFFFFF)
-			}
-		}
-		
-		.iconic-social-twitter {
-			display: none;
-		}
-	}
-	
-	li.email {
-		a:hover .iconic-envelope * {
-			@include iconic-color($social-email-color);
-		}
-	}
-	
-	@mixin social_icon ($slug, $colour) {
-		li.#{$slug} {
-			.iconic-social-#{$slug} {
-				display: inline;
-			}
-			
-			a:hover .iconic-social-#{$slug} * {
-				@include iconic-color($colour);
-			}
-		}
-	}
-	
-	@include social_icon('twitter', $social-twitter-color);
-	@include social_icon('instagram', $social-instagram-color);
-	@include social_icon('github', $social-github-color);
-	@include social_icon('facebook', $social-facebook-color);
-	@include social_icon('google-plus', $social-google-plus-color);
-	@include social_icon('linkedin', $social-linkedin-color);
+// Social Media Buttons
+.social-buttons {
+  @include social-icon('twitter', $social-twitter-color);
+  @include social-icon('instagram', $social-instagram-color);
+  @include social-icon('github', $social-github-color);
+  @include social-icon('facebook', $social-facebook-color);
+  @include social-icon('google-plus', $social-google-plus-color);
+  @include social-icon('linkedin', $social-linkedin-color);
+  
+  li {
+    display: inline;
+    
+    a {
+      .iconic {
+        @include padding(1em null);
+        @include margin(.5em null);
+        @include size(5em);
+        @include border-top-radius(5px);
+        @include border-right-radius(5px);
+        @include border-bottom-radius(5px);
+        @include border-left-radius(5px);
+      }
+      
+      &:hover .iconic {
+        @include background($light-gray)
+      }
+    }
+    
+    .iconic-social-twitter {
+      display: none;
+    }
+    
+    .email {
+      a:hover .iconic-envelope * {
+        @include iconic-color($social-email-color);
+      }
+    }
+  }
 }

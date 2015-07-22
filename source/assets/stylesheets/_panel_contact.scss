@@ -1,6 +1,6 @@
 .panel-contact {
-	.content {
-		color: #000000;
-		background: #FFFFFF;
-	}
+  .content {
+    background: $panel-contact-background-color;
+    color: $panel-contact-color;
+  }
 }

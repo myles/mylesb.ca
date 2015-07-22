@@ -1,16 +1,34 @@
 .panel-home {
-	.container {
-	  @include align-items(center);
-	  @include display(flex);
-	  @include justify-content(center);
-	}
-	
-	.content {
-		text-align: center;
-		
-		.image-avatar-wrapper {
-			@include size(128px);
-			margin: 0 auto;
-		}
-	}
+  .container {
+    @include align-items(center);
+    @include display(flex);
+    @include justify-content(center);
+  }
+  
+  .content {
+    text-align: center;
+    
+    .image-avatar-wrapper {
+      @include size(128px);
+      margin: 0 auto;
+    }
+    
+    h1,
+    h2 {
+      margin: 0;
+    }
+    
+    h1 {
+      font-size: modular-scale(3);
+    }
+    
+    h2 {
+      font-size: modular-scale(2);
+    }
+    
+    .bio {
+      @include margin(1em null);
+      font-size: modular-scale(1);
+    }
+  }
 }

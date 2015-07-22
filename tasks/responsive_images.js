@@ -18,7 +18,7 @@ module.exports = function (grunt) {
                 dest: 'build/assets/images/'
             }]
         },
-        backgrounds: {
+        backgrounds_flickr: {
             options: {
                 sizes: [{
                     aspectRatio: false,
@@ -60,6 +60,23 @@ module.exports = function (grunt) {
                     width: 1024,
                     height: 1024
                 }]
+            },
+            files: [{
+                expand: true,
+                cwd: 'source/assets/images/',
+                src: ['backgrounds/**.jpg'],
+                dest: 'build/assets/images/'
+            }]
+        },
+        backgrounds: {
+            options: {
+                sizes: [
+                    { width: 320 },
+                    { width: 480 },
+                    { width: 768 },
+                    { width: 1024 },
+                    { width: 1280 }
+                ]
             },
             files: [{
                 expand: true,

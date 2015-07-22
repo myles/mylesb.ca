@@ -1,6 +1,6 @@
 .panel-about {
-	.content {
-		color: #000000;
-		background: #FFFFFF;
-	}
+  .content {
+    background: $panel-about-background-color;
+    color: $panel-about-color;
+  }
 }

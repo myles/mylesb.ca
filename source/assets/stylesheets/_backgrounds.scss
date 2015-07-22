@@ -1,11 +1,33 @@
-.panel {
-	@each $background in $backgrounds {
-		&.background-#{$background} {
-			background: url('../images/backgrounds/#{$background}.jpg') no-repeat center center fixed;
-		  -webkit-background-size: cover;
-		  -moz-background-size: cover;
-		  -o-background-size: cover;
-		  background-size: cover;
-		}
-	}
+@each $background in $backgrounds {
+  .panel.background-#{$background} {
+    @media (max-width: $xlarge-screen) and (min-width: $large-screen) {
+      background-image: url('#{$backgrounds-dir}/#{$background}-1280.jpg');
+    }
+    
+    @media (max-width: $large-screen) and (min-width: $medium-screen) {
+      background-image: url('#{$backgrounds-dir}/#{$background}-1024.jpg');
+    }
+    
+    @media (max-width: $medium-screen) and (min-width: $small-screen) {
+      background-image: url('#{$backgrounds-dir}/#{$background}-768.jpg');
+    }
+    
+    @media (max-width: $small-screen) and (min-width: $xsmall-screen) {
+      background-image: url('#{$backgrounds-dir}/#{$background}-480.jpg');
+    }
+    
+    @media (max-width: $xsmall-screen) {
+      background-image: url('#{$backgrounds-dir}/#{$background}-320.jpg');
+    }
+    
+    @media (min-width: $xlarge-screen) {
+      background-image: url('#{$backgrounds-dir}/#{$background}.jpg');
+    }
+    
+    background-attachment: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+  }
 }

@@ -1,44 +1,59 @@
 .mast-head {
-	min-height: $header-height;
-	background-color: $header-background-color;
-	@include position(fixed, 0 null null 0);
-	width: 100%;
-	
-	.wrapper {
-		@include outer-container;
-		@include clearfix;
-	}
-	
-	nav {
-		margin: 0 auto;
-		padding-right: 1em;
-		
-		ul {
-			list-display: none;
-		}
-		
-		li {
-			@include padding(null 1em);
-			
-			display: inline;
-			line-height: $header-height;
-			color: $header-link-color;
-			
-			a {
-				color: $header-link-color;
-			
-				&:focus, &:hover {
-					color: $header-link-color-hover;
-				}
-			}
-		}
-		
-		ul.site-info {
-			float: left;
-		}
-		
-		ul.site-links {
-			float: right;
-		}
-	}
+  @include position(fixed, 0 null null 0);
+  
+  background-color: $header-background-color;
+  min-height: $header-height;
+  width: 100%;
+  
+  .wrapper {
+    @include outer-container;
+    @include clearfix;
+  }
+  
+  nav {
+    margin: 0 auto;
+    padding-right: 1em;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    @include padding(null 1em);
+    
+    color: $header-link-color;
+    display: inline;
+    line-height: $header-height;
+  }
+  
+  a {
+    color: $header-link-color;
+    
+    &:focus,
+    &:hover {
+      color: $header-link-color-hover;
+    }
+    
+    &.active {
+      color: $header-link-color-hover;
+    }
+  }
+  
+  .site-info {
+    float: left;
+    
+    a {
+      color: $header-link-color;
+      font-weight: bold;
+    }
+  }
+  
+  .site-links {
+    float: right;
+  
+    @include media(max-width $medium-screen, 1) {
+      display: none;
+    }
+  }
 }

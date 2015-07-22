@@ -7,8 +7,15 @@
 // $max-width: 1200px;
 
 // Neat Breakpoints
-$medium-screen: 600px;
-$large-screen: 900px;
+$xsmall-screen: 320px;
+$small-screen: 480px;
+$medium-screen: 768px;
+$large-screen: 1024px;
+$xlarge-screen: 1280px;
 
-$medium-screen-up: new-breakpoint(min-width $medium-screen 4);
-$large-screen-up: new-breakpoint(min-width $large-screen 8);
+$xsmall-screen-up: new-breakpoint(min-width $xsmall-screen);
+$small-screen-up: new-breakpoint(min-width $small-screen);
+$medium-screen-up: new-breakpoint(min-width $medium-screen);
+$large-screen-up: new-breakpoint(min-width $large-screen);
+$xlarge-screen-up: new-breakpoint(min-width $xlarge-screen);
+$fucking-huge-screen-up: new-breakpoint(max-width $xlarge-screen);

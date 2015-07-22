@@ -1,11 +1,11 @@
 .container {
-	@include outer-container;
-	@include padding(75px null null null);
-	
-	height: 100vh;
+  @include outer-container;
+  @include padding(75px null null null);
+  
+  height: 100vh;
 }
 
 .content {
-	@include span-columns(12);
-	@include padding(60px);
+  @include span-columns(12);
+  @include padding(60px);
 }
