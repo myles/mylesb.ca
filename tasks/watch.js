@@ -11,6 +11,7 @@ module.exports = function (grunt) {
                 'source/partials/*.hbs',
                 'source/partials/*.md',
                 'source/layouts/*.hbs',
+				'source/plain/*.hbs',
                 'source/pages/*.hbs',
                 'source/data/*.yml'
             ]

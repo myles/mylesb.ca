@@ -17,7 +17,15 @@ module.exports = function (grunt) {
                     'source/pages/**/*.hbs'
                 ]
             }
-        }
+        },
+		plain: {
+			options: { ext: '.txt' },
+			files: {
+				'build/': [
+					'source/plain/*.hbs'
+				]
+			}
+		}
     };
     
     grunt.config.set('assemble', config);
