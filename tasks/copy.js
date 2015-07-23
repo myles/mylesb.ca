@@ -1,11 +1,17 @@
 module.exports = function (grunt) {
     var config = {
-        main: {
+        images: {
             expand: true,
             cwd: 'source/assets/images/',
             src: '**',
             dest: 'build/assets/images/'
         },
+		fonts: {
+			expand: true,
+			cwd: 'source/assets/fonts/',
+			src: '*.ttf',
+			dest: 'build/assets/fonts/'
+		},
         favicons: {
             expand: true,
             cwd: 'source/assets/images/',

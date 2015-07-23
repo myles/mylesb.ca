@@ -1,6 +1,10 @@
 // ###########################
 // # Base
 // ###########################
+// Typography
+$base-font-family: $georgia;
+$heading-font-family: 'julius-sans-one', $helvetica;
+
 // Font Colors
 $base-font-color: $light-gray;
 $action-color: $blue;
@@ -35,6 +39,8 @@ $panel-background-color: #fff;
 
 $backgrounds: 'toronto-skyline', 'IMG_0606', 'IMG_2409', 'IMG_0626';
 $backgrounds-dir: '../images/backgrounds';
+$background-color-top: rgba(127, 153, 190, .3);
+$background-color-bottom: rgba(32, 57, 43, .3);
 
 // Home
 $panel-home-color: $panel-color;

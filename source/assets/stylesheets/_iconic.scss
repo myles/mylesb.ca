@@ -1,4 +1,4 @@
-// scss-lint:disable ImportantRule, SelectorDepth, NestingDepth
+// scss-lint:disable ImportantRule, SelectorDepth, NestingDepth, QualifyingElement
 
 @mixin iconic-color($color) {
   fill: $color;
@@ -17,12 +17,12 @@
   }
 }
 
-.iconic {
+img.iconic {
   display: none;
-  
-  * {
-    @include iconic-color($light-gray);
-  }
+}
+
+.iconic * {
+  @include iconic-color($light-gray);
 }
 
 // Make sure filled and text elements only get fills
@@ -68,7 +68,7 @@
       display: none;
     }
     
-    .email {
+    &.email {
       a:hover .iconic-envelope * {
         @include iconic-color($social-email-color);
       }

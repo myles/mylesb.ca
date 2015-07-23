@@ -21,7 +21,9 @@ imgrAvatar = new Imager('.image-avatar',
 
 $(document).ready ->
   jQuery.mark.jump()
+  
   SVGInjector jQuery('.iconic')
+  
   jQuery('nav .site-links').navScroll
     scrollSpy: true
   

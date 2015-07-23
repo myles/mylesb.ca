@@ -1,27 +1,27 @@
 @each $background in $backgrounds {
   .panel.background-#{$background} {
     @media (max-width: $xlarge-screen) and (min-width: $large-screen) {
-      background-image: url('#{$backgrounds-dir}/#{$background}-1280.jpg');
+      @include background-image(linear-gradient(10deg, $background-color-bottom, $background-color-top), url('#{$backgrounds-dir}/#{$background}-1280.jpg'));
     }
     
     @media (max-width: $large-screen) and (min-width: $medium-screen) {
-      background-image: url('#{$backgrounds-dir}/#{$background}-1024.jpg');
+      @include background-image(linear-gradient(10deg, $background-color-bottom, $background-color-top), url('#{$backgrounds-dir}/#{$background}-1024.jpg'));
     }
     
     @media (max-width: $medium-screen) and (min-width: $small-screen) {
-      background-image: url('#{$backgrounds-dir}/#{$background}-768.jpg');
+      @include background-image(linear-gradient(10deg, $background-color-bottom, $background-color-top), url('#{$backgrounds-dir}/#{$background}-768.jpg'));
     }
     
     @media (max-width: $small-screen) and (min-width: $xsmall-screen) {
-      background-image: url('#{$backgrounds-dir}/#{$background}-480.jpg');
+      @include background-image(linear-gradient(10deg, $background-color-bottom, $background-color-top), url('#{$backgrounds-dir}/#{$background}-480.jpg'));
     }
     
     @media (max-width: $xsmall-screen) {
-      background-image: url('#{$backgrounds-dir}/#{$background}-320.jpg');
+      @include background-image(linear-gradient(10deg, $background-color-bottom, $background-color-top), url('#{$backgrounds-dir}/#{$background}-320.jpg'));
     }
     
     @media (min-width: $xlarge-screen) {
-      background-image: url('#{$backgrounds-dir}/#{$background}.jpg');
+      @include background-image(linear-gradient(10deg, $background-color-bottom, $background-color-top), url('#{$backgrounds-dir}/#{$background}.jpg'));
     }
     
     background-attachment: center;

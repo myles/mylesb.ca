@@ -10,7 +10,13 @@
     
     .image-avatar-wrapper {
       @include size(128px);
-      margin: 0 auto;
+      @include margin(1em auto);
+    }
+    
+    h1,
+    h2,
+    p {
+      font-family: 'julius-sans-one';
     }
     
     h1,
