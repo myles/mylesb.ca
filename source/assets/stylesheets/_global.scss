@@ -10,10 +10,6 @@ article {
   $action-color: #477dca !default;
   $dark-gray: #333 !default;
   $light-gray: #ddd !default;
-  $medium-screen: em(640) !default;
-  $base-font-color: $dark-gray !default;
-  $sans-serif: 'Questrial', sans-serif;
-  $serif: 'Sanchez', serif;
   
   @include clearfix;
   text-align: left;
@@ -36,21 +32,21 @@ article {
   
   p {
     color: $dark-gray;
-    font-family: $sans-serif;
+    font-family: $base-font-family;
     font-size: 1.05em;
     line-height: $base-line-height;
     margin-bottom: 1.5em;
     
     &.date {
       color: transparentize($dark-gray, .6);
-      font-family: $serif;
+      font-family: $base-font-family;
       font-size: .9em;
       font-style: italic;
       margin-bottom: .3em;
     }
     
     &.author {
-      font-family: $sans-serif;
+      font-family: $base-font-family;
     }
   }
   
@@ -62,7 +58,7 @@ article {
   .type {
     border-bottom: 1px solid;
     display: inline-block;
-    font-family: $sans-serif;
+    font-family: $heading-font-family;
     font-size: .7em;
     font-weight: 800;
     margin-bottom: 2em;
@@ -72,7 +68,7 @@ article {
   }
   
   h1 {
-    font-family: $serif;
+    font-family: $heading-font-family;
     font-size: 1.8em;
     font-weight: 700;
     margin-bottom: .5em;
@@ -83,7 +79,7 @@ article {
   }
   
   h2 {
-    font-family: $serif;
+    font-family: $base-font-family;
     font-size: 1.2em;
     font-style: italic;
     font-weight: 400;
@@ -96,7 +92,7 @@ article {
   }
   
   h3 {
-    font-family: $serif;
+    font-family: $base-font-family;
     font-size: 1.4em;
     font-weight: 400;
     line-height: 1.3em;

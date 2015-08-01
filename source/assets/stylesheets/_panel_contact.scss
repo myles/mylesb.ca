@@ -3,4 +3,12 @@
     background: $panel-contact-background-color;
     color: $panel-contact-color;
   }
+  
+  .form-group {
+    @include outer-container;
+    
+    p {
+      @include span-columns(6);
+    }
+  }
 }

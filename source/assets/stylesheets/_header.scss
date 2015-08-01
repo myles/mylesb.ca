@@ -1,7 +1,11 @@
+// scss-lint:disable PropertySpelling
+
 .mast-head {
   @include position(fixed, 0 null null 0);
   
+  backdrop-filter: blur(5px);
   background-color: $header-background-color;
+  
   min-height: $header-height;
   width: 100%;
   

@@ -1,23 +1,23 @@
 <div class="panel panel-elsewhere background-{{elsewhere.background}}" id="elsewhere">
     <div class="container">
         <div class="content">
-            <h1>Elsewhere</h1>
-            
-            <div class="cards">
-                {{#each elsewhere.portfolio}}
-                <a href="{{url}}" class="card">
-                    <div class="card-image">
+            <article>
+                <p class="type">Elsewhere</p>
+                
+                <h1>Other Web Sites I Manage</h1>
+                
+                <hr>
+                
+                <div class="cards">
+                    {{#each elsewhere.portfolio}}
+                    <a href="{{url}}" class="card {{#if big}}card-big{{/if}}">
                         <img src="{{image}}" alt="{{name}}">
-                    </div>
-                    <div class="card-header">
-                        {{name}}
-                    </div>
-                    <div class="card-copy">
+                        <h1>{{name}}</h1>
                         {{#markdown }}{{copy}}{{/markdown }}
-                    </div>
-                </a>
-                {{/each}}
-            </div>
+                    </a>
+                    {{/each}}
+                </div>
+            </atricle>
         </div>
     </div>
 </div>

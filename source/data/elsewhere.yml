@@ -2,16 +2,24 @@ background: IMG_0606
 portfolio:
   - name: Homepage
     url: http://mylesbraithwaite.com/
-    image: https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png
+    image: 
+    big: true
     copy: >
       Hello, World!
+  - name: Programming Blog
+    url: http://mylesbraithwaite.org/
+  - name: I Love Myles
+    url: http://ilovemyles.com/
+  - name: Myles.Photo
+    url: http://myles.photo/
+    big: true
+    copy: >
+      My photography blog.
   - name: Myles.RED
     url: http://myles.red/
-    image: https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png
+    image: /assets/images/portfolio/red.png
     copy: >
-      Hello, World!
+      Some random-ass playlists I have made.
   - name: Myles.Coffee
     url: http://myles.coffee/
-    image: https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png
-    copy: >
-      Hello, World!
+    image: /assets/images/portfolio/coffee.png

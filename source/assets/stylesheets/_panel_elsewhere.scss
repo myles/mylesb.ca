@@ -1,93 +1,73 @@
+// scss-lint:disable NestingDepth
+
 .panel-elsewhere {
   .content {
     background: $panel-elsewhere-background-color;
     color: $panel-elsewhere-color;
   }
   
-  $base-border-color: #dcdcdc !default;
-  $base-border-radius: 3px !default;
-  $base-background-color: #fff !default;
-  $base-spacing: 1.5em !default;
-  $action-color: #477dca !default;
-  $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
-  $card-border-color: $base-border-color;
-  $card-border: 1px solid $card-border-color;
-  $card-background: lighten($card-border-color, 10%);
-  $card-header-background: $card-background;
-  $card-margin: 1em;
-  $card-image-hover-opacity: .7;
-  $card-image-hover-color: #f8f2b4;
-  
   .cards {
+    @include clearfix;
     @include display(flex);
+    @include justify-content(center);
+    @include align-items(stretch);
     @include flex-wrap(wrap);
-    @include justify-content(space-between);
+    
+    clear: both;
+    height: 300px;
+    overflow: scroll;
+    overflow-x: hidden;
+    text-align: center;
   }
   
   .card {
-    @include flex-basis(15em);
-    @include flex-grow(1);
-    @include transition (all .2s ease-in-out);
+    @include transition(all .2s ease-in-out);
+    @include flex(2 2 15em);
+    @include align-self(stretch);
+    @include padding(2em 2em 3em 2em);
+    @include margin($flex-box-gutter);
     
-    background-color: $card-background;
-    border: $card-border;
+    background: $flex-box-background;
     border-radius: $base-border-radius;
-    box-shadow: 0 2px 4px darken($base-background-color, 10%);
-    cursor: pointer;
-    margin: 0 $card-margin $base-spacing;
-    // position: relative;
-  }
-  
-  .card-image {
-    background-color: $card-image-hover-color;
-    height: 150px;
-    max-height: 150px;
-    overflow: hidden;
+    box-shadow: inset 0 0 1px $flex-box-border-color, 0 2px 4px darken($base-background-color, 10%);
+    display: block;
+    text-decoration: none;
+    
+    @for $i from 1 to 7 {
+      &:nth-child(#{$i}) {
+        $color-from-list: nth($flex-box-top-colors, $i);
+        border-top: 6px solid $color-from-list;
+        
+        &:focus,
+        &:hover {
+          background-color: transparentize($color-from-list, .9);
+        }
+      }
+    }
     
     img {
-      @include transition (all .2s ease-in-out);
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
-      opacity: 1;
-      width: 100%;
+      display: block;
+      height: 3em;
+      margin: auto;
+      margin-bottom: 2em;
+      opacity: .4;
     }
-  }
   
-  .card-header {
-    @include transition (all .2s ease-in-out);
-    background-color: $card-header-background;
-    border-bottom: $card-border;
-    border-radius: $base-border-radius $base-border-radius 0 0;
-    font-weight: bold;
-    line-height: 1.5em;
-    padding: ($base-spacing / 3) ($base-spacing / 2);
-  }
+    h1 {
+      color: $flex-box-color;
+      font-size: 1.2em;
+      font-weight: 800;
+      margin-bottom: .5em;
+    }
   
-  .card-copy {
-    font-size: .9em;
-    line-height: 1.5em;
-    padding: ($base-spacing / 2);
-    
     p {
-      margin: 0 0 ($base-spacing / 2);
+      color: transparentize($flex-box-color, .1);
+      line-height: 1.5em;
+      margin: auto;
     }
   }
   
-  &:focus,
-  &:hover {
-    cursor: pointer;
-    
-    img {
-      opacity: $card-image-hover-opacity;
-    }
-  }
-  
-  &:active {
-    background-color: $card-background;
-    
-    .card-header {
-      background-color: $card-background;
-    }
+  .card-big {
+    @include flex(1 1 40em);
   }
 }

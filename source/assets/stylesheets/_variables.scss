@@ -1,9 +1,11 @@
+// scss-lint:disable ColorVariable
+
 // ###########################
 // # Base
 // ###########################
 // Typography
-$base-font-family: $georgia;
-$heading-font-family: 'julius-sans-one', $helvetica;
+$base-font-family: $helvetica;
+$heading-font-family: 'julius-sans-one', $base-font-family;
 
 // Font Colors
 $base-font-color: $light-gray;
@@ -53,6 +55,14 @@ $panel-about-background-color: $panel-background-color;
 // Elsewhere
 $panel-elsewhere-color: $panel-color;
 $panel-elsewhere-background-color: $panel-background-color;
+
+$flex-box-border-color: $light-gray;
+$flex-box-border: 1px solid $flex-box-border-color;
+$flex-box-background: lighten($light-gray, 10%);
+$flex-box-gutter: .4em;
+$flex-box-width: 18em;
+$flex-box-color: transparentize($white, .3);
+$flex-box-top-colors: #ff6347, #72bfbf, #92b1e3, #e3d743, #ccc, #f6c05c;
 
 // Contact
 $panel-contact-color: $panel-color;

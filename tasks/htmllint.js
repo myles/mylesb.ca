@@ -7,7 +7,9 @@ module.exports = function (grunt) {
 				'attr-name-style': false
 			},
 			src: [
-				'source/**/*.hbs'
+				'source/partials/*.hbs',
+				'source/layouts/*.hbs',
+				'source/pages/*.hbs'
 			]
 		}
     };
