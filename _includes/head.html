@@ -1,0 +1,33 @@
+<head>
+	<meta charset="utf-8">
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="{% if page.description %}{{ pgae.description }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="author" content="{{ site.author }} ({{ site.email }})">
+	<meta name="robots" content="{% if page.robots %}{{ page.robots }}{% else %}index, follow{% endif %}">
+	
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	
+	<link type="text/plain" rel="author" href="{{ "/human.txt" | prepend: site.baseurl }}">
+	
+	<!-- Le styles -->
+	<link href="{{ "/static/css/style.css" | prepend: site.baseurl }}" rel="stylesheet">
+	{% stylesheet style %}
+	
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" href="{% if page.apple_touch_icon %}{{ page.apple_touch_icon | prepend: site.baseurl }}{% else %}{{ "/static/img/apple-touch-icon.png" | prepend: site.baseurl }}{% endif %}">
+	<link rel="shortcut icon" href="{% if page.favicon %}{{ page.favicon | prepend: site.baseurl }}{% else %}{{ "/static/img/favicon.ico" | prepend: site.baseurl }}{% endif %}">
+	
+	<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1642439-32', document.domain);
+		ga('send', 'pageview');
+	</script>
+	
+	<link rel="x-tor-hidden-service" href="http://27rbn47kt7aurbyo.onion/">
+</head>

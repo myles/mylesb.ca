@@ -1,0 +1,42 @@
+# Site settings
+title: Myles B.
+author: Myles Braithwaite
+email: me@mylesbraithwaite.com
+description: "Hoping for the Best, Imagining the Worst."
+baseurl: ""
+url: "http://mylesb.ca/"
+
+# Global Configuration
+destination: ./_site
+static_dir: ./_static
+etc_dir: ./_etc
+include: [".htaccess", ".well-known"]
+exclude:
+- "README.md"
+- "fabfile.py"
+- "fabfile.pyc"
+- "Gemfile"
+- "Gemfile.lock"
+- "bower.json"
+- "divshot.json"
+
+# Build settings
+markdown: kramdown
+
+# jekyll-assets
+assets:
+  dirname: static
+  baseurl: /static/
+  
+  sources:
+    - _static/less
+    - _static/js
+    - _vendor/bower/bootstrap/less
+    - _vendor/bower/bootstrap/js
+    - _vendor/bower/jquery/dist
+    - _vendor/bower/sjcl
+  
+  js_compressor: null
+  css_compressor: null
+  cachebust: none
+  gzip: [ text/css, application/javascript ]

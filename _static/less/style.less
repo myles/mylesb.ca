@@ -1,0 +1,282 @@
+@import "bootstrap/bootstrap.less";
+@import "img-assets.less";
+@import "fonts.less";
+
+@font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* @font-size-base: 16px; */
+@icon-font-path: '/static/fonts/';
+
+@component-offset-horizontal: 140px;
+
+body {
+	padding-top: 20px;
+	background-color: transparent;
+	
+	&#personal-mylesb-ca {
+		h1, p.lead { font-family: 'Josefin Sans', @font-family-sans-serif; }
+	}
+
+	&#bcorp-mylesb-ca {
+		h1, p.lead { font-family: 'Francois One', @font-family-sans-serif; }
+	}
+
+	&#miys-mylesb-ca {
+		h1, p.lead { font-family: Futura, @font-family-sans-serif; }
+	}
+}
+
+h1 { margin: 0; }
+
+.container {
+	.row {
+
+		margin: 20px 0;
+		padding: 20px 0;
+		
+		#photo {
+			.make-sm-column(4);
+			.make-md-column(2);
+			.make-md-column-offset(2);
+			
+			img {
+				.img-thumbnail();
+			}
+			
+			[class^="avatar-"] {
+				.img-thumbnail();
+                background-position: center center;
+			}
+		}
+
+		#content {
+			.make-sm-column(8);
+			.make-md-column(6);
+			
+			padding: 1em;
+			background-color: rgba(255, 255, 255, 0.9);
+			
+			h1 {
+				[itemprop=familyName] {
+					.text-muted;
+				}
+			}
+			
+			p {
+				[itemprop=jobTitle] {
+					.text-info;
+				}
+				
+				[itemprop=worksFor] {
+					.text-primary;
+				}
+			}
+			
+			ul#inline-icons {
+				.list-inline;
+				.text-center;
+				
+				[class^="sn-"] {
+					display: inline-block;
+					width: 32px;
+					height: 32px;
+					.hide-text();
+					
+					&:hover {
+						background-color: @link-color;
+						.border-top-radius(5px);
+						.border-right-radius(5px);
+						.border-bottom-radius(5px);
+						.border-left-radius(5px);
+					}
+				}
+				
+				/* App.net */
+				.sn-44d0c989a20065bcfc8d1f11306ebfc0 { .img-retina('@{icon-dir}@{icon-app-net-hash}.png', '@{icon-dir}@{icon-app-net-hash}-2x.png', 32px, 32px); }
+				
+				/* Facebook */
+				.sn-68eb3b29e205780a9da02e48be7a4c23 { .img-retina('@{icon-dir}@{icon-facebook-hash}.png', '@{icon-dir}@{icon-facebook-hash}-2x.png', 32px, 32px) }
+				
+				/* Flickr */
+				.sn-4f1a1c442398b087ebd501a1afe72401 { .img-retina('@{icon-dir}@{icon-flickr-hash}.png', '@{icon-dir}@{icon-flickr-hash}-2x.png', 32px, 32px) }
+				
+				/* Google+ */
+				.sn-57119792364d1e70318ec25bda4afb98 { .img-retina('@{icon-dir}@{icon-google-plus-hash}.png', '@{icon-dir}@{icon-google-plus-hash}-2x.png', 32px, 32px) }
+				
+				/* Tumblr */
+				.sn-92929918995ae6c02acf3c833540253b { .img-retina('@{icon-dir}@{icon-tumblr-hash}.png', '@{icon-dir}@{icon-tumblr-hash}-2x.png', 32px, 32px) }
+				
+				/* Twitter */
+				.sn-2766261fd348db216869dfd0743149a6 { .img-retina('@{icon-dir}@{icon-twitter-hash}.png', '@{icon-dir}@{icon-twitter-hash}-2x.png', 32px, 32px) }
+				
+			}
+			
+			code {
+				white-space: normal;
+			}
+		}
+	}
+}
+
+@media (max-width: @screen-xs-max) {
+	body {
+		padding-top: 0;
+	}
+	
+	.container {
+		.row {
+			padding-top: 0;
+			margin-top: 0;
+			
+			#photo {
+				[class^="avatar-"] {
+					.center-block;
+					width: 256px;
+					height: 256px;
+				}
+			    
+				.avatar-default {
+					.img-retina('@{default-avatar-dir}256.png', '@{default-avatar-dir}256-x2.png', 256px, 256px);
+				}
+                
+				.avatar-hipster {
+					.img-retina('@{hipster-avatar-dir}256.png', '@{hipster-avatar-dir}256-x2.png', 256px, 256px);
+				}
+			
+				.avatar-suite {
+					.img-retina('@{suit-avatar-dir}256.png', '@{suit-avatar-dir}256-x2.png', 256px, 256px);
+				}
+			}
+	
+			#content {
+				h1, p.lead {
+					.text-center;
+				}
+			}
+			
+		}
+	}
+}
+
+@media (min-width: @screen-xs-min) and (max-width: @screen-sm-max) {
+	html {
+		background: url(@background-sm) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	
+	.container .row {
+		#photo {
+			
+			margin-bottom: 1em;
+			
+			[class^="avatar-"] {
+				width: 256px;
+				height: 256px;
+			}
+			
+			.avatar-default {
+				.img-retina('@{default-avatar-dir}256.png', '@{default-avatar-dir}256-x2.png', 256px, 256px);
+			}
+            
+			.avatar-hipster {
+				.img-retina('@{hipster-avatar-dir}256.png', '@{hipster-avatar-dir}256-x2.png', 256px, 256px);
+			}
+			
+			.avatar-suite {
+				.img-retina('@{suit-avatar-dir}256.png', '@{suit-avatar-dir}256-x2.png', 256px, 256px);
+			}
+		}
+		
+		#content {
+			h1, p.lead {
+				.text-center;
+			}
+		}
+	}
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+	html {
+		background: url(@background-md) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	
+	.container .row {
+		#photo {
+			@avatar-medium-size: 164px - @grid-gutter-width;
+			
+			[class^="avatar-"] {
+				width: @avatar-medium-size;
+				height: @avatar-medium-size;
+				background-size: @avatar-medium-size @avatar-medium-size;
+				
+				.pull-right();
+			}
+			
+			.avatar-default {
+				.img-retina('@{default-avatar-dir}164.png', '@{default-avatar-dir}164-x2.png', @avatar-medium-size, @avatar-medium-size);
+			}
+            
+			.avatar-hipster {
+				.img-retina('@{hipster-avatar-dir}164.png', '@{hipster-avatar-dir}164-x2.png', @avatar-medium-size, @avatar-medium-size);
+			}
+			
+			.avatar-suite {
+				.img-retina('@{suit-avatar-dir}164.png', '@{suit-avatar-dir}164-x2.png', @avatar-medium-size, @avatar-medium-size);
+			}
+		}
+	}
+}
+
+@media (min-width: @screen-md-min) {
+	.container .row {
+		#photo {
+			@avatar-large-size: 200px - @grid-gutter-width;
+			
+			[class^="avatar-"] {
+				width: @avatar-large-size;
+				height: @avatar-large-size;
+				background-size: @avatar-large-size @avatar-large-size;
+				
+				.pull-right();
+			}
+			
+			.avatar-default {
+				.img-retina('@{default-avatar-dir}200.png', '@{default-avatar-dir}200-x2.png', @avatar-large-size, @avatar-large-size);
+			}
+            
+			.avatar-hipster {
+				.img-retina('@{hipster-avatar-dir}200.png', '@{hipster-avatar-dir}200-x2.png', @avatar-large-size, @avatar-large-size);
+			}
+			
+			.avatar-suite {
+				.img-retina('@{suit-avatar-dir}200.png', '@{suit-avatar-dir}200-x2.png', @avatar-large-size, @avatar-large-size);
+			}
+		}
+	}
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-lg) {
+	html {
+		background: url(@background-lg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+
+@media (min-width: @screen-lg-min) {
+	html {
+		background: url(@background-org) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
