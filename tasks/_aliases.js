@@ -3,7 +3,9 @@ module.exports = function (grunt) {
 
     grunt.registerTask('develop', [
         'assemble:develop',
-        'sass:deploy'
+        'sass:develop',
+        'connect',
+        'watch'
     ]);
 
     /*

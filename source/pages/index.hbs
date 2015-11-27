@@ -4,7 +4,7 @@
 <ul class="contact">
 {{#each site.contact}}
     <li class="{{ slug }}">
-        <a href="{{ url }}" title="{{ description }}">
+        <a href="{{ url }}" title="{{ trim description }}">
             {{ title }}
         </a>
     </li>
@@ -14,7 +14,7 @@
 <ul class="elsewhere">
 {{#each site.elsewhere}}
     <li class="{{ slug }}">
-        <a href="{{ url }}" title="{{ description }}">
+        <a href="{{ url }}" title="{{ trim description }}">
             {{ title }}
         </a>
     </li>
