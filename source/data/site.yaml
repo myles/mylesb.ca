@@ -1,0 +1,36 @@
+title: 'Myles Braithwaite'
+description: 'Hoping for the Best, Imagining the Worst.'
+
+contact:
+  - slug: email
+    title: E-mail
+    url: mailto:me@mylesb.ca
+    description: E-mail me at <me@mylesb.ca>.
+
+  - slug: twitter
+    title: Twitter
+    url: https://twitter.com/mylesb
+    description: Tweet me at @MylesB.
+
+elsewhere:
+  - slug: blog
+    title: Myles' Blog
+    url: http://mylesbraithwaite.com/
+    description: >
+                  Where I write about technology, programming,
+                  and liberal arts.
+
+  - slug: lab
+    title: Myles' Lab
+    url: http://mylesbraithwaite.org
+    description: 'A place for web experiments and programming notes.'
+
+  - slug: red
+    title: Myles RED
+    url: http://myles.red/
+    description: 'Sometimes I make mixtapes for the Internet.'
+
+  - slug: life
+    title: Myles' Life
+    url: http://www.myles.life/
+    description: 'Some pictures from my life.'

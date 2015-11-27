@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        bower: grunt.file.readJSON('bower.json')
+        config: grunt.file.readYAML('config.yaml')
     });
 
     grunt.loadNpmTasks('assemble');
