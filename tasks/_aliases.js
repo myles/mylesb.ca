@@ -14,12 +14,12 @@ module.exports = function (grunt) {
         'htmllint'
     ]);
 
-    /*
-      TODO Add the S3 and rsync deploy tasks here.
-    */
     grunt.registerTask('deploy', [
+        'clean',
         'assemble:deploy',
-        'sass:deploy'
+        'sass:deploy',
+        's3',
+        'clean'
     ]);
 
     grunt.registerTask('default', [
