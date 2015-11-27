@@ -1,1 +1,0 @@
-I am a computer programmer living in Toornto, Ontario, Canada.
