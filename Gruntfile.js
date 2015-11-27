@@ -7,6 +7,7 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
     grunt.task.loadTasks('./tasks/');
 };

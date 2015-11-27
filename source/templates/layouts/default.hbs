@@ -10,27 +10,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <h1>{{ site.title }}</h1>
-        <h2>{{ site.description }}</h2>
-        
-        <ul class="contact">
-        {{#each site.contact}}
-            <li class="{{ slug }}">
-                <a href="{{ url }}" title="{{ description }}">
-                    {{ title }}
-                </a>
-            </li>
-        {{/each}}
-        </ul>
-        
-        <ul class="elsewhere">
-        {{#each site.elsewhere}}
-            <li class="{{ slug }}">
-                <a href="{{ url }}" title="{{ description }}">
-                    {{ title }}
-                </a>
-            </li>
-        {{/each}}
-        </ul>
+        <div class="container">
+            {{> body}}
+        </div>
     </body>
 </html>

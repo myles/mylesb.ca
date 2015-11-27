@@ -1,7 +1,16 @@
 module.exports = function (grunt) {
     'use strict';
 
-    var config = {
+    var config, files;
+
+    files = [{
+        expand: true,
+        cwd: '<%= config.source %>/pages/',
+        src: '**/*.hbs',
+        dest: '<%= config.destination %>'
+    }];
+
+    config = {
         options: {
             data: [
                 '<%= config.source%>/data/*.{json,yaml}'
@@ -17,22 +26,16 @@ module.exports = function (grunt) {
                 dev: true,
                 prod: false
             },
-            files: [{
-                expand: true,
-                cwd: '<%= config.source %>/pages/',
-                src: '**/*.hbs',
-                dest: '<%= config.destination %>'
-            }]
+            files: files
         },
         deploy: {
             options: {
                 dev: false,
                 prod: true
             },
-            src: '<%= config.source %>/pages/',
-            dest: '<%= config.destination %>'
+            files: files
         }
     };
 
-    grunt.config.set('assemble', config)
+    grunt.config.set('assemble', config);
 };

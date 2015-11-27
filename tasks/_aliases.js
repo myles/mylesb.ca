@@ -2,7 +2,8 @@ module.exports = function (grunt) {
     'use strict';
 
     grunt.registerTask('develop', [
-        'assemble:develop'
+        'assemble:develop',
+        'sass:deploy'
     ]);
 
     /*
@@ -14,7 +15,8 @@ module.exports = function (grunt) {
       TODO Add the S3 and rsync deploy tasks here.
     */
     grunt.registerTask('deploy', [
-        'assemble:develop'
+        'assemble:deploy',
+        'sass:deploy'
     ]);
 
     grunt.registerTask('default', [
