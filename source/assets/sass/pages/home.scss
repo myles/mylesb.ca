@@ -1,0 +1,64 @@
+.body-index {
+  @include animation-name(multicolour-background);
+  @include animation-duration(30s);
+  @include animation-timing-function(ease);
+  @include animation-iteration-count(infinite);
+
+  background-color: $cape-code;
+}
+
+.page-index {
+  color: $white;
+  text-align: center;
+
+  h1 {
+    font-size: ms(3);
+  }
+
+  h2 {
+    font-size: ms(2);
+  }
+
+  ul {
+    @extend .list-inline;
+
+    font-size: ms(2);
+  }
+
+  a {
+    @include padding(.1rem);
+
+    color: $gray-lightest;
+
+    &:hover {
+      color: $gray-lighter;
+      text-decoration: underline;
+    }
+  }
+
+  .logo,
+  .header,
+  .footer {
+    @include padding(1rem);
+  }
+  
+  @include media-breakpoint-up(md) {
+    @include display(flex);
+    @include flex-direction(column);
+    @include align-items(center);
+    @include flex-flow(row wrap);
+    @include justify-content(space-between);
+
+    text-align: left;
+
+    > * {
+      @include flex(1 100%);
+    }
+
+    .logo,
+    .header,
+    .footer {
+      padding-left: 5rem;
+    }
+  }
+}

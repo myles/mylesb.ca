@@ -1,22 +1,30 @@
-<h1>{{ site.title }}</h1>
-<h2>{{ site.description }}</h2>
+<div class="logo">
+    <img src="http://placekitten.com/g/250/250?image=9">
+</div>
 
-<ul class="contact">
-{{#each site.contact}}
-    <li class="{{ slug }}">
-        <a href="{{ url }}" title="{{ trim description }}">
-            {{ title }}
-        </a>
-    </li>
-{{/each}}
-</ul>
+<div class="header">
+    <h1>{{ site.title }}</h1>
+    <h2>{{ site.description }}</h2>
+</div>
 
-<ul class="elsewhere">
-{{#each site.elsewhere}}
-    <li class="{{ slug }}">
-        <a href="{{ url }}" title="{{ trim description }}">
-            {{ title }}
-        </a>
-    </li>
-{{/each}}
-</ul>
+<div class="footer">
+    <ul class="contact">
+    {{#each site.contact}}
+        <li class="{{ slug }}">
+            <a href="{{ url }}" title="{{ trim description }}">
+                {{ title }}
+            </a>
+        </li>
+    {{/each}}
+    </ul>
+    
+    <ul class="elsewhere">
+    {{#each site.elsewhere}}
+        <li class="{{ slug }}">
+            <a href="{{ url }}" title="{{ trim description }}">
+                {{ title }}
+            </a>
+        </li>
+    {{/each}}
+    </ul>
+</div>

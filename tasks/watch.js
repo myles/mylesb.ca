@@ -18,8 +18,8 @@ module.exports = function (grunt) {
         },
         sass: {
             files: [
-                '<%= config.source %>/source/assets/sass/*.scss',
-                '<%= config.source %>/source/assets/sass/**/*.scss'
+                '<%= config.source %>/assets/sass/*.scss',
+                '<%= config.source %>/assets/sass/**/*.scss'
             ],
             tasks: ['sass:develop']
         }

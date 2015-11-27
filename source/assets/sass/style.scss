@@ -1,6 +1,14 @@
-// Old Fashioned 1.0.0
+// MylesB.ca 1.0.0
 // Copyright 2015 Myles Braithwaite
 // MIT License
 // https://github.com/myles/mylesb.ca/blob/master/LICENSE
 
 @import 'old-fashioned';
+
+// MylesB.ca
+@import 'variables';
+@import 'animations';
+@import 'global';
+
+// Pages
+@import 'pages/home';
