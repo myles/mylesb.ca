@@ -23,7 +23,7 @@ module.exports = function (grunt) {
             ],
             tasks: ['sass:develop']
         }
-    }
+    };
 
     grunt.config.set('watch', config);
 };

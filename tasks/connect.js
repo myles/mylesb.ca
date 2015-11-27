@@ -10,7 +10,7 @@ module.exports = function (grunt) {
                 base: '<%= config.destination %>'
             }
         }
-    }
+    };
 
     grunt.config.set('connect', config);
 };
