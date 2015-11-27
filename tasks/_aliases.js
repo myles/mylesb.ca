@@ -8,10 +8,11 @@ module.exports = function (grunt) {
         'watch'
     ]);
 
-    /*
-      TODO Add some test/lint tasks here.
-    */
-    grunt.registerTask('test', []);
+    grunt.registerTask('test', [
+        'jshint',
+        'scsslint',
+        'htmllint'
+    ]);
 
     /*
       TODO Add the S3 and rsync deploy tasks here.
