@@ -8,15 +8,11 @@
                 
                 <hr>
                 
-                <div class="cards">
+                <ul>
                     {{#each elsewhere.portfolio}}
-                    <a href="{{url}}" class="card {{#if big}}card-big{{/if}}">
-                        <img src="{{image}}" alt="{{name}}">
-                        <h1>{{name}}</h1>
-                        {{#markdown }}{{copy}}{{/markdown }}
-                    </a>
+                    <li><a href="{{url}}">{{name}}</a><!-- {{#if copy}} - {{#markdown }}{{copy}}{{/markdown }}{{/if}}--></li>
                     {{/each}}
-                </div>
+                </ul>
             </atricle>
         </div>
     </div>
