@@ -1,4 +1,4 @@
-@keyframes multicolour-background {
+@include keyframes(multicolour-background) {
   0% {
     background-color: $cape-code;
   }
