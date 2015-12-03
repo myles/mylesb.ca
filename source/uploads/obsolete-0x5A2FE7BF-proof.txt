@@ -1,0 +1,35 @@
+Date: 3rd December, 2015
+
+I am transitioning my GPG key from my old 2048-bit with no expiry to a
+4096-bit with a two year expiry and made in an Air Gap envoriment.
+
+The old key, which I am trnsitioning away from, is:
+
+pub   2048R/5A2FE7BF 2013-08-12
+      Key fingerprint = 45A5 ED20 B8E8 06FD 8CF8  ED1E 6A4C E837 5A2F E7BF
+uid       [ unknown] Myles Braithwaite <me@mylesbraithwaite.com>
+uid       [ unknown] Myles Braithwaite <myles@me.com>
+uid       [ unknown] Myles Braithwaite <63@6953727248492483.com>
+uid       [ unknown] Myles Braithwaite <myles.braithwaite@gmail.com>
+uid       [ unknown] Myles Braithwaite <mylesbraithwaite@hotmail.com>
+uid       [ unknown] Myles Braithwaite <mylesbraithwaite@outlook.com>
+uid       [ unknown] Myles Braithwaite (Monkey in your Soul) <myles@monkeyinyoursoul.com>
+uid       [ unknown] Myles Braithwaite (Braithwaite Corp.) <mbraithwaite@braithwaitecorp.com>
+uid       [ unknown] Myles Braithwaite (Peanut Butter Nice Guy) <myles@peanutbutterniceguy.com>
+uid       [ unknown] Myles Braithwaite (Queen of Portland Street) <myles@queenofportlandstreet.com>
+uid       [ unknown] [jpeg image of size 19831]
+sub   2048R/8BE15893 2013-08-12
+
+The new key, which I will be using next, is:
+
+pub   4096R/5B423590 2015-06-12
+      Key fingerprint = 6720 DB3C 03FF DDF1 3838  7D4A A49A 64DF 5B42 3590
+uid       [ultimate] Myles Braithwaite <me@mylesbraithwaite.com>
+uid       [ultimate] Myles Braithwaite (Gmail) <myles.braithwaite@gmail.com>
+uid       [ultimate] Myles Braithwaite (Coffee) <me@myles.coffee>
+sub   4096R/CF8E8A71 2015-06-12
+sub   4096R/6E2C2D77 2015-06-12 [expires: 2016-06-11]
+
+Myles Braithwaite
+me@mylesbraithwaite.com
+

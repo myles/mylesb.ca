@@ -10,6 +10,11 @@ module.exports = function (grunt) {
         website: {
             cwd: "<%= config.destination %>",
             src: "**"
+        },
+        uploads: {
+            cwd: "<%= config.source %>/uploads/",
+            src: "**",
+            dest: 'uploads/'
         }
     };
 
