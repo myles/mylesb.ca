@@ -11,9 +11,12 @@
     <ul class="contact">
     {{#each site.contact}}
         <li class="{{ slug }}">
-            <a href="{{ url }}" title="{{ trim description }}">
+            <a href="{{ url }}">
                 {{ title }}
             </a>
+            <span class="popover">
+                {{ trim description }}
+            </span>
         </li>
     {{/each}}
     </ul>
@@ -21,9 +24,12 @@
     <ul class="elsewhere">
     {{#each site.elsewhere}}
         <li class="{{ slug }}">
-            <a href="{{ url }}" title="{{ trim description }}">
+            <a href="{{ url }}">
                 {{ title }}
             </a>
+            <span class="popover">
+                {{ trim description }}
+            </span>
         </li>
     {{/each}}
     </ul>

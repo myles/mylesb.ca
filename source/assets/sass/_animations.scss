@@ -1,4 +1,4 @@
-@keyframes multicolour-background {
+@include keyframes(multicolour-background) {
   0% {
     background-color: $cape-code;
   }
@@ -22,5 +22,25 @@
   
   100% {
     background-color: $cape-code;
+  }
+}
+
+@include keyframes(fade-in) {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@include keyframes(move-up) {
+  from {
+    bottom: 30px;
+  }
+
+  to {
+    bottom: 42px;
   }
 }
