@@ -1,2 +1,8 @@
+# Site structure
 source: ./source/
 destination: ./build/
+uploads: ./source/uploads/
+
+# GnuPG Stuff
+gpg_short_id: '0x5B423590'
+obsolete_gpg_short_id: '0x5A2FE7BF'

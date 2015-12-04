@@ -9,6 +9,7 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-aws');
+    grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-htmllint');
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-contrib-sass');
