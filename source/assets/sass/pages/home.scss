@@ -2,7 +2,7 @@
   @include radial-gradient(transparent, rgba(0, 0, 0, .2));
 
   @include animation-name(multicolour-background);
-  @include animation-duration(30s);
+  @include animation-duration(45s);
   @include animation-timing-function(ease);
   @include animation-iteration-count(infinite);
 
@@ -16,23 +16,23 @@
   text-align: center;
 
   h1 {
-    font-size: ms(3);
+    @extend %display-3;
   }
 
   h2 {
-    font-size: ms(2);
+    @extend %display-4;
   }
 
   ul {
-    @extend .list-inline;
-
-    font-size: ms(2);
+    @extend %list-inline;
   }
 
   a {
     @include padding(.1rem);
 
     color: $gray-lightest;
+    font-size: ms(2);
+    font-weight: normal;
 
     &:hover {
       color: $gray-lighter;
@@ -45,7 +45,7 @@
   .footer {
     @include padding(1rem);
   }
-  
+
   @include media-breakpoint-up(md) {
     @include display(flex);
     @include flex-direction(column);
@@ -63,48 +63,6 @@
     .header,
     .footer {
       padding-left: 5rem;
-    }
-  }
-  
-  ul {
-    li {
-      display: inline-block;
-      position: relative;
-      
-      .popover {
-        background-color: rgba(0,0,0,0.85);
-        border-radius: 5px;
-        bottom: 42px;
-        box-shadow: 0 0 5px rgba(0,0,0,0.4);
-        color: #fff;
-        text-align: center;
-        display: none;
-        font-size: .5em;
-        left: -95px;
-        padding: 7px 10px;
-        position: absolute;
-        width: 200px;
-        z-index: 4;
-        
-        &:before {
-          border-top: 7px solid rgba(0,0,0,0.85);
-          border-right: 7px solid transparent;
-          border-left: 7px solid transparent;
-          bottom: -7px;
-          content: '';
-          display: block;
-          left: 50%;
-          margin-left: -7px;
-          position: absolute;
-        }
-      }
-      
-      &:hover {
-        .popover {
-          @include animation(fade-in .3s linear 1, move-up .3s linear 1);
-          display: block;
-        }
-      }
     }
   }
 }
