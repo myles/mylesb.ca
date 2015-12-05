@@ -15,12 +15,9 @@
   color: $white;
   text-align: center;
 
-  h1 {
-    @extend %display-3;
-  }
-
+  h1,
   h2 {
-    @extend %display-4;
+    font-weight: 200;
   }
 
   ul {
@@ -28,15 +25,30 @@
   }
 
   a {
-    @include padding(.1rem);
-
     color: $gray-lightest;
     font-size: ms(2);
-    font-weight: normal;
+    font-weight: 300;
 
     &:hover {
       color: $gray-lighter;
       text-decoration: underline;
+    }
+  }
+  
+  @include media-breakpoint-up(md) {
+    a {
+      @include linear-gradient(transparent, rgba(0, 0, 0, .2));
+      @include border-radius(.25rem);
+      @include padding(.25rem .5rem);
+
+      border: 1px solid $gray-lightest;
+
+      &:hover {
+        @include linear-gradient(transparent, rgba(255, 255, 255, .2));
+
+        color: $gray-lightest;
+        text-decoration: none;
+      }
     }
   }
 
