@@ -4,6 +4,8 @@
 // https://github.com/myles/mylesb.ca/blob/master/LICENSE
 
 @import 'old-fashioned';
+@import 'full/type';
+@import 'full/code';
 
 // MylesB.ca
 @import 'variables';
@@ -12,3 +14,4 @@
 
 // Pages
 @import 'pages/home';
+@import 'pages/gpg';
