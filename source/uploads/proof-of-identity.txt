@@ -1,8 +1,7 @@
 Date: 3rd December, 2015
 
-My name is Myles Braithwatie and I use GnuPG.
+My name is Myles Braithwaite and I use GnuPG.
 
 My public key information is:
   ID: 0x5B423590
   Fingerprint: 6720 DB3C 03FF DDF1 3838  7D4A A49A 64DF 5B42 3590
-
