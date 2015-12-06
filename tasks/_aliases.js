@@ -22,7 +22,17 @@ module.exports = function (grunt) {
         'clean'
     ]);
 
+    grunt.registerTask('staging', [
+        'clean',
+        'assemble:develop',
+        'sass:develop',
+        'rsync:staging',
+        'clean'
+    ]);
+
     grunt.registerTask('default', [
-        'develop'
+        'clean',
+        'assemble:develop',
+        'sass:develop'
     ]);
 };
