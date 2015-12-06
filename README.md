@@ -14,7 +14,6 @@ This command will build the web site.
 
 This command will build and run a simple web server for viewing the web site locally.
 
-
 ### `grunt deploy`
 
 This comamnd will build, compress, and deploy the web site.
