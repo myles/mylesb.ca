@@ -14,6 +14,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-exec": "^0.4.6",
     "grunt-htmllint": "^0.2.7",
+    "grunt-rsync": "^0.6.2",
     "grunt-scss-lint": "^0.3.8"
   }
 }
