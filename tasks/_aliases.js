@@ -35,7 +35,7 @@ module.exports = function (grunt) {
         'assemble:develop',
         'sass:develop'
     ]);
-    
+
     grunt.registerTask('default', [
         'build'
     ]);
