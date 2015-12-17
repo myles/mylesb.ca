@@ -30,9 +30,13 @@ module.exports = function (grunt) {
         'clean'
     ]);
 
-    grunt.registerTask('default', [
+    grunt.registerTask('build', [
         'clean',
         'assemble:develop',
         'sass:develop'
+    ]);
+    
+    grunt.registerTask('default', [
+        'build'
     ]);
 };
