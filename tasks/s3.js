@@ -20,6 +20,10 @@ module.exports = function (grunt) {
             cwd: "<%= config.assets %>/images/",
             src: "**",
             dest: "assets/images/"
+        },
+        favicons: {
+            cwd: "<%= config.assets %>/images/favicons/",
+            src: "favicon.ico"
         }
     };
 

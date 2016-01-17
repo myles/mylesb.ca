@@ -24,6 +24,7 @@ module.exports = function (grunt) {
         'rsync:production',
         'rsync:production_assets',
         'rsync:production_uploads',
+        'rsync:production_favicon',
         'clean'
     ]);
 

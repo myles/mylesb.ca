@@ -45,6 +45,15 @@ module.exports = function (grunt) {
 				user: "myles",
 				delete: true
             }
+        },
+        production_favicon: {
+            options: {
+                src: "<%= config.source %>/assets/images/favicons/favicon.ico",
+                dest: "/srv/www/ca_mylesb_www/html",
+				host: "panda.mylesbraithwaite.com",
+				port: 2222,
+				user: "myles"
+            }
         }
     };
 
