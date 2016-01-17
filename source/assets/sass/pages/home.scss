@@ -48,23 +48,19 @@
   }
   
   .blog a {
-    text-decoration-color: $fire-bush;
-    -webkit-text-decoration-color: $fire-bush;
+    @include prefixer(text-decoration-color, $fire-bush, webkit moz ms o spec);
   }
   
   .lab a {
-    text-decoration-color: $cerulean;
-    -webkit-text-decoration-color: $cerulean;
+    @include prefixer(text-decoration-color, $cerulean, webkit moz ms o spec);
   }
   
   .red a {
-    text-decoration-color: $wild-watermelon;
-    -webkit-text-decoration-color: $wild-watermelon;
+    @include prefixer(text-decoration-color, $wild-watermelon, webkit moz ms o spec);
   }
   
   .life a {
-    text-decoration-color: $bitter-lemon;
-    -webkit-text-decoration-color: $bitter-lemon;
+    @include prefixer(text-decoration-color, $bitter-lemon, webkit moz ms o spec);
   }
 
   .logo,
