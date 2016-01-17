@@ -5,10 +5,10 @@
 
   .page-header {
     @extend %page-header;
-
-    h1 {
-      @extend %display-2;
-    }
+  }
+  
+  h1 {
+    @extend %display-2;
   }
 
   blockquote {
