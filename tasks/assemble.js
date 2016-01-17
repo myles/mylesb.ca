@@ -25,8 +25,7 @@ module.exports = function (grunt) {
             layout: 'default.hbs',
             permalinks: {
                 structure: ':basename/index.html'
-            },
-            assets: 'assets'
+            }
         },
         develop: {
             options: {
