@@ -46,6 +46,26 @@
       text-decoration: underline;
     }
   }
+  
+  .blog a {
+    text-decoration-color: $fire-bush;
+    -webkit-text-decoration-color: $fire-bush;
+  }
+  
+  .lab a {
+    text-decoration-color: $cerulean;
+    -webkit-text-decoration-color: $cerulean;
+  }
+  
+  .red a {
+    text-decoration-color: $wild-watermelon;
+    -webkit-text-decoration-color: $wild-watermelon;
+  }
+  
+  .life a {
+    text-decoration-color: $bitter-lemon;
+    -webkit-text-decoration-color: $bitter-lemon;
+  }
 
   .logo,
   .header,
