@@ -14,4 +14,10 @@
   blockquote {
     @extend %blockquote;
   }
+  
+  pre {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    overflow: auto;
+  }
 }
