@@ -21,6 +21,9 @@ module.exports = function (grunt) {
         'assemble:deploy',
         'sass:deploy',
         's3',
+        'rsync:production',
+        'rsync:production_assets',
+        'rsync:production_uploads',
         'clean'
     ]);
 

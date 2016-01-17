@@ -4,7 +4,8 @@ module.exports = function (grunt) {
     var config = {
 		options: {
 			args: ["--verbose"],
-			recursive: true
+			recursive: true,
+            exclude: ["*.scss"],
 		},
 		staging: {
 			options: {
@@ -13,7 +14,7 @@ module.exports = function (grunt) {
 				host: "panda.mylesbraithwaite.com",
 				port: 2222,
 				user: "myles",
-				delete: true // Careful this option could cause data loss, read the docs!
+				delete: true
 			}
 		},
 		production: {
@@ -23,9 +24,28 @@ module.exports = function (grunt) {
 				host: "panda.mylesbraithwaite.com",
 				port: 2222,
 				user: "myles",
-				delete: true // Careful this option could cause data loss, read the docs!
+				delete: true
 			}
-		}
+		},
+        production_assets: {
+            options: {
+                src: "<%= config.source %>/assets/",
+                dest: "/srv/www/ca_mylesb_www/html/assets",
+				host: "panda.mylesbraithwaite.com",
+				port: 2222,
+				user: "myles"
+            }
+        },
+        production_uploads: {
+            options: {
+                src: "<%= config.source %>/uploads/",
+                dest: "/srv/www/ca_mylesb_www/html/uploads",
+				host: "panda.mylesbraithwaite.com",
+				port: 2222,
+				user: "myles",
+				delete: true
+            }
+        }
     };
 
     grunt.config.set('rsync', config);
