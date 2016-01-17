@@ -4,14 +4,16 @@ module.exports = function (grunt) {
     grunt.registerTask('develop', [
         'assemble:develop',
         'sass:develop',
+        'uglify',
         'connect',
+        'copy',
         'watch'
     ]);
 
     grunt.registerTask('test', [
+        // 'htmllint',
         'jshint',
-        'scsslint',
-        'htmllint'
+        'scsslint'
     ]);
 
     grunt.registerTask('deploy', [

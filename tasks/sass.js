@@ -14,10 +14,7 @@ module.exports = function (grunt) {
     }];
 
     loadPath = [
-        './bower_components/bourbon/app/assets/stylesheets/',
-        './bower_components/neat/app/assets/stylesheets/',
-        './bower_components/modular-scale/stylesheets/',
-        './bower_components/old-fashioned/scss/',
+        './bower_components/',
         '<%= config.source %>/assets/sass/'
     ];
 

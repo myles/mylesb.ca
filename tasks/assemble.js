@@ -16,7 +16,7 @@ module.exports = function (grunt) {
                 'grunt-assemble-permalinks'
             ],
             data: [
-                '<%= config.source%>/data/*.{json,yaml}'
+                '<%= config.source %>/data/*.{json,yaml}'
             ],
             flatten: true,
             helpers: '<%= config.source %>/helpers/helpers-*.js',
@@ -25,7 +25,8 @@ module.exports = function (grunt) {
             layout: 'default.hbs',
             permalinks: {
                 structure: ':basename/index.html'
-            }
+            },
+            assets: 'assets'
         },
         develop: {
             options: {

@@ -15,6 +15,11 @@ module.exports = function (grunt) {
             cwd: "<%= config.source %>/uploads/",
             src: "**",
             dest: 'uploads/'
+        },
+        assets: {
+            cwd: "<%= config.assets %>/images/",
+            src: "**",
+            dest: "assets/images/"
         }
     };
 

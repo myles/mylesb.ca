@@ -2,6 +2,7 @@
 source: ./source/
 destination: ./build/
 uploads: ./source/uploads/
+assets: ./source/assets/
 
 # GnuPG Stuff
 gpg_short_id: '0x5B423590'

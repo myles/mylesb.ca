@@ -22,6 +22,25 @@ module.exports = function (grunt) {
                 '<%= config.source %>/assets/sass/**/*.scss'
             ],
             tasks: ['sass:develop']
+        },
+        javascript: {
+            files: [
+                '<%= config.assets %>/javascript/script.js'
+            ],
+            tasks: ['uglify']
+        },
+        assets: {
+            files: [
+                '<%= config.source %>/assets/**',
+                '!<%= config.source %>/assets/sass/**'
+            ],
+            tasks: ['copy:assets']
+        },
+        uploads: {
+            files: [
+                '<%= config.source %>/uploads/**'
+            ],
+            tasks: ['copy:uploads']
         }
     };
 

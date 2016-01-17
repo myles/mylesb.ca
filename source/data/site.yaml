@@ -8,6 +8,11 @@ contact:
     url: mailto:me@mylesb.ca
     description: E-mail me at <me@mylesb.ca>.
 
+  - slug: gpg-key
+    title: GnuPG Key
+    url: /gpg/
+    description: My GnuPG
+
   - slug: twitter
     title: Twitter
     url: https://twitter.com/mylesb
