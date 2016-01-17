@@ -30,6 +30,10 @@
   ul {
     @extend %list-inline;
   }
+  
+  li {
+    padding: 0;
+  }
 
   a {
     color: $gray-lightest;
@@ -81,23 +85,7 @@
     > * {
       @include flex(1 100%);
     }
-
-    a {
-      @include linear-gradient(transparent, rgba(0, 0, 0, .2));
-      @include border-radius(.25rem);
-      @include padding(.25rem .5rem);
-
-      border: 1px solid $gray-lightest;
-      text-decoration: none;
-
-      &:hover {
-        @include linear-gradient(transparent, rgba(255, 255, 255, .2));
-
-        color: $gray-lightest;
-        text-decoration: none;
-      }
-    }
-
+    
     .logo,
     .header,
     .footer {
@@ -109,6 +97,39 @@
         margin: 0;
         text-align: center;
       }
+    }
+
+    a {
+      @include linear-gradient(transparent, transparentize($cape-code, .8));
+      @include border-radius(.25rem);
+      @include padding(.25rem .5rem);
+
+      border: 1px solid $gray-lightest;
+      text-decoration: none;
+    }
+
+    .blog a {
+      @include linear-gradient(transparent, transparentize($fire-bush, .8));
+    }
+    
+    .lab a {
+      @include linear-gradient(transparent, transparentize($cerulean, .8));
+    }
+    
+    .red a {
+      @include linear-gradient(transparent,
+                               transparentize($wild-watermelon, .8));
+    }
+    
+    .life a {
+      @include linear-gradient(transparent, transparentize($bitter-lemon, .8));
+    }
+    
+    a:hover {
+      @include linear-gradient(transparent, rgba(255, 255, 255, .2));
+
+      color: $gray-lightest;
+      text-decoration: none;
     }
   }
 }
