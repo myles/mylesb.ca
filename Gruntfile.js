@@ -7,10 +7,10 @@ module.exports = function (grunt) {
         config: grunt.file.readYAML('config.yaml')
     });
 
-    grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-aws');
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-rsync');
+    grunt.loadNpmTasks('grunt-assemble');
     grunt.loadNpmTasks('grunt-htmllint');
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-contrib-copy');
