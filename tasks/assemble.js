@@ -13,6 +13,7 @@ module.exports = function (grunt) {
     config = {
         options: {
             plugins: [
+                'grunt-assemble-sitemap',
                 'grunt-assemble-permalinks'
             ],
             data: [
@@ -25,6 +26,12 @@ module.exports = function (grunt) {
             layout: 'default.hbs',
             permalinks: {
                 structure: ':basename/index.html'
+            },
+            sitemap: {
+                homepage: 'http://mylesb.ca',
+                changefreq: 'weekly',
+                relativedest: true,
+                robot: true
             }
         },
         develop: {
