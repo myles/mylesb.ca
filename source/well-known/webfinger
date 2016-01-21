@@ -1,0 +1,14 @@
+{
+	"subject": "acct:me@mylesb.ca",
+	"properties": {
+		"http://schema.org/name": "Myles Braithwaite",
+		"http://schema.org/email": "me@mylesb.ca"
+	},
+	"links": [{
+		"rel": "http://webfinger.net/rel/profile-page",
+		"href": "https://mylesb.ca/"
+	}, {
+		"rel": "http://webfinger.net/rel/avatar",
+		"href": "http://www.gravatar.com/avatar/f95fe316ef71f251592e1987b1ff08a7.jpg?s=512"
+	}]
+}
