@@ -5,21 +5,11 @@ module.exports = function (grunt) {
         options: {
             accessKeyId: "<%= aws.accessKeyId %>",
             secretAccessKey: "<%= aws.secretAccessKey %>",
-            bucket: "mylesb.ca"
+            bucket: "<%= config.deploy.aws.bucket %>"
         },
         website: {
             cwd: "<%= config.destination %>",
             src: "**"
-        },
-        uploads: {
-            cwd: "<%= config.source %>/uploads/",
-            src: "**",
-            dest: 'uploads/'
-        },
-        assets: {
-            cwd: "<%= config.assets %>/images/",
-            src: "**",
-            dest: "assets/images/"
         },
         favicons: {
             cwd: "<%= config.assets %>/images/favicons/",

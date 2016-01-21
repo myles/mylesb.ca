@@ -2,57 +2,52 @@ module.exports = function (grunt) {
     'use strict';
 
     var config = {
-		options: {
-			args: ["--verbose"],
-			recursive: true,
-            exclude: ["*.scss"],
-		},
-		staging: {
-			options: {
-				src: "./build/",
-				dest: "/srv/www/ca_mylesb_draft/html",
-				host: "panda.mylesbraithwaite.com",
-				port: 2222,
-				user: "myles",
-				delete: true
-			}
-		},
-		production: {
-			options: {
-				src: "./build/",
-				dest: "/srv/www/ca_mylesb_www/html",
-				host: "panda.mylesbraithwaite.com",
-				port: 2222,
-				user: "myles",
-				delete: true
-			}
-		},
-        production_assets: {
+        options: {
+            args: ["--verbose"],
+            recursive: true,
+            exclude: ["*.scss"]
+        },
+        staging: {
             options: {
-                src: "<%= config.source %>/assets/",
-                dest: "/srv/www/ca_mylesb_www/html/assets",
-				host: "panda.mylesbraithwaite.com",
-				port: 2222,
-				user: "myles"
+                src: "<%= config.destination %>",
+                dest: "<%= config.deploy.stag.dest %>",
+                host: "<%= config.deploy.stag.host %>",
+                port: "<%= config.deploy.stag.port %>",
+                delete: true
             }
         },
-        production_uploads: {
+        production: {
             options: {
-                src: "<%= config.source %>/uploads/",
-                dest: "/srv/www/ca_mylesb_www/html/uploads",
-				host: "panda.mylesbraithwaite.com",
-				port: 2222,
-				user: "myles",
-				delete: true
+                src: "<%= config.destination %>",
+                dest: "<%= config.deploy.prod.dest %>",
+                host: "<%= config.deploy.prod.host %>",
+                port: "<%= config.deploy.prod.port %>",
+                delete: true
             }
         },
         production_favicon: {
             options: {
                 src: "<%= config.source %>/assets/images/favicons/favicon.ico",
-                dest: "/srv/www/ca_mylesb_www/html",
-				host: "panda.mylesbraithwaite.com",
-				port: 2222,
-				user: "myles"
+                dest: "<%= config.deploy.prod.dest %>",
+                host: "<%= config.deploy.prod.host %>",
+                port: "<%= config.deploy.prod.port %>"
+            }
+        },
+        nfs: {
+            options: {
+                src: "<%= config.destination %>",
+                dest: "<%= config.deploy.nfs.dest %>",
+                host: "<%= config.deploy.nfs.host %>",
+                port: "<%= config.deploy.nfs.port %>",
+                delete: true
+            }
+        },
+        nfs_favicon: {
+            options: {
+                src: "<%= config.source %>/assets/images/favicons/favicon.ico",
+                dest: "<%= config.deploy.nfs.dest %>",
+                host: "<%= config.deploy.nfs.host %>",
+                port: "<%= config.deploy.nfs.port %>"
             }
         }
     };

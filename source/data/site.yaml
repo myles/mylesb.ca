@@ -29,14 +29,17 @@ elsewhere:
   - slug: lab
     title: Myles' Lab
     url: http://mylesbraithwaite.org
-    description: 'A place for web experiments and programming notes.'
+    description: >
+                  A place for web experiments and programming notes.
 
   - slug: red
     title: Myles RED
     url: http://myles.red/
-    description: 'Sometimes I make mixtapes for the Internet.'
+    description: >
+                  Sometimes I make mixtapes for the Internet.
 
   - slug: life
     title: Myles' Life
     url: http://www.myles.life/
-    description: 'Some pictures from my life.'
+    description: >
+                  Some random posts from my life.

@@ -16,15 +16,30 @@ module.exports = function (grunt) {
         'scsslint'
     ]);
 
+    grunt.registerTask('deploy:s3', [
+        's3:website',
+        's3:favicons'
+    ]);
+
+    grunt.registerTask('deploy:prod', [
+        'rsync:production',
+        'rsync:production_favicon'
+    ]);
+
+    grunt.registerTask('deploy:nfs', [
+        'rsync:nfs',
+        'rsync:nfs_favicon'
+    ]);
+
     grunt.registerTask('deploy', [
         'clean',
         'assemble:deploy',
         'sass:deploy',
-        's3',
-        'rsync:production',
-        'rsync:production_assets',
-        'rsync:production_uploads',
-        'rsync:production_favicon',
+        'copy:assets',
+        'copy:uploads',
+        'deploy:s3',
+        'deploy:prod',
+        'deploy:nfs',
         'clean'
     ]);
 

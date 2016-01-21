@@ -4,8 +4,28 @@ destination: ./build/
 uploads: ./source/uploads/
 assets: ./source/assets/
 
-# GnuPG Stuff
+# GnuPG stuff
 gpg_short_id: '0x5B423590'
 obsolete_gpg_short_id: '0x5A2FE7BF'
 work_gpg_short_id: '0x'
 bgi_gpg_short_id: '0x3DE49250'
+
+# Deploy stuff
+deploy:
+  aws:
+    bucket: 'mylesb.ca'
+
+  stag:
+    dest: '/srv/www/ca_mylesb_draft/html'
+    host: 'myles@panda.mylesbraithwaite.com'
+    port: 2222
+
+  prod:
+    dest: '/srv/www/ca_mylesb_www/html'
+    host: 'myles@panda.mylesbraithwaite.com'
+    port: 2222
+
+  nfs:
+    dest: '/home/public'
+    host: 'myles_myles@ssh.phx.nearlyfreespeech.net'
+    port: 22
