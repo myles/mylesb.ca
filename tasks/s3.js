@@ -14,6 +14,11 @@ module.exports = function (grunt) {
         favicons: {
             cwd: "<%= config.assets %>/images/favicons/",
             src: "favicon.ico"
+        },
+        well_known: {
+            cwd: "<%= config.source %>/well-known/",
+            src: "**",
+            dest: ".well-known/"
         }
     };
 
