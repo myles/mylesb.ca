@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/myles
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mylesb.ca
+  * I am myles (https://keybase.io/myles) on keybase.
+  * I have a public key ASDsKmdWyUdbC2T4z0-AEwEVKhi7krT1ikTEvWiXaP1kLAo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101c4fe2a960a2637dfab2e287e5c019f99c5eb3422db6919ea15b3f1242788e06b0a",
+            "host": "keybase.io",
+            "kid": "0120ec2a6756c9475b0b64f8cf4f801301152a18bb92b4f58a44c4bd689768fd642c0a",
+            "uid": "c98030d0d6b81c09fd2673bcd5e0fd00",
+            "username": "myles"
+        },
+        "service": {
+            "hostname": "mylesb.ca",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.6"
+    },
+    "ctime": 1453390254,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1453390054,
+        "hash": "a03cff4c5a821b6c7c58141946eb6fbc01b93c0656f551eb7c66c2c881c9320f9c83bcf47e0cc4a503f23d5e47ecf46a3de7a9fdd781d1cc6926a319ead07421",
+        "seqno": 353032
+    },
+    "prev": "0788dd74b875b63fa1e6e3b5152e583a004c3c36e71bdf260b2617e40ac6a0e8",
+    "seqno": 31,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg7CpnVslHWwtk+M9PgBMBFSoYu5K09YpExL1ol2j9ZCwKp3BheWxvYWTFAu57ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxYzRmZTJhOTYwYTI2MzdkZmFiMmUyODdlNWMwMTlmOTljNWViMzQyMmRiNjkxOWVhMTViM2YxMjQyNzg4ZTA2YjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZWMyYTY3NTZjOTQ3NWIwYjY0ZjhjZjRmODAxMzAxMTUyYTE4YmI5MmI0ZjU4YTQ0YzRiZDY4OTc2OGZkNjQyYzBhIiwidWlkIjoiYzk4MDMwZDBkNmI4MWMwOWZkMjY3M2JjZDVlMGZkMDAiLCJ1c2VybmFtZSI6Im15bGVzIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJteWxlc2IuY2EiLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC42In0sImN0aW1lIjoxNDUzMzkwMjU0LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NTMzOTAwNTQsImhhc2giOiJhMDNjZmY0YzVhODIxYjZjN2M1ODE0MTk0NmViNmZiYzAxYjkzYzA2NTZmNTUxZWI3YzY2YzJjODgxYzkzMjBmOWM4M2JjZjQ3ZTBjYzRhNTAzZjIzZDVlNDdlY2Y0NmEzZGU3YTlmZGQ3ODFkMWNjNjkyNmEzMTllYWQwNzQyMSIsInNlcW5vIjozNTMwMzJ9LCJwcmV2IjoiMDc4OGRkNzRiODc1YjYzZmExZTZlM2I1MTUyZTU4M2EwMDRjM2MzNmU3MWJkZjI2MGIyNjE3ZTQwYWM2YTBlOCIsInNlcW5vIjozMSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBIRdI4KidOUiim4pm764p9I5ICL7C6RYTajlCBerPB7MmpYpQh9dVZlBYkH+vHf4ljG5mg+Lwubh+GhdZVI60AqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/myles
+
+==================================================================

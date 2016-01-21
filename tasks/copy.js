@@ -21,6 +21,14 @@ module.exports = function (grunt) {
                     dest: '<%= config.destination %>/uploads/'
                 }
             ]
+        },
+        well_known: {
+            files: [{
+                expand: true,
+                cwd: '<%= config.source %>/well-known',
+                src: ['**'],
+                dest: '<%= config.destination %>/.well-known/'
+            }]
         }
     };
 
