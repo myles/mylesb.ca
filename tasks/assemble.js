@@ -22,7 +22,9 @@ module.exports = function (grunt) {
             flatten: true,
             helpers: '<%= config.source %>/helpers/helpers-*.js',
             layoutdir: '<%= config.source %>/templates/layouts',
-            partials: '<%= config.source %>/templates/partials/*.hbs',
+            partials: [
+                '<%= config.source %>/templates/partials/*.hbs'
+            ],
             layout: 'default.hbs',
             permalinks: {
                 structure: ':basename/index.html'
