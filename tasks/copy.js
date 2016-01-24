@@ -7,7 +7,10 @@ module.exports = function (grunt) {
                 {
                     expand: true,
                     cwd: '<%= config.assets %>',
-                    src: ['images/**'],
+                    src: [
+                        'images/**',
+                        'javascript/jquery-2.2.0.min.js'
+                    ],
                     dest: '<%= config.destination %>/assets/'
                 }
             ]

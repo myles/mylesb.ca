@@ -1,0 +1,13 @@
+.page-avatars {
+  .row {
+    @extend %row;
+  }
+  
+  .avatar {
+    @include span-columns(3);
+    
+    img {
+      width: 95%;
+    }
+  }
+}

@@ -4,11 +4,13 @@ module.exports = function (grunt) {
     var config = {
         options: {
             banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-                    '<%= grunt.template.today("yyyy-mm-dd") %> */'
+                    '<%= grunt.template.today("yyyy-mm-dd") %> */',
+            sourceMap: true
         },
         target: {
             files: {
                 '<%= config.destination %>/assets/javascript/script.js': [
+                    '<%= config.assets %>/javascript/svg-injector.js',
                     '<%= config.assets %>/javascript/script.js'
                 ]
             }
