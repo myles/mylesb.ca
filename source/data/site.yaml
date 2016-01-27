@@ -32,14 +32,20 @@ elsewhere:
     description: >
                   A place for web experiments and programming notes.
 
-  - slug: red
-    title: Myles RED
-    url: http://myles.red/
-    description: >
-                  Sometimes I make mixtapes for the Internet.
-
   - slug: life
     title: Myles' Life
     url: http://www.myles.life/
     description: >
                   Some random posts from my life.
+
+  - slug: photo
+    title: Myles.Photo
+    url: http://myles.photo/
+    description: >
+                  Some of my photography.
+
+  - slug: red
+    title: Myles RED
+    url: http://myles.red/
+    description: >
+                  Sometimes I make mixtapes for the Internet.

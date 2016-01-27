@@ -62,6 +62,10 @@
   .life a {
     @include prefixer(text-decoration-color, $bitter-lemon, webkit moz ms o spec);
   }
+  
+  .photo a {
+    @include prefixer(text-decoration-color, $cape-code, webkit moz ms o spec);
+  }
 
   .logo,
   .header,
