@@ -63,6 +63,10 @@
     @include prefixer(text-decoration-color, $bitter-lemon, webkit moz ms o spec);
   }
   
+  .photo {
+    display: none;
+  }
+  
   .photo a {
     @include prefixer(text-decoration-color, $cape-code, webkit moz ms o spec);
   }
@@ -143,10 +147,6 @@
     
     .life a {
       @include linear-gradient(transparent, transparentize($bitter-lemon, .8));
-    }
-    
-    .photo {
-      display: none;
     }
     
     .photo a {
