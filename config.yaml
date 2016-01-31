@@ -7,7 +7,7 @@ assets: ./source/assets/
 # GnuPG stuff
 gpg_short_id: '0x5B423590'
 obsolete_gpg_short_id: '0x5A2FE7BF'
-work_gpg_short_id: '0x'
+work_gpg_short_id: '0x7E0205AA'
 bgi_gpg_short_id: '0x3DE49250'
 
 # Deploy stuff
