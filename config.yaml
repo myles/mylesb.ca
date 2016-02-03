@@ -8,7 +8,7 @@ assets: ./source/assets/
 gpg_short_id: '0x5B423590'
 obsolete_gpg_short_id: '0x5A2FE7BF'
 work_gpg_short_id: '0x7E0205AA'
-bgi_gpg_short_id: '0x3DE49250'
+bgi_gpg_short_id: '0x72C89F91'
 
 # Deploy stuff
 deploy:
