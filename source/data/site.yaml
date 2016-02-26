@@ -7,6 +7,7 @@ contact:
     title: E-mail
     url: mailto:me@mylesb.ca
     description: E-mail me at <me@mylesb.ca>.
+    rel: me
 
   - slug: gpg-key
     title: GnuPG Key
@@ -17,11 +18,13 @@ contact:
     title: Twitter
     url: https://twitter.com/mylesb
     description: Tweet me at @MylesB.
+    rel: me
 
 elsewhere:
   - slug: blog
     title: Myles' Blog
     url: http://mylesbraithwaite.com/
+    rel: me
     description: >
                   Where I write about technology, programming,
                   and liberal arts.
@@ -29,23 +32,28 @@ elsewhere:
   - slug: lab
     title: Myles' Lab
     url: http://mylesbraithwaite.org/
+    rel: me
     description: >
                   A place for web experiments and programming notes.
 
   - slug: life
     title: Myles' Life
     url: http://www.myles.life/
+    rel: me
     description: >
                   Some random posts from my life.
 
   - slug: photo
     title: Myles.Photo
     url: http://myles.photo/
+    rel: me
+    disabled: true
     description: >
                   Some of my photography.
 
   - slug: red
     title: Myles RED
     url: http://myles.red/
+    rel: me
     description: >
                   Sometimes I make mixtapes for the Internet.

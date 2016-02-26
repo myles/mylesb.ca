@@ -13,7 +13,7 @@
     <ul class="contact">
     {{#each site.contact}}
         <li class="{{ slug }}">
-            <a href="{{ url }}" title="{{ trim description }}">
+            <a href="{{ url }}" title="{{ trim description }}" rel="{{ rel }}">
                 {{ title }}
             </a>
         </li>
@@ -23,7 +23,7 @@
     <ul class="elsewhere">
     {{#each site.elsewhere}}
         <li class="{{ slug }}">
-            <a href="{{ url }}?utm_source=mylesb.ca&utm_medium=button&utm_campaign=referral" title="{{ trim description }}">
+            <a href="{{ url }}?utm_source=mylesb.ca&utm_medium=button&utm_campaign=referral" title="{{ trim description }}" rel="{{ rel }}">
                 {{ title }}
             </a>
         </li>
