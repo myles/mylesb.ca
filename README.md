@@ -2,7 +2,7 @@
 
 ![Screenshot of MylesB.ca](/designs/screenshot.png?raw=true "Screenshot of MylesB.ca")
 
-Hi! This is the source code for [my](http://mylesbraithwaite.com "Myles Braithwaite") homepage. It uses the Node.js static web site generator [Assemble](http://assemble.io/) and a bunch of other Grunt tasks (see the [package.json](package.json) for more information).
+Hi! This is the source code for [my](http://mylesb.ca "Myles Braithwaite") homepage. It uses the Node.js static web site generator [Assemble](http://assemble.io/) and a bunch of other Grunt tasks (see the [package.json](package.json) for more information).
 
 ## Usage
 
@@ -19,3 +19,7 @@ This command will build and run a simple web server for viewing the web site loc
 ### `grunt deploy`
 
 This comamnd will build, compress, and deploy the web site.
+
+## Hidden Service
+
+You can access the web site though Tor though the address [jx5z7chkv7wuvobn.onion](http://jx5z7chkv7wuvobn.onion).
