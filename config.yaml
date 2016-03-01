@@ -16,14 +16,14 @@ deploy:
     bucket: 'mylesb.ca'
 
   stag:
-    dest: '/srv/www/ca_mylesb_draft/html'
-    host: 'myles@panda.mylesbraithwaite.com'
-    port: 2222
+    dest: '/srv/www/mylesb.ca/draft/html'
+    host: 'myles@bear.mylesbraithwaite.com'
+    port: 22
 
   prod:
-    dest: '/srv/www/ca_mylesb_www/html'
-    host: 'myles@panda.mylesbraithwaite.com'
-    port: 2222
+    dest: '/srv/www/mylesb.ca/www/html'
+    host: 'myles@bear.mylesbraithwaite.com'
+    port: 22
 
   nfs:
     dest: '/home/public'
