@@ -2,7 +2,7 @@
 
 ![Screenshot of MylesB.ca](/designs/screenshot.png?raw=true "Screenshot of MylesB.ca")
 
-Hi! This is the source code for [my](http://mylesb.ca "Myles Braithwaite") homepage. It uses the Node.js static web site generator [Assemble](http://assemble.io/) and a bunch of other Grunt tasks (see the [package.json](package.json) for more information).
+Hi! This is the source code for [my homepage](https://mylesb.ca/ "Myles Braithwaite"). It uses the Node.js static web site generator [Assemble](http://assemble.io/) and a bunch of other Grunt tasks (see the [package.json](package.json) for more information).
 
 ## Usage
 
