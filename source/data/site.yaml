@@ -57,3 +57,33 @@ elsewhere:
     rel: me
     description: >
                   Sometimes I make mixtapes for the Internet.
+
+  - slug: theworst
+    title: You are the Worst Today
+    url: http://youaretheworst.today/
+    rel: me
+
+avatars:
+  - slug: hipster
+    title: Hipster
+    images:
+      headshot: hipster-square.png
+      full_body: hipster.png
+
+  - slug: suite-and-tie
+    title: Suite and Tie
+    images:
+      headshot: suite-and-tie-square.png
+      full_body: suite-and-tie.png
+
+  - slug: formal
+    title: Formal
+    images:
+      headshot: formal-square.png
+      full_body: formal.png
+
+  - slug: pride
+    title: Pride
+    images:
+      headshot: pride-square.png
+      full_body: pride.png

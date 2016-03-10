@@ -6,20 +6,22 @@ title: Myles Braithwaite's Avatars
     <h1>Myles' Avatars</h1>
 </div>
 
-<div class="row">
-    <div class="avatar">
-        <img src="/assets/images/avatar/hipster.png">
+<div class="avatars">
+    {{#each site.avatars}}
+    <div class="avatar avatar-{{slug}}">
+        <a href="/assets/images/avatar/{{images.full_body}}" data-featherlight="image">
+            <div class="avatar-image">
+                <img src="/assets/images/avatar/{{images.headshot}}">
+            </div>
+            <div class="avatar-header">
+                {{title}}
+            </div>
+            {{#if description}}
+            <div class="avatar-body">
+                {{description}}
+            </div>
+            {{/if}}
+        </a>
     </div>
-    
-    <div class="avatar">
-        <img src="/assets/images/avatar/suite-and-tie.png">
-    </div>
-    
-    <div class="avatar">
-        <img src="/assets/images/avatar/formal.png">
-    </div>
-    
-    <div class="avatar">
-        <img src="/assets/images/avatar/pride.png">
-    </div>
+    {{/each}}
 </div>

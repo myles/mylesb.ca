@@ -9,7 +9,8 @@ module.exports = function (grunt) {
                     cwd: '<%= config.assets %>',
                     src: [
                         'images/**',
-                        'javascript/jquery-2.2.0.min.js'
+                        'javascript/jquery-2.2.0.min.js',
+                        'javascript/featherlight-1.3.4.min.js'
                     ],
                     dest: '<%= config.destination %>/assets/'
                 }
