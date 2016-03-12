@@ -33,6 +33,14 @@ module.exports = function (grunt) {
                 src: ['**'],
                 dest: '<%= config.destination %>/.well-known/'
             }]
+        },
+        plain: {
+            files: [{
+                expand: true,
+                cwd: '<%= config.source %>/plain',
+                src: ['**'],
+                dest: '<%= config.destination %>'
+            }]
         }
     };
 
