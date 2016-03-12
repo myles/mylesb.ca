@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#" prefix="profile: http://ogp.me/ns/profile#">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,8 +12,9 @@
         <link rel="stylesheet" href="/assets/css/style.css">
 
         {{> favicons }}
+        {{> opengraph }}
 
-        <link rel="canonical" href="https://mylesb.ca{{canonical page.dest}}">
+        <link rel="canonical" href="{{ site.url }}{{canonical page.dest}}">
         <link rel="onion" href="http://jx5z7chkv7wuvobn.onion{{canonical page.dest}}">
     </head>
     <body class="body-{{basename}}">
