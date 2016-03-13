@@ -5,7 +5,7 @@ url: https://mylesb.ca
 contact:
   - slug: email
     title: E-mail
-    url: mailto:me@mylesb.ca
+    url: mailto:me@mylesb.ca?subject=Hi%21
     description: E-mail me at <me@mylesb.ca>.
     rel: me
 
