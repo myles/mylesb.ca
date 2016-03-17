@@ -11,6 +11,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-rsync');
     grunt.loadNpmTasks('grunt-assemble');
+    grunt.loadNpmTasks('grunt-favicons');
     grunt.loadNpmTasks('grunt-htmllint');
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-contrib-copy');

@@ -36,10 +36,11 @@ module.exports = function (grunt) {
         'assemble:deploy',
         'sass:deploy',
         'uglify',
+        'favicons',
         'copy',
-        'deploy:s3',
         'deploy:prod',
         'deploy:nfs',
+        'deploy:s3',
         'clean'
     ]);
 
