@@ -32,11 +32,11 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('deploy', [
-        'clean',
+        // 'clean',
         'assemble:deploy',
         'sass:deploy',
         'uglify',
-        'favicons',
+        //'favicons',
         'copy',
         'deploy:prod',
         'deploy:nfs',

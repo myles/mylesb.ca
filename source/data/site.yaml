@@ -8,6 +8,7 @@ contact:
     url: mailto:me@mylesb.ca?subject=Hi%21
     description: E-mail me at <me@mylesb.ca>.
     rel: me
+    class: u-email
 
   - slug: gpg-key
     title: GnuPG Key
@@ -19,6 +20,7 @@ contact:
     url: https://twitter.com/mylesb
     description: Tweet me at @MylesB.
     rel: me
+    class: u-url
 
 elsewhere:
   - slug: blog

@@ -1,32 +1,34 @@
-<div class="logo">
-    <div class="logo-wrapper">
-        <img alt="{{ site.title }}" src="/assets/images/avatar.svg">
+<div class="h-card">
+    <div class="logo">
+        <div class="logo-wrapper">
+            <img class="u-photo" alt="{{ site.title }}" src="/assets/images/avatar.svg">
+        </div>
     </div>
-</div>
 
-<div class="header">
-    <h1>{{ site.title }}</h1>
-    <h2>{{ site.description }}</h2>
-</div>
+    <div class="header">
+        <h1 class="p-name">{{ site.title }}</h1>
+        <h2 class="p-note">{{ site.description }}</h2>
+    </div>
 
-<div class="footer">
-    <ul class="contact">
-    {{#each site.contact}}
-        <li class="{{ slug }}">
-            <a href="{{ url }}"{{#if description}} title="{{ trim description }}"{{/if}}{{#if rel }} rel="{{ rel }}"{{/if}}>
-                {{ title }}
-            </a>
-        </li>
-    {{/each}}
-    </ul>
+    <div class="footer">
+        <ul class="contact">
+        {{#each site.contact}}
+            <li class="{{ slug }}">
+                <a href="{{ url }}"{{#if description}} title="{{ trim description }}"{{/if}}{{#if rel }} rel="{{ rel }}"{{/if}}{{#if class }} class="{{ class }}"{{/if}}>
+                    {{ title }}
+                </a>
+            </li>
+        {{/each}}
+        </ul>
 
-    <ul class="elsewhere">
-    {{#each site.elsewhere}}
-        <li class="{{ slug }}">
-            <a href="{{ url }}?utm_source=mylesb.ca&utm_medium=button&utm_campaign=referral"{{#if description}} title="{{ trim description }}"{{/if}}{{#if rel }} rel="{{ rel }}"{{/if}}>
-                {{ title }}
-            </a>
-        </li>
-    {{/each}}
-    </ul>
+        <ul class="elsewhere">
+        {{#each site.elsewhere}}
+            <li class="{{ slug }}">
+                <a href="{{ url }}?utm_source=mylesb.ca&utm_medium=button&utm_campaign=referral"{{#if description}} title="{{ trim description }}"{{/if}}{{#if rel }} rel="{{ rel }}"{{/if}} class="u-url">
+                    {{ title }}
+                </a>
+            </li>
+        {{/each}}
+        </ul>
+    </div>
 </div>
