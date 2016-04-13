@@ -17,6 +17,7 @@ module.exports = function (grunt) {
                 'grunt-assemble-permalinks'
             ],
             data: [
+                './config.yaml',
                 '<%= config.source %>/data/*.{json,yaml}'
             ],
             flatten: true,
@@ -30,7 +31,7 @@ module.exports = function (grunt) {
                 structure: ':basename/index.html'
             },
             sitemap: {
-                homepage: 'http://mylesb.ca',
+                homepage: '<%= config.url %>',
                 changefreq: 'weekly',
                 relativedest: true,
                 robot: true
@@ -39,14 +40,14 @@ module.exports = function (grunt) {
         develop: {
             options: {
                 dev: true,
-                prod: false
+                production: false
             },
             files: files
         },
-        deploy: {
+        build: {
             options: {
                 dev: false,
-                prod: true
+                production: true
             },
             files: files
         }

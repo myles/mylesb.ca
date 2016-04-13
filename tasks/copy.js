@@ -8,7 +8,6 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: '<%= config.assets %>',
                     src: [
-                        'images/**',
                         'javascript/jquery-2.2.0.min.js',
                         'javascript/featherlight-1.3.4.min.js'
                     ],

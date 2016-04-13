@@ -1,7 +1,3 @@
-title: 'Myles Braithwaite'
-description: 'Hoping for the Best, Imagining the Worst.'
-url: https://mylesb.ca
-
 contact:
   - slug: email
     title: E-mail
@@ -64,28 +60,3 @@ elsewhere:
     title: You are the Worst Today
     url: http://youaretheworst.today/
     rel: me
-
-avatars:
-  - slug: hipster
-    title: Hipster
-    images:
-      headshot: hipster-square.png
-      full_body: hipster.png
-
-  - slug: suite-and-tie
-    title: Suite and Tie
-    images:
-      headshot: suite-and-tie-square.png
-      full_body: suite-and-tie.png
-
-  - slug: formal
-    title: Formal
-    images:
-      headshot: formal-square.png
-      full_body: formal.png
-
-  - slug: pride
-    title: Pride
-    images:
-      headshot: pride-square.png
-      full_body: pride.png

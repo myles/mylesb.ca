@@ -4,59 +4,61 @@
     @include flex-wrap(wrap);
     @include justify-content(space-between);
   }
-  
+
   .avatar {
     @include flex-basis(15rem);
     @include flex-grow(1);
-    @include transition(all 0.2s ease-in-out);
-    
-    background-color: #fff;
-    border-radius: 5px;
+    @include transition(all .2s ease-in-out);
+
+    background-color: $white;
     border: 1px solid darken($cape-code, 50%);
+    border-radius: 5px;
     box-shadow: 0 2px 4px darken($cape-code, 10%);
     cursor: pointer;
-    margin: 0 1em 1.5em 1em;
+    margin: 0 1em 1.5em;
     position: relative;
-    
+
     &:focus,
     &:hover {
       cursor: pointer;
-    
+
       img {
-        opacity: 0.7;
+        opacity: .7;
       }
     }
   }
-  
+
   .avatar-image {
-    overflow: hidden;
-    height: 100%;
     background-color: $fire-bush;
-    
+    height: 100%;
+    overflow: hidden;
+
     img {
-      @include transition(all 0.2s ease-in-out);
+      @include transition(all .2s ease-in-out);
+
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
-      width: 100%;
       opacity: 1;
+      width: 100%;
     }
   }
-  
+
   .avatar-header {
-    @include transition(all 0.2s ease-in-out);
-    background-color: #fff;
+    @include transition(all .2s ease-in-out);
+
+    background-color: $white;
     border-bottom: 1px solid darken($cape-code, 50%);
     border-radius: 3px 3px 0 0;
     font-weight: bold;
     line-height: 1.5em;
     padding: (1.5em / 3) (1.5em / 2);
   }
-  
+
   .avatar-body {
-    font-size: 0.9em;
+    font-size: .9em;
     line-height: 1.5em;
-    padding: (1.5em / 2) (1.5em / 2);
-    
+    padding: (1.5em / 2);
+
     p {
       margin: 0 0 (1.5em / 2);
     }

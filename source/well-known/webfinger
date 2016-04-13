@@ -6,7 +6,7 @@
 	},
 	"links": [{
 		"rel": "http://webfinger.net/rel/profile-page",
-		"href": "{{ site.url }}"
+		"href": "{{ config.url }}{{ config.baseurl }}"
 	}, {
 		"rel": "http://webfinger.net/rel/avatar",
 		"href": "http://www.gravatar.com/avatar/f95fe316ef71f251592e1987b1ff08a7.jpg?s=512"

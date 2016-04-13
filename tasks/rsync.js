@@ -3,31 +3,21 @@ module.exports = function (grunt) {
 
     var config = {
         options: {
-            args: ["--verbose"],
+            args: ['--verbose'],
             recursive: true,
-            exclude: ["*.scss"]
+            exclude: ['.keep'],
+            src: '<%= config.destination %>',
+            delete: true
         },
         staging: {
             options: {
-                src: "<%= config.destination %>",
                 dest: "<%= config.deploy.stag.dest %>",
                 host: "<%= config.deploy.stag.host %>",
-                port: "<%= config.deploy.stag.port %>",
-                delete: true
+                port: "<%= config.deploy.stag.port %>"
             }
         },
         production: {
             options: {
-                src: "<%= config.destination %>",
-                dest: "<%= config.deploy.prod.dest %>",
-                host: "<%= config.deploy.prod.host %>",
-                port: "<%= config.deploy.prod.port %>",
-                delete: true
-            }
-        },
-        production_favicon: {
-            options: {
-                src: "<%= config.source %>/assets/images/favicons/favicon.ico",
                 dest: "<%= config.deploy.prod.dest %>",
                 host: "<%= config.deploy.prod.host %>",
                 port: "<%= config.deploy.prod.port %>"
@@ -35,16 +25,6 @@ module.exports = function (grunt) {
         },
         nfs: {
             options: {
-                src: "<%= config.destination %>",
-                dest: "<%= config.deploy.nfs.dest %>",
-                host: "<%= config.deploy.nfs.host %>",
-                port: "<%= config.deploy.nfs.port %>",
-                delete: true
-            }
-        },
-        nfs_favicon: {
-            options: {
-                src: "<%= config.source %>/assets/images/favicons/favicon.ico",
                 dest: "<%= config.deploy.nfs.dest %>",
                 host: "<%= config.deploy.nfs.host %>",
                 port: "<%= config.deploy.nfs.port %>"

@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         all: [
             'Gruntfile.js',
             'tasks/*.js',
-            '<%= config.source %>/assets/javascript/*.js'
+            '<%= config.source %>/assets/javascript/script.js'
         ]
     };
 

@@ -3,7 +3,8 @@ module.exports = function (grunt) {
 
     var config = {
         build: [
-            'build/'
+            '<%= config.destination %>/**/*',
+            '!<%= config.destination %>/.keep'
         ]
     };
 

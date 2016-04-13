@@ -10,15 +10,6 @@ module.exports = function (grunt) {
         website: {
             cwd: "<%= config.destination %>",
             src: "**"
-        },
-        favicons: {
-            cwd: "<%= config.assets %>/images/favicons/",
-            src: "favicon.ico"
-        },
-        well_known: {
-            cwd: "<%= config.source %>/well-known/",
-            src: "**",
-            dest: ".well-known/"
         }
     };
 

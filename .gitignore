@@ -1,6 +1,8 @@
-/node_modules/
-/bower_components/
+.aws.json
+config.local.yaml
+
+/dist/
 /build/
 /.sass-cache/
-.aws.json
-
+/node_modules/
+/bower_components/

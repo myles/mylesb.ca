@@ -1,8 +1,22 @@
+# Site info
+site_tilte: 'Myles Braithwaite'
+site_description: 'Hoping for the Best, Imagining the Worst.'
+site_keywords:
+  - Myles Braithwaite
+  - Myles Alden Braithwaite
+  - Myles
+  - Braithwaite
+
+url: https://mylesb.ca
+baseurl: /
+
+google_analytics: 'UA-1642439-32'
+
 # Site structure
-source: ./source/
-destination: ./build/
-uploads: ./source/uploads/
-assets: ./source/assets/
+source: './source/'
+destination: './build/'
+uploads: './source/uploads/'
+assets: './source/assets/'
 
 # GnuPG stuff
 gpg_short_id: '0x5B423590'

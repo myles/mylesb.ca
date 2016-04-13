@@ -2,63 +2,49 @@ module.exports = function (grunt) {
     'use strict';
 
     grunt.registerTask('develop', [
+        'favicons',
         'assemble:develop',
         'sass:develop',
-        'uglify',
+        'uglify:develop',
+        'copy',
+        'imagemin',
         'connect',
-        'copy',
         'watch'
-    ]);
-
-    grunt.registerTask('test', [
-        // 'htmllint',
-        'jshint',
-        'scsslint'
-    ]);
-
-    grunt.registerTask('deploy:s3', [
-        's3:website',
-        's3:favicons'
-    ]);
-
-    grunt.registerTask('deploy:prod', [
-        'rsync:production',
-        'rsync:production_favicon'
-    ]);
-
-    grunt.registerTask('deploy:nfs', [
-        'rsync:nfs',
-        'rsync:nfs_favicon'
-    ]);
-
-    grunt.registerTask('deploy', [
-        // 'clean',
-        'assemble:deploy',
-        'sass:deploy',
-        'uglify',
-        //'favicons',
-        'copy',
-        'deploy:prod',
-        'deploy:nfs',
-        'deploy:s3',
-        'clean'
-    ]);
-
-    grunt.registerTask('staging', [
-        'clean',
-        'assemble:develop',
-        'sass:develop',
-        'rsync:staging',
-        'clean'
     ]);
 
     grunt.registerTask('build', [
         'clean',
-        'assemble:develop',
-        'sass:develop'
+        'favicons',
+        'assemble:build',
+        'uglify:build',
+        'sass:build',
+        'htmlmin:build',
+        'header:stylesheet',
+        'imagemin',
+        'copy'
     ]);
 
-    grunt.registerTask('default', [
-        'build'
+    grunt.registerTask('deploy', [
+        'build',
+        'rsync:staging'
     ]);
+
+    grunt.registerTask('deploy:production', [
+        'build',
+        'rsync:production',
+        'rsync:nfs'
+    ]);
+
+    grunt.registerTask('distribute', [
+        'build',
+        'compress:distribute'
+    ]);
+
+    grunt.registerTask('test', [
+        'htmllint',
+        'jshint',
+        'scsslint'
+    ]);
+
+    grunt.registerTask('default', ['develop']);
 };

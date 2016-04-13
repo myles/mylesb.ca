@@ -11,13 +11,13 @@ module.exports = function (grunt) {
       appleTouchPadding: 0,
       firefox: true,
       androidHomescree: true,
-      html: 'source/templates/partials/favicons.hbs',
+      html: '<%= config.source %>/templates/partials/favicons.hbs',
       HTMLPrefix: '/',
       indent: ''
     },
     icons: {
-      src: 'source/assets/images/favicon.png',
-      dest: 'build/'
+      src: '<%= config.source %>/assets/images/favicon.png',
+      dest: '<%= config.destination %>/'
     }
   };
 

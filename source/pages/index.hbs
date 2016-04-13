@@ -1,18 +1,18 @@
 <div class="h-card">
     <div class="logo">
         <div class="logo-wrapper">
-            <img class="u-photo" alt="{{ site.title }}" src="/assets/images/avatar.svg">
+            <img class="u-photo" alt="{{ config.site_title }}" src="/assets/images/avatar.svg">
         </div>
     </div>
 
     <div class="header">
-        <h1 class="p-name">{{ site.title }}</h1>
-        <h2 class="p-note">{{ site.description }}</h2>
+        <h1 class="p-name">{{ config.site_title }}</h1>
+        <h2 class="p-note">{{ config.site_description }}</h2>
     </div>
 
     <div class="footer">
         <ul class="contact">
-        {{#each site.contact}}
+        {{#each index.contact}}
             <li class="{{ slug }}">
                 <a href="{{ url }}"{{#if description}} title="{{ trim description }}"{{/if}}{{#if rel }} rel="{{ rel }}"{{/if}}{{#if class }} class="{{ class }}"{{/if}}>
                     {{ title }}
@@ -22,7 +22,7 @@
         </ul>
 
         <ul class="elsewhere">
-        {{#each site.elsewhere}}
+        {{#each index.elsewhere}}
             <li class="{{ slug }}">
                 <a href="{{ url }}?utm_source=mylesb.ca&utm_medium=button&utm_campaign=referral"{{#if description}} title="{{ trim description }}"{{/if}}{{#if rel }} rel="{{ rel }}"{{/if}} class="u-url">
                     {{ title }}

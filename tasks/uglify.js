@@ -1,19 +1,34 @@
 module.exports = function (grunt) {
     'use strict';
 
-    var config = {
+    var files, config;
+
+    files = {
+        '<%= config.destination %>/assets/javascript/script.js': [
+            '<%= config.assets %>/javascript/svg-injector.js',
+            '<%= config.assets %>/javascript/script.js'
+        ]
+    };
+
+    config = {
         options: {
             banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
                     '<%= grunt.template.today("yyyy-mm-dd") %> */',
             sourceMap: true
         },
-        target: {
-            files: {
-                '<%= config.destination %>/assets/javascript/script.js': [
-                    '<%= config.assets %>/javascript/svg-injector.js',
-                    '<%= config.assets %>/javascript/script.js'
-                ]
-            }
+        develop: {
+            options: {
+                sourceMap: true,
+                beautify: true
+            },
+            files: files
+        },
+        build: {
+            options: {
+                sourceMap: false,
+                beautify: false
+            },
+            files: files
         }
     };
 

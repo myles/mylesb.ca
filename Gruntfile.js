@@ -10,6 +10,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-aws');
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-rsync');
+    grunt.loadNpmTasks('grunt-header');
     grunt.loadNpmTasks('grunt-assemble');
     grunt.loadNpmTasks('grunt-favicons');
     grunt.loadNpmTasks('grunt-htmllint');
@@ -21,6 +22,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     grunt.task.loadTasks('./tasks/');
 };
