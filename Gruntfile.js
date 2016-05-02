@@ -7,24 +7,7 @@ module.exports = function (grunt) {
         config: grunt.file.readYAML('config.yaml')
     });
 
-    grunt.loadNpmTasks('grunt-aws');
-    grunt.loadNpmTasks('grunt-exec');
-    grunt.loadNpmTasks('grunt-rsync');
-    grunt.loadNpmTasks('grunt-header');
-    grunt.loadNpmTasks('grunt-assemble');
-    grunt.loadNpmTasks('grunt-favicons');
-    grunt.loadNpmTasks('grunt-htmllint');
-    grunt.loadNpmTasks('grunt-scss-lint');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-contrib-compress');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     grunt.task.loadTasks('./tasks/');
 };
