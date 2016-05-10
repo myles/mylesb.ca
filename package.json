@@ -36,6 +36,7 @@
     "grunt-favicons": "^0.8.0",
     "grunt-header": "^1.1.0",
     "grunt-htmllint": "^0.2.7",
+    "grunt-humans-txt": "^0.2.1",
     "grunt-rsync": "^1.0.1",
     "grunt-scss-lint": "^0.3.8",
     "matchdep": "^1.0.1"
