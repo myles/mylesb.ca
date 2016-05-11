@@ -60,3 +60,8 @@ elsewhere:
     title: You are the Worst Today
     url: http://youaretheworst.today/
     rel: me
+
+  - slug: love-hate
+    title: I Love/Hate Myles
+    url: https://ilovemyles.com/
+    rel: me
