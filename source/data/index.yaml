@@ -18,6 +18,28 @@ contact:
     rel: me
     class: u-url
 
+  - slug: instagram
+    title: Instagram
+    url: https://instagram.com/myles
+    description: Follow me on Instagram.
+    disabled: true
+    rel: me
+    class: u-url
+
+  - slug: github
+    title: GitHub
+    url: https://github.com/myles
+    description: Follow my open source programming on GitHub.
+    rel: me
+    class: u-url
+
+  - slug: facebook
+    title: Facebook
+    url: https://www.facebook.com/mylesbraithwaite
+    description: Like me on Facebook.
+    rel: me
+    class: u-url
+
 elsewhere:
   - slug: blog
     title: Myles' Blog

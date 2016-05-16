@@ -13,21 +13,25 @@
     <div class="footer">
         <ul class="contact">
         {{#each index.contact}}
-            <li class="{{ slug }}">
+            {{#unless disabled}}
+            <li class="{{ slug }}{{#unless important}} not-important{{/unless}}">
                 <a href="{{ url }}"{{#if description}} title="{{ trim description }}"{{/if}}{{#if rel }} rel="{{ rel }}"{{/if}}{{#if class }} class="{{ class }}"{{/if}}>
                     {{ title }}
                 </a>
             </li>
+            {{/unless}}
         {{/each}}
         </ul>
 
         <ul class="elsewhere">
         {{#each index.elsewhere}}
-            <li class="{{ slug }}">
+            {{#unless disabled}}
+            <li class="{{ slug }}{{#unless important}} not-important{{/unless}}">
                 <a href="{{ url }}?utm_source=mylesb.ca&utm_medium=button&utm_campaign=referral"{{#if description}} title="{{ trim description }}"{{/if}}{{#if rel }} rel="{{ rel }}"{{/if}} class="u-url">
                     {{ title }}
                 </a>
             </li>
+            {{/unless}}
         {{/each}}
         </ul>
     </div>
