@@ -1,0 +1,6 @@
+Date: 31 May 2016
+
+My name is Myles Braithwaite and I use SSH.
+
+$ ssh-keygen -lf myles-braithwaite-spider-gwen.pub
+2048 SHA256:+od6DUmI9+gzysab9T19nHf2cuYKBp7yFWBsTInRH0w Myles@Spider-Gwen.local (RSA)

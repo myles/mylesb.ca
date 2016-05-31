@@ -7,6 +7,9 @@ module.exports = function (grunt) {
 
         xmpp_otr_fingerprints: 'gpg -u <%=config.gpg_short_id %> --clearsign <%= config.uploads %>/xmpp-otr-fingerprints.txt',
 
+        ssh_keys: 'gpg -u <%=config.gpg_short_id %> --clearsign <%= config.uploads %>/myles-braithwaite*.pub',
+        ssh_key_fingerprints: 'gpg -u <%=config.gpg_short_id %> --clearsign <%= config.uploads %>/ssh-key-fingerprints.txt',
+
         work_public_key: 'gpg --armor --export <%= config.work_gpg_short_id %> > <%= config.uploads %>/<%= config.work_gpg_short_id %>.asc',
         work_proof_of_identity: 'gpg -u <%= config.work_gpg_short_id %> -u <%= config.gpg_short_id %> --clearsign  <%= config.uploads %>/proof-of-identity-work.txt',
 
