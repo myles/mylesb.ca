@@ -34,7 +34,7 @@ $(document).ready(function() {
         $(this).html(
             codeFingerprintText.replace(
                 regexNumber,
-                '<span class="number">$&</span>'
+                '<span class="fingerprint__number">$&</span>'
             )
         );
     });

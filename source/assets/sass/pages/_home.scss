@@ -1,4 +1,4 @@
-.body-index {
+.body--index {
   @include radial-gradient(transparent, rgba(0, 0, 0, .2));
 
   @include animation-name(multicolour-background);

@@ -1,27 +1,43 @@
-.page-gpg,
-.page-otr,
-.page-ssh,
-.page-404,
-.page-avatars {
-  @extend %container;
+$page-title-font-size: ms(7);
+$page-title-font-weight: 300;
 
+// .page {}
+
+.page__header {
   margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
-  .page-header {
-    @extend %page-header;
-  }
-  
-  h1 {
-    @extend %display-2;
-  }
+.page__title {
+  font-size: $page-title-font-size;
+  font-weight: $page-title-font-weight;
+}
 
+.page__header-wrapper,
+.page__content-wrapper {
+  margin: 0 1rem;
+
+  @include media($small-screen-up) {
+    margin: 0 auto;
+    width: 700px;
+  }
+}
+
+.page__content {
   blockquote {
-    @extend %blockquote;
-  }
-  
-  pre {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    overflow: auto;
+	  border-left: .25rem solid $grey-light;
+	  font-size: 1.2rem;
+	  margin-bottom: 0;
+    margin-top: 1rem;
+	  padding: .5rem 1rem;
+
+    p,
+	  ul,
+	  ol {
+      margin-top: 0;
+	    &:last-child {
+	      margin-bottom: 0;
+	    }
+    }
   }
 }

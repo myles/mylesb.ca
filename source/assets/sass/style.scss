@@ -3,23 +3,25 @@
 // MIT License
 // https://github.com/myles/mylesb.ca/blob/master/LICENSE
 
-@import 'old-fashioned/old-fashioned';
-@import 'old-fashioned/full/type';
-@import 'old-fashioned/full/code';
+// @import 'old-fashioned/old-fashioned';
+// @import 'old-fashioned/full/type';
+// @import 'old-fashioned/full/code';
 
 // Dependencies
 @import 'modular-scale/stylesheets/modular-scale';
 @import 'bourbon/app/assets/stylesheets/bourbon';
 @import 'neat/app/assets/stylesheets/neat';
 @import 'animatewithsass/properties';
-@import 'bitters/app/assets/stylesheets/base';
 
 // MylesB.ca
 @import 'variables';
-@import 'animations';
 @import 'global';
 
+// Components
+@import 'components/animations';
+@import 'components/fingerprint';
+
 // Pages
-@import 'pages/home';
+// @import 'pages/home';
 @import 'pages/page';
-@import 'pages/avatars';
+// @import 'pages/avatars';

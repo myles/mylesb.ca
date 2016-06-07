@@ -1,5 +1,10 @@
-.fingerprint {
-  .number {
-    color: darken($code-color, 20%);
+body {
+  color: $grey-dark;
+  font-family: $font-family-base;
+  font-size: $font-size-small;
+  margin: 0;
+
+  @include media($small-screen-up) {
+    font-size: $font-size-large;
   }
 }

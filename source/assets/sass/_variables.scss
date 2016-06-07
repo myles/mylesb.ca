@@ -1,0 +1,38 @@
+// Colours
+// -------
+
+// Local Palette
+$cape-code: rgb(63, 80, 76);
+$wild-watermelon: rgb(255, 81, 115);
+$fire-bush: rgb(237, 160, 52);
+$bitter-lemon: rgb(198, 225, 0);
+$cerulean: rgb(36, 165, 212);
+
+// Neutral Colours
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$grey: mix($white, $black, 50);
+
+// Gary Colours
+$grey-dark: darken($grey, 20);
+$grey-light: lighten($grey, 20);
+$grey-lighter: lighten($grey, 40);
+$grey-lightest: lighten($grey, 60);
+
+// Typography
+// ----------
+
+$font-family-base: "Proxima Nova", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-mono: "Hack", Menlo, Monaco, Consolas, "Courier New", monospace;
+
+$font-size-small: 16px;
+$font-size-large: 18px;
+
+$ms-base: 1rem;
+$ms-ratio: 1.2;
+
+// Grid
+// ----
+
+$small-screen: 800px;
+$small-screen-up: new-breakpoint(min-width $small-screen);
