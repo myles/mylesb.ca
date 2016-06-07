@@ -1,0 +1,29 @@
+// scss-lint:disable Comment
+
+/* Inline and block code styles
+ * ----------------------------
+ */
+samp {
+  @extend %code-base;
+}
+
+/* Inline code
+ * -----------
+ */
+code {
+  @extend %code;
+}
+
+/* User input typically entered via keyboard
+ * -----------------------------------------
+ */
+kbd {
+  @extend %kbd;
+}
+
+/* Blocks of code
+ * --------------
+ */
+pre {
+  @extend %pre;
+}

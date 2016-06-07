@@ -1,0 +1,50 @@
+%pagination {
+  text-align: center;
+
+  @include media-breakpoint-down(sm) {
+    ul ul {
+      display: none;
+    }
+  }
+
+  ul {
+    @extend %list-inline;
+
+    text-align: center;
+  }
+
+  a {
+    @include transition(all .2s ease-in-out);
+
+    border: $pagination-border;
+    border-radius: 3px;
+    outline: none;
+    padding: (1.5em / 4) (1.5em / 2);
+    text-decoration: none;
+  }
+
+  .inactive {
+    cursor: not-allowed;
+  }
+
+  .inactive,
+  .current {
+    background: lighten($pagination-background, 10);
+    color: lighten($pagination-color, 15);
+  }
+
+  .active {
+    background: $pagination-background;
+    color: $pagination-color;
+
+    &:hover,
+    &:focus {
+      background: $pagination-hover-background;
+      color: $primary-color;
+    }
+
+    &:active {
+      background: $pagination-background;
+    }
+  }
+}

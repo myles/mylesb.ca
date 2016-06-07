@@ -1,0 +1,10 @@
+// scss-lint:disable Comment
+
+/* Contextual Backgrounds
+ * ----------------------
+ */
+
+@each $name, $hex in $colors {
+  /* Colour #{$name}. */
+  @include text-color-variant('.text-#{$name}, %text-#{$name}', $hex);
+}

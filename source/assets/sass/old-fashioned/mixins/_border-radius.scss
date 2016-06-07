@@ -1,0 +1,6 @@
+@mixin border-radius($radii) {
+  @include border-top-radius($radii);
+  @include border-bottom-radius($radii);
+  @include border-left-radius($radii);
+  @include border-right-radius($radii);
+}

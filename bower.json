@@ -1,7 +1,11 @@
 {
   "name": "mylesb.ca-www",
   "version": "1.0.0",
-  "devDependencies": {
-    "old-fashioned": "https://github.com/myles/old-fashioned.git"
+  "dependencies": {
+    "bourbon": null,
+    "neat": null,
+    "bitters": null,
+    "modular-scale": null,
+    "animatewithsass": null
   }
 }
