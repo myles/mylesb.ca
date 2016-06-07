@@ -6,7 +6,7 @@ Hi! This is the source code for [my homepage](https://mylesb.ca/ "Myles Braithwa
 
 ## Usage
 
-You will need to have Node.js, NPM, and Grunt installed to work on this web site.
+You will need to have Node.js, NPM, and Grunt installed to work on this website.
 
 ### `grunt build`
 
@@ -18,8 +18,4 @@ This command will build and run a simple web server for viewing the web site loc
 
 ### `grunt deploy`
 
-This comamnd will build, compress, and deploy the web site.
-
-## Hidden Service
-
-You can access the web site though Tor though the address [jx5z7chkv7wuvobn.onion](http://jx5z7chkv7wuvobn.onion).
+This command will build, compress, and deploy the web site.

@@ -38,6 +38,4 @@ $(document).ready(function() {
             )
         );
     });
-
-    $('.avatar').featherlight();
 });

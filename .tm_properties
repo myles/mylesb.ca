@@ -1,2 +1,2 @@
-include = "{$include,.aws.json,.editorconfig,.travis.yml}"
-exclude = "{$exclude,build,node_modules,bower_components,*.gpg}"
+include = "{$include,.editorconfig,.travis.yml}"
+exclude = "{$exclude,build,node_modules,bower_components}"

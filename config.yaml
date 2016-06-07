@@ -29,9 +29,6 @@ bgi_gpg_short_id: '0x72C89F91'
 
 # Deploy stuff
 deploy:
-  aws:
-    bucket: 'mylesb.ca'
-
   stag:
     dest: '/srv/www/mylesb.ca/draft/html'
     host: 'myles@bear.mylesbraithwaite.com'
