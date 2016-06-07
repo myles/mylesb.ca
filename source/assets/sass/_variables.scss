@@ -25,8 +25,14 @@ $grey-lightest: lighten($grey, 60);
 $font-family-base: "Proxima Nova", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-mono: "Hack", Menlo, Monaco, Consolas, "Courier New", monospace;
 
-$font-size-small: 16px;
-$font-size-large: 18px;
+$font-size-base: 16px;
+
+$font-size-responsive: (
+  544px: 17px,
+  768px: 18px,
+  992px: 19px,
+  1200px: 20px
+);
 
 $ms-base: 1rem;
 $ms-ratio: 1.2;

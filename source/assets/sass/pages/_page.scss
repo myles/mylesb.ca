@@ -1,4 +1,4 @@
-$page-title-font-size: ms(7);
+$page-title-font-size: modular-scale(2, 1rem, $golden);
 $page-title-font-weight: 300;
 
 // .page {}
@@ -19,25 +19,25 @@ $page-title-font-weight: 300;
 
   @include media($small-screen-up) {
     margin: 0 auto;
-    width: 700px;
+    width: rem(700);
   }
 }
 
 .page__content {
   blockquote {
-	  border-left: .25rem solid $grey-light;
-	  font-size: 1.2rem;
-	  margin-bottom: 0;
-    margin-top: 1rem;
-	  padding: .5rem 1rem;
+    border-left: 0.25rem solid $grey-light;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding: .5rem .5rem;
 
-    p,
-	  ul,
-	  ol {
+    p {
       margin-top: 0;
-	    &:last-child {
-	      margin-bottom: 0;
-	    }
+      margin-bottom: 1rem;
+    }
+
+    cite {
+      font-size: 1rem;
+      line-height: 1.5;
     }
   }
 }
