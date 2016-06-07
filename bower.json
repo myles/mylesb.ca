@@ -2,10 +2,10 @@
   "name": "mylesb.ca-www",
   "version": "1.0.0",
   "dependencies": {
-    "bourbon": null,
-    "neat": null,
-    "bitters": null,
-    "modular-scale": null,
-    "animatewithsass": null
+    "bourbon": "latest",
+    "neat": "latest",
+    "bitters": "latest",
+    "modular-scale": "latest",
+    "animatewithsass": "latest"
   }
 }
