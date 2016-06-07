@@ -7,6 +7,13 @@
 @import 'old-fashioned/full/type';
 @import 'old-fashioned/full/code';
 
+// Dependencies
+@import 'modular-scale/stylesheets/modular-scale';
+@import 'bourbon/app/assets/stylesheets/bourbon';
+@import 'neat/app/assets/stylesheets/neat';
+@import 'animatewithsass/properties';
+@import 'bitters/app/assets/stylesheets/base';
+
 // MylesB.ca
 @import 'variables';
 @import 'animations';
