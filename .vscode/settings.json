@@ -6,7 +6,6 @@
 		"**/.sass-cache": true,
 		"**/bower_components": true,
 		"**/node_modules": true,
-		"**/build": true,
-		"**/.tm_properties": true
+		"**/build": true
 	}
 }
