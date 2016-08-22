@@ -5,7 +5,6 @@ module.exports = function (grunt) {
 
     files = {
         '<%= config.destination %>/assets/javascript/script.js': [
-            '<%= config.assets %>/javascript/svg-injector.js',
             '<%= config.assets %>/javascript/script.js'
         ]
     };

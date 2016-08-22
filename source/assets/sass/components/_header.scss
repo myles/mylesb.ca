@@ -1,0 +1,39 @@
+.header {
+  $navigation-height: 60px;
+  $navigation-logo-height: 2em;
+
+  width: 100%;
+
+  @at-root #{&}__logo--mobile {
+    display: inline;
+    float: left;
+
+    @include media($small-screen-up) {
+      display: none;
+    }
+  }
+
+  @at-root #{&}__logo-image {
+    max-height: $navigation-logo-height;
+    
+    @at-root #{&}--desktop {
+      margin-bottom: -$navigation-logo-height / 3;
+    }
+  }
+
+  @at-root #{&}__navigation-mobile-menu {
+    float: right;
+    padding-top: 0.5em;
+
+    @include media($small-screen-up) {
+      display: none;
+    }
+  }
+
+  @at-root #{&}__wrapper {
+    @include clearfix;
+    @include outer-container;
+
+    position: relative;
+  }
+}

@@ -1,0 +1,30 @@
+- slug: about
+  title: About
+  url: /about/
+
+- slug: contact
+  title: Contact
+  url: /contact/
+
+- slug: avatars
+  title: Avatars
+  url: /avatars/
+
+- logo: true
+  title: Myles Braithwaite
+  url: /
+  image: /assets/images/favicons/favicon-152x152.png 
+
+- slug: gpg
+  title: GnuPG Key
+  description: Myles' GnuPG Public Key
+  url: /gpg/
+
+- slug: otr
+  title: XMPP OTR
+  description: Myles' XMPP OTR Fingerprints
+  url: /otr/
+
+- slug: ssh
+  title: SSH Key
+  url: /ssh/

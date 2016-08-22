@@ -2,6 +2,36 @@
 layout: default.hbs
 ---
 
+<div class="header header--{{basename}}">
+    <div class="header__wrapper">
+        <a href="/" class="header__logo--mobile">
+            <img src="/assets/images/favicons/favicon-152x152.png" class="header__logo-image header__logo-image--mobile" alt="Myles Braithwaite">
+        </a>
+        
+        <a href="javascript:void(0)" class="header__navigation-mobile-menu" id="js-navigation-mobile-menu">Menu</a>
+        
+        <nav role="navigation" class="navigation">
+            <ul class="navigation__list navigation__list--show" id="js-navigation-menu">
+                {{#each nav}}
+                {{#if logo}}
+                <li class="navigation__item navigation__item--link navigation__item--logo">
+                    <a href="{{url}}" class="navigation__link header__logo" tilte="{{title}}">
+                        <img src="{{image}}" class="header__logo-image header__logo-image--desktop" alt="{{title}}">
+                    </a>
+                </li>
+                {{else}}
+                <li class="navigation__item navigation__item--link">
+                    <a href="{{url}}" class="navigation__link">
+                        {{title}}
+                    </a>
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </nav>
+    </div>
+</div>
+
 <div class="page page--{{basename}}">
     {{> body}}
 </div>

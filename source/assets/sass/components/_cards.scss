@@ -1,0 +1,22 @@
+.card-list {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+}
+
+.card {
+  @include flex-basis(10em);
+  @include flex-grow(1);
+
+  margin: 0 1em;
+
+  @at-root #{&}__image {
+    height: 15em;
+    background: whitesmoke;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,11 +1,9 @@
-// MylesB.ca 1.0.0
-// Copyright 2015 Myles Braithwaite
-// MIT License
-// https://github.com/myles/mylesb.ca/blob/master/LICENSE
-
-// @import 'old-fashioned/old-fashioned';
-// @import 'old-fashioned/full/type';
-// @import 'old-fashioned/full/code';
+/*
+ * MylesB.ca 1.0.0
+ * Copyright 2016 Myles Braithwaite
+ * MIT License
+ * https://github.com/myles/mylesb.ca/blob/master/LICENSE
+ */
 
 // Dependencies
 @import 'modular-scale/stylesheets/modular-scale';
@@ -13,15 +11,22 @@
 @import 'neat/app/assets/stylesheets/neat';
 @import 'animatewithsass/properties';
 
+// Mixins
+@import 'mixins/border-radius';
+
 // MylesB.ca
 @import 'variables';
 @import 'global';
 
 // Components
 @import 'components/animations';
+@import 'components/cards';
 @import 'components/fingerprint';
+@import 'components/form';
+@import 'components/grid';
+@import 'components/header';
+@import 'components/navigation';
+@import 'components/page';
 
 // Pages
-// @import 'pages/home';
-@import 'pages/page';
-// @import 'pages/avatars';
+@import 'pages/home';
