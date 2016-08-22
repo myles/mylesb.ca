@@ -35,11 +35,9 @@ title: Contact Myles Braithwaite
                             <div class="form__group-wrapper">
                                 <label for="id_subject" class="form__label">Reason for your inquiry</label>
                                 <select name="subject" id="id_subject" class="form__control">
-                                    <option value="Hello">You would just like to say hello.</option>
-                                    <option value="Consulting">You are intersted in hiring me for a project.</option>
-                                    <option value="Employment">You are interested in hiring me full-time.</option>
-                                    <option value="Speaking">You are interested in booking me to speak at your event.</option>
-                                    <option value="Browsing Tor while Drunk">You found this site on Tor and are currently drinking.</option>
+                                    {{#each contact.subjects}}
+                                    <option value="{{email}}">{{display}}</option>
+                                    {{/each}}
                                 </select>
                             </div>
                         </div>
