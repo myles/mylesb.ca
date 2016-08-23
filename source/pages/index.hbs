@@ -15,16 +15,16 @@ layout: default.hbs
     </div>
 
     <div class="footer">
-        <ul class="contact">
-        {{#each index.contact}}
-            {{#unless disabled}}
-            <li class="{{ slug }}{{#unless important}} not-important{{/unless}}">
-                <a href="{{ url }}"{{#if description}} title="{{ trim description }}"{{/if}}{{#if rel }} rel="{{ rel }}"{{/if}}{{#if class }} class="{{ class }}"{{/if}}>
-                    {{ title }}
+        <ul class="navigation">
+            {{#each nav}}
+            {{#unless logo}}
+            <li class="{{slug}}">
+                <a href="{{url}}">
+                    {{title}}
                 </a>
             </li>
             {{/unless}}
-        {{/each}}
+            {{/each}}
         </ul>
 
         <ul class="elsewhere">

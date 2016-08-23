@@ -18,8 +18,8 @@ module.exports = function (grunt) {
         },
         sass: {
             files: [
-                '<%= config.source %>/assets/sass/*.scss',
-                '<%= config.source %>/assets/sass/**/*.scss'
+                '<%= config.source %>/assets/scss/*.scss',
+                '<%= config.source %>/assets/scss/**/*.scss'
             ],
             tasks: ['sass:develop']
         },
@@ -32,7 +32,7 @@ module.exports = function (grunt) {
         assets: {
             files: [
                 '<%= config.source %>/assets/**',
-                '!<%= config.source %>/assets/sass/**'
+                '!<%= config.source %>/assets/scss/**'
             ],
             tasks: ['copy:assets']
         },
