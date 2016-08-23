@@ -1,8 +1,8 @@
 .footer {
   background: $footer-background-color;
-  padding: ($base-spacing * 2) $gutter;
-  margin-top: $base-spacing;
   width: 100%;
+  padding-top: $base-spacing;
+  padding-bottom: $base-spacing;
   
   @at-root #{&}__wrapper {
     max-width: 30em;

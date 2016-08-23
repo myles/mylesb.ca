@@ -20,7 +20,7 @@ layout: default.hbs
                 {{#each nav}}
                 {{#unless logo}}
                 <li class="button-group__item">
-                    <a href="{{url}}" class="button">{{title}}</a>
+                    <a href="{{url}}" class="button{{#if colour}} button--{{colour}}{{/if}}">{{title}}</a>
                 </li>
                 {{/unless}}
                 {{/each}}
@@ -30,7 +30,7 @@ layout: default.hbs
                 {{#each elsewhere}}
                 {{#unless disabled}}
                 <li class="button-group__item">
-                    <a href="{{ url }}?utm_source=mylesb.ca&utm_medium=button&utm_campaign=referral"{{#if description}} title="{{ trim description }}"{{/if}}{{#if rel }} rel="{{ rel }}"{{/if}} class="button">
+                    <a href="{{ url }}?utm_source=mylesb.ca&utm_medium=button&utm_campaign=referral"{{#if description}} title="{{ trim description }}"{{/if}}{{#if rel }} rel="{{ rel }}"{{/if}} class="button{{#if colour}} button--{{colour}}{{/if}}">
                         {{ title }}
                     </a>
                 </li>

@@ -7,6 +7,7 @@
                 Where I write about technology, programming,
                 and liberal arts.
   footer: true
+  colour: fire-bush
 
 - slug: lab
   title: Myles' Lab
@@ -16,6 +17,7 @@
   description: >
                 A place for web experiments and programming notes.
   footer: true
+  colour: cerulean
 
 - slug: life
   title: Myles' Life
@@ -23,6 +25,7 @@
   rel: me
   description: >
                 Some random posts from my life.
+  colour: bitter-lemon
 
 - slug: photo
   title: Myles.Photo
@@ -40,6 +43,7 @@
   rel: me
   description: >
                 Sometimes I make mixtapes for the Internet.
+  colour: wild-watermelon
 
 - slug: theworst
   title: You are the Worst Today

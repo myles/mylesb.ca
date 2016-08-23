@@ -11,7 +11,6 @@
 
 .landing {
   color: $white;
-  height: 100vh;
   margin: 0;
   text-align: center;
   
@@ -24,6 +23,7 @@
       @include justify-content(space-between);
     
       text-align: left;
+      height: 100vh;
     }
   }
   
@@ -65,13 +65,21 @@
     margin-bottom: .25em;
     
     @at-root #{&}--large {
-      font-size: ms(8);
+      font-size: ms(6);
       font-weight: 400;
+      
+      @include media($small-screen-up) {
+        font-size: ms(8);
+      }
     }
     
     @at-root #{&}--small {
-      font-size: ms(6);
+      font-size: ms(4);
       font-weight: 200;
+      
+      @include media($small-screen-up) {
+         font-size: ms(6);
+      }
     }
   }
 }
