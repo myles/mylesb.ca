@@ -1,0 +1,48 @@
+.button {
+  color: $grey-lightest;
+  font-size: ms(2);
+  font-weight: 300;
+  text-decoration: underline;
+  
+  &:hover {
+    color: $grey-lighter;
+    text-decoration: underline;
+  }
+  
+  @include media($small-screen-up) {
+    @include linear-gradient(transparent, transparentize($cape-code, .8));
+    @include border-radius(.25rem);
+    @include padding(.25rem .5rem);
+
+    border: 1px solid $grey-lightest;
+    text-decoration: none;
+    
+    &:hover {
+      @include linear-gradient(transparent, rgba(255, 255, 255, .2));
+      
+      color: $grey-lightest;
+      text-decoration: none;
+    }
+    
+    @at-root #{&}--fire-bush {
+      @include linear-gradient(transparent, transparentize($fire-bush, .8));
+    }
+    
+    @at-root #{&}--cerulean {
+      @include linear-gradient(transparent, transparentize($cerulean, .8));
+    }
+    
+    @at-root #{&}--wild-watermelon {
+      @include linear-gradient(transparent,
+                               transparentize($wild-watermelon, .8));
+    }
+    
+    @at-root #{&}--bitter-lemon {
+      @include linear-gradient(transparent, transparentize($bitter-lemon, .8));
+    }
+    
+    @at-root #{&}--cape-code {
+      @include linear-gradient(transparent, transparentize($cape-code, .8));
+    }
+  }
+}
