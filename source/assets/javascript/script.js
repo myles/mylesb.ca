@@ -19,9 +19,12 @@ $(document).ready(function() {
 
     var menuToggle = $('#js-navigation-mobile-menu').unbind();
     $("#js-navigation-menu").removeClass("navigation__list--show");
+    $("#js-navigation-menu").removeClass("navigation__list--mobile");
 
     menuToggle.on('click', function (e) {
         e.preventDefault();
+
+        $("#js-navigation-menu").addClass("navigation__list--mobile");
 
         $("#js-navigation-menu").slideToggle(function () {
             if ($("#js-navigation-menu").is(":hidden")) {

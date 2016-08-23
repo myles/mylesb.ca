@@ -23,8 +23,16 @@
 
   @at-root #{&}__navigation-mobile-menu {
     float: right;
-    padding-top: 0.5em;
-
+    padding-top: .5em;
+    margin-right: .5em;
+    color: $header-link-color;
+    text-decoration: none;
+    
+    &:focus,
+    &:hover {
+      color: transparentize($header-color, 0);
+    }
+    
     @include media($small-screen-up) {
       display: none;
     }

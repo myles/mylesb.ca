@@ -15,6 +15,10 @@
     @at-root #{&}--show {
       display: block;
     }
+    
+    @at-root #{&}--mobile {
+      padding-right: .5em;
+    }
   }
   
   @at-root #{&}__item {
