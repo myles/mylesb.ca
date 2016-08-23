@@ -33,8 +33,7 @@
     }
     
     @at-root #{&}--wild-watermelon {
-      @include linear-gradient(transparent,
-                               transparentize($wild-watermelon, .8));
+      @include linear-gradient(transparent, transparentize($wild-watermelon, .8));
     }
     
     @at-root #{&}--bitter-lemon {

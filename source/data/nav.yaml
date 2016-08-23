@@ -24,7 +24,7 @@
   url: /gpg/
 
 - slug: otr
-  title: XMPP OTR
+  title: OTR
   description: Myles' XMPP OTR Fingerprints
   url: /otr/
 
