@@ -1,22 +1,25 @@
 - slug: about
   title: About
   url: /about/
+  footer: true
 
 - slug: contact
   title: Contact
   url: /contact/
+  footer: true
 
 - slug: avatars
   title: Avatars
   url: /avatars/
+  footer: true
 
 - logo: true
   title: Myles Braithwaite
   url: /
-  image: /assets/images/favicons/favicon-152x152.png 
+  image: /assets/images/favicons/favicon-152x152.png
 
 - slug: gpg
-  title: GnuPG Key
+  title: GPG Key
   description: Myles' GnuPG Public Key
   url: /gpg/
 

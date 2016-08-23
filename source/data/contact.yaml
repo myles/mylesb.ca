@@ -1,11 +1,15 @@
 subjects:
   - email: Hello
     display: You would just like to say hello.
+
   - email: Consulting
     display: You are intersted in hiring me for a project.
+
   - email: Employment
     display: You are interested in hiring me full-time.
+
   - email: Speaking
     display: You are interested in booking me to speak at your event.
+
   - email: Browsing Tor while drunk
     display: You found this site on Tor and are currently drinking.

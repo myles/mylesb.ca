@@ -1,0 +1,12 @@
+body {
+  color: $grey-dark;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  margin: 0;
+
+  @each $breakpoint, $font-size in $font-size-responsive {
+    @include media($breakpoint) {
+      font-size: $font-size;
+    }
+  }
+}

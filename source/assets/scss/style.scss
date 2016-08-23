@@ -15,10 +15,12 @@
 @import '01_base/mixins';
 @import '01_base/variables';
 @import '01_base/base';
+@import '01_base/typography';
 @import '01_base/animations';
 
 // Layout
 @import '02_layout/grid';
+@import '02_layout/footer';
 @import '02_layout/header';
 @import '02_layout/navigation';
 @import '02_layout/page';

@@ -12,6 +12,12 @@ title: Contact Myles Braithwaite
     <div class="page__content-wrapper">
         <p>You can email me at <a href="mailto:me@mylesb.ca">me@mylesb.ca</a>.</p>
         
+        <ul>
+            {{#each social}}
+            <li><a href="{{url}}"{{#if description}} title="{{description}}"{{/if}}>{{title}}</a></li>
+            {{/each}}
+        </ul>
+        
         <form action="contact_submit" method="post" accept-charset="utf-8" class="form">
                 <div class="grid">
                     <div class="grid__row">
