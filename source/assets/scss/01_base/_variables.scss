@@ -1,3 +1,5 @@
+$base-spacing: 1.5em;
+
 // Colours
 // -------
 
@@ -43,3 +45,25 @@ $ms-ratio: 1.2;
 $small-screen: 800px;
 $small-screen-up: new-breakpoint(min-width $small-screen);
 $small-screen-down: new-breakpoint(max-width $small-screen);
+
+// Footer
+// ------
+
+$footer-logo-height: 5em;
+
+$footer-background-color: desaturate(darken($wild-watermelon, 20%), 30%);
+$footer-color: #fff;
+$footer-link-color: transparentize($footer-color, 0.6);
+$footer-disclaimer-color: transparentize($footer-color, 0.6);
+
+$footer-copy-font-size: .9em;
+
+// Header
+// ------
+
+$header-background-color: $footer-background-color;
+$header-color: #fff;
+$header-link-color: transparentize($header-color, 0.6);
+
+$navigation-height: 60px;
+$navigation-logo-height: 2em;

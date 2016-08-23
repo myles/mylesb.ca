@@ -42,6 +42,13 @@
   
   @at-root #{&}__link {
     display: inline-block;
+    color: $header-link-color;
+    text-decoration: none;
+    
+    &:focus,
+    &:hover {
+      color: transparentize($header-color, 0);
+    }
     
     @include media($small-screen-up) {
       padding-right: 1em;

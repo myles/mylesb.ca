@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         'uglify:build',
         'sass:build',
         'htmlmin:build',
-        'header:stylesheet',
+        // 'header:stylesheet',
         'imagemin',
         'copy'
     ]);

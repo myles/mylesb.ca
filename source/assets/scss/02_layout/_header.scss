@@ -1,8 +1,8 @@
 .header {
-  $navigation-height: 60px;
-  $navigation-logo-height: 2em;
-
   width: 100%;
+  background-color: $header-background-color;
+  padding-top: $base-spacing / 2;
+  padding-bottom: $base-spacing / 2;
 
   @at-root #{&}__logo--mobile {
     display: inline;

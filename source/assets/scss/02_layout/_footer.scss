@@ -1,14 +1,4 @@
 .footer {
-  $base-spacing: 1.5em;
-  
-  $footer-background-color: desaturate(darken($wild-watermelon, 20%), 30%);
-  
-  $footer-color: #fff;
-  $footer-link-color: transparentize($footer-color, 0.6);
-  $footer-disclaimer-color: transparentize($footer-color, 0.6);
-  
-  $footer-copy-font-size: .9em;
-  
   background: $footer-background-color;
   padding: ($base-spacing * 2) $gutter;
   margin-top: $base-spacing;
@@ -23,7 +13,7 @@
     text-align: center;
     
     img {
-      width: 5em;
+      width: $footer-logo-height;
     }
   }
   
