@@ -1,0 +1,23 @@
+- slug: twitter
+  title: Twitter
+  url: https://twitter.com/mylesb
+  description: Tweet me at @MylesB.
+  footer: true
+
+- slug: instagram
+  title: Instagram
+  url: https://instagram.com/myles
+  description: Follow me on Instagram.
+  footer: true
+
+- slug: github
+  title: GitHub
+  url: https://github.com/myles
+  description: Follow my open source programming on GitHub.
+  footer: true
+
+- slug: facebook
+  title: Facebook
+  url: https://www.facebook.com/mylesbraithwaite
+  description: Like me on Facebook.
+  footer: false

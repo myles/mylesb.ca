@@ -13,22 +13,19 @@
         <link rel="stylesheet" href="/assets/css/style.css">
 
         {{> favicons }}
-        
+
         {{> opengraph }}
-        
+
         {{> schema }}
 
         <link rel="canonical" href="{{ config.url }}{{ config.baseurl }}{{canonical page.dest}}">
         <link rel="onion" href="http://jx5z7chkv7wuvobn.onion{{canonical page.dest}}">
     </head>
-    <body class="body-{{basename}}">
-        <div class="page page-{{basename}}">
-            {{> body}}
-        </div>
+    <body class="body--{{basename}}">
+        {{> body}}
 
         {{> analytics }}
-        <script src="{{ config.url }}{{ config.baseurl }}assets/javascript/jquery-2.2.0.min.js"></script>
-        <script src="{{ config.url }}{{ config.baseurl }}assets/javascript/featherlight-1.3.4.min.js"></script>
-        <script src="{{ config.url }}{{ config.baseurl }}assets/javascript/script.js"></script>
+        <script src="{{ config.baseurl }}assets/javascript/jquery-2.2.0.min.js"></script>
+        <script src="{{ config.baseurl }}assets/javascript/script.js"></script>
     </body>
 </html>

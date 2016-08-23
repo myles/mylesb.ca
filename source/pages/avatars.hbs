@@ -2,26 +2,27 @@
 title: Myles Braithwaite's Avatars
 ---
 
-<div class="page-header">
-    <h1>Myles' Avatars</h1>
+<div class="page__header">
+    <div class="page__header-wrapper">
+        <h1 class="page__title">Myles' Avatars</h1>
+    </div>
 </div>
 
-<div class="avatars">
-    {{#each avatars}}
-    <div class="avatar avatar-{{slug}}">
-        <a href="/assets/images/avatar/{{images.full_body}}" data-featherlight="image">
-            <div class="avatar-image">
-                <img src="/assets/images/avatar/{{images.headshot}}">
+<div class="page__content page__content--avatars">
+    <div class="page__content-wrapper">
+        <div class="card-list">
+            {{#each avatars}}
+            <div class="card">
+                <div class="card__image">
+                    <img src="/assets/images/avatar/{{images.headshot}}">
+                </div>
+                
+                <h2 class="card__header">{{title}}</h2>
+                
+                {{#if description}}<p class="card__copy">{{description}}</p>{{/if}}
             </div>
-            <div class="avatar-header">
-                {{title}}
-            </div>
-            {{#if description}}
-            <div class="avatar-body">
-                {{description}}
-            </div>
-            {{/if}}
-        </a>
+            {{/each}}
+        </div>
     </div>
-    {{/each}}
 </div>
+

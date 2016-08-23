@@ -2,4 +2,10 @@
 layout: default.hbs
 ---
 
-{{> body}}
+{{> header }}
+
+<div class="page page--{{basename}}">
+    {{> body}}
+</div>
+
+{{> footer }}

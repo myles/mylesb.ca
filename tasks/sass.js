@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 
     files = [{
         expand: true,
-        cwd: '<%= config.source %>/assets/sass/',
+        cwd: '<%= config.source %>/assets/scss/',
         src: [
             'style.scss'
         ],
@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 
     loadPath = [
         './bower_components/',
-        '<%= config.source %>/assets/sass/'
+        '<%= config.source %>/assets/scss/'
     ];
 
     config = {

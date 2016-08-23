@@ -1,0 +1,73 @@
+---
+title: Contact Myles Braithwaite
+---
+
+<div class="page__header">
+    <div class="page__header-wrapper">
+        <h1 class="page__title">Contact Myles</h1>
+    </div>
+</div>
+
+<div class="page__content">
+    <div class="page__content-wrapper">
+        <p>You can email me at <a href="mailto:me@mylesb.ca">me@mylesb.ca</a>.</p>
+        
+        <ul>
+            {{#each social}}
+            <li><a href="{{url}}"{{#if description}} title="{{description}}"{{/if}}>{{title}}</a></li>
+            {{/each}}
+        </ul>
+        
+        <form action="contact_submit" method="post" accept-charset="utf-8" class="form">
+                <div class="grid">
+                    <div class="grid__row">
+                        <div class="grid__col grid__col--6 grid__col--omega form__group form__group--right-border">
+                            <div class="form__group-wrapper">
+                                <label for="id_name" class="form__label">Your Name</label>
+                                <input type="text" name="name" value="" id="id_name" autocomplete="name" placeholder="River Tam" class="form__control">
+                            </div>
+                        </div>
+                
+                        <div class="grid__col grid__col--6 form__group">
+                            <div class="form__group-wrapper">
+                                <label for="id_email" class="form__label">Your Email</label>
+                                <input type="email" name="email" value="" id="id_email" autocomplete="email" placeholder="river.tam@serenity.cortex" class="form__control">
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="grid__row">
+                        <div class="grid__col grid__col--12 grid__col--omega form__group">
+                            <div class="form__group-wrapper">
+                                <label for="id_subject" class="form__label">Reason for your inquiry</label>
+                                <select name="subject" id="id_subject" class="form__control">
+                                    {{#each contact.subjects}}
+                                    <option value="{{email}}">{{display}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="grid__row">
+                        <div class="grid__col grid__col--12 grid__col--omega form__group">
+                            <div class="form__group-wrapper">
+                                <label for="id_body" class="form__label">Your message</label>
+                                <textarea name="body" id="id_body" rows="3" placeholder="Type your wonderful message here" class="form__control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid__row">
+                        <div class="grid__col grid__col--12 grid__col--omega form__group">
+                            <div class="form__group-wrapper">
+                                <button name="submit" type="submit" class="form__control">Send your message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
