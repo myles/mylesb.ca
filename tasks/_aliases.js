@@ -8,6 +8,7 @@ module.exports = function (grunt) {
         'uglify:develop',
         'copy',
         'imagemin',
+        'uglify',
         'connect',
         'watch'
     ]);

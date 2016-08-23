@@ -3,9 +3,8 @@ module.exports = function (grunt) {
 
     var config = {
         allFiles: [
-            '<%= config.source %>/assets/sass/*.scss',
-            '<%= config.source %>/assets/sass/**/*.scss',
-            '!<%= config.source %>/assets/sass/_featherlight.scss'
+            '<%= config.source %>/assets/scss/*.scss',
+            '<%= config.source %>/assets/scss/**/*.scss'
         ]
     };
 

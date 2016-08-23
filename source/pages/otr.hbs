@@ -2,39 +2,43 @@
 title: Myles Braithwaite's OTR Fingerprints
 ---
 
-<div class="page-header">
-    <h1>Myles' OTR&nbsp;Fingerprints</h1>
+<div class="page__header">
+    <div class="page__header-wrapper">
+        <h1 class="page__title">Myles' OTR&nbsp;Fingerprints</h1>
+    </div>
 </div>
 
-<blockquote>
-    <p>There are two types of encryption: one that will prevent your sister from reading your diary and one that will prevent your government.</p>
-    <footer><cite>Bruce Schneier</cite></footer>
-</blockquote>
+<div class="page__content">
+    <div class="page__content-wrapper">
+        <blockquote>
+            <p>There are two types of encryption: one that will prevent your sister from reading your diary and one that will prevent your government.</p>
+            <footer><cite>Bruce Schneier</cite></footer>
+        </blockquote>
 
-<h2>Fingerprints</h2>
+        <h2>Fingerprints</h2>
 
-<dl>
-    <dt>me@myles.coffee</dt>
-    <dd>
+        <dl>
+            <dt>me@myles.coffee</dt>
+            <dd>
+                <ul>
+                    <li>Spider-Gwen: <code class="fingerprint">D8E1A450 DA738597 E9418B7A EBA0218C 77BB730B</code></li>
+                    <li>Captian-Marvel: <code class="fingerprint">F5DE6724 2D146E01 C684A32A FA93A95F C2B3AA10</code></li>
+                </ul>
+            </dd>
+        </dl>
+
+        <h2>Want to Know More About OTR?</h2>
+
         <ul>
-            <li>Spider-Gwen: <code class="fingerprint">D8E1A450 DA738597 E9418B7A EBA0218C 77BB730B</code></li>
-            <li>Captian-Marvel: <code class="fingerprint">F5DE6724 2D146E01 C684A32A FA93A95F C2B3AA10</code></li>
+            <li>The Freedom of the Press Foundation has a good article about <a href="https://freedom.press/encryption-works" title="How to protect your privacy in the age of NSA surveillance">how encrypion works</a>.</li>
+            <li>The <addr title="Electronic Frontier Foundation">EFF</addr> has tutorials on how to use OTR on <a href="https://ssd.eff.org/en/module/how-use-otr-mac" title="How to use OTR on Mac OS X">Mac OS X</a>, <a href="https://ssd.eff.org/en/module/how-use-otr-windows" title="How to use OTR on Windows">Windows</a>, <a href="https://ssd.eff.org/en/module/how-use-otr-linux" title="How to use OTR on Linux">Linux</a>, and <a href="https://ssd.eff.org/en/module/how-install-and-use-chatsecure" title="How to use OTR on iOS or Android">iOS or Android</a>.</li>
         </ul>
-    </dd>
-</dl>
 
-<h2>Want to Know More About OTR?</h2>
+        <h2>Proof of Identity</h2>
 
-<ul>
-    <li>The Freedom of the Press Foundation has a good article about <a href="https://freedom.press/encryption-works" title="How to protect your privacy in the age of NSA surveillance">how encrypion works</a>.</li>
-    <li>The <addr title="Electronic Frontier Foundation">EFF</addr> has tutorials on how to use OTR on <a href="https://ssd.eff.org/en/module/how-use-otr-mac" title="How to use OTR on Mac OS X">Mac OS X</a>, <a href="https://ssd.eff.org/en/module/how-use-otr-windows" title="How to use OTR on Windows">Windows</a>, <a href="https://ssd.eff.org/en/module/how-use-otr-linux" title="How to use OTR on Linux">Linux</a>, and <a href="https://ssd.eff.org/en/module/how-install-and-use-chatsecure" title="How to use OTR on iOS or Android">iOS or Android</a>.</li>
-</ul>
+        <p>Below is my proof of identity, you can also download it here: <code><a href="{{ config.url }}{{ config.baseurl }}uploads/xmpp-otr-fingerprints.txt.asc">{{ config.url }}{{ config.baseurl }}uploads/xmpp-otr-fingerprints.txt.asc</a></code> and verify it using <kbd>gpg --verify xmpp-otr-fingerprints.txt.asc</kbd>.</p>
 
-<h2>Proof of Identity</h2>
-
-<p>Below is my proof of identity, you can also download it here: <code><a href="{{ config.url }}{{ config.baseurl }}uploads/xmpp-otr-fingerprints.txt.asc">{{ config.url }}{{ config.baseurl }}uploads/xmpp-otr-fingerprints.txt.asc</a></code> and verify it using <kbd>gpg --verify xmpp-otr-fingerprints.txt.asc</kbd>.</p>
-
-<pre>
+        <pre>
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
@@ -61,4 +65,7 @@ KyL6/1SmNIHtxp0NQgUMri7GQ9zdIy2CYZrgkKrVSbitMmid6txiWVBorD5QTtXO
 VbmAcPLO/XKD1maKofIF
 =iWVI
 -----END PGP SIGNATURE-----
-</pre>
+        </pre>
+        
+    </div>
+</div>
