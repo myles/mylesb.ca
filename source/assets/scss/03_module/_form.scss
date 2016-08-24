@@ -1,25 +1,25 @@
 .form {
   @at-root #{&}__group {
     border-top: 1px solid;
-    
+
     @at-root #{&}-wrapper {
       margin: .5em .25em;
     }
-    
+
     @at-root #{&}--right-border {
       border-right: 1px solid;
     }
   }
-  
+
   @at-root #{&}__label {
-    display: block;
-    text-transform: uppercase;
     color: $grey;
+    display: block;
     padding-bottom: .25em;
+    text-transform: uppercase;
   }
-  
+
   @at-root #{&}__control {
-    min-width: 100%;
     font-size: 1rem;
+    min-width: 100%;
   }
 }

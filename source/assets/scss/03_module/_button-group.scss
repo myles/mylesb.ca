@@ -1,8 +1,8 @@
 .button-group {
-  padding-left: 0;
   list-style: none;
   margin-left: -5px;
-  
+  padding-left: 0;
+
   @at-root #{&}__item {
     display: inline-block;
     padding: .5em .25em;

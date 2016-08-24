@@ -2,14 +2,14 @@
   @at-root #{&}__row {
     @include outer-container;
   }
-  
+
   @at-root #{&}__col {
     @for $i from 1 through 12 {
       @at-root #{&}--#{$i} {
         @include span-columns($i);
       }
     }
-    
+
     @at-root #{&}--omega {
       @include omega();
     }

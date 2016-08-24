@@ -1,0 +1,21 @@
+linters:
+  BemDepth:
+    enabled: true
+    max_elements: 1
+
+  ColorVariable:
+    enabled: false
+
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_BEM
+
+  NestingDepth:
+    enabled: true
+    exclude:
+      - 'source/assets/scss/02_layout/_footer.scss'
+
+  SelectorDepth:
+    enabled: true
+    exclude:
+      - 'source/assets/scss/02_layout/_footer.scss'

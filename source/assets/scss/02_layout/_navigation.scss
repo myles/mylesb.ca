@@ -11,29 +11,29 @@
       display: block;
       text-align: center;
     }
-    
+
     @at-root #{&}--show {
       display: block;
     }
-    
+
     @at-root #{&}--mobile {
       padding-right: .5em;
     }
   }
-  
+
   @at-root #{&}__item {
     display: block;
     text-align: right;
     width: 100%;
-    
+
     @include media($small-screen-up) {
       display: inline;
     }
-    
+
     &:last-child a {
       padding-right: 0;
     }
-    
+
     @at-root #{&}--logo {
       display: none;
       line-height: 0;
@@ -43,19 +43,19 @@
       }
     }
   }
-  
+
   @at-root #{&}__link {
-    display: inline-block;
     color: $header-link-color;
+    display: inline-block;
     text-decoration: none;
-    
+
+    @include media($small-screen-up) {
+      padding-right: 1em;
+    }
+
     &:focus,
     &:hover {
       color: transparentize($header-color, 0);
-    }
-    
-    @include media($small-screen-up) {
-      padding-right: 1em;
     }
   }
 }

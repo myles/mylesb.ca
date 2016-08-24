@@ -3,33 +3,33 @@ $page-title-font-weight: 300;
 
 .page {
   background-color: #fff;
-  padding-top: $base-spacing;
   padding-bottom: $base-spacing;
-}
+  padding-top: $base-spacing;
 
-.page__header {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
+  @at-root #{&}__header {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
 
-.page__title {
-  font-size: $page-title-font-size;
-  font-weight: $page-title-font-weight;
-}
+  @at-root #{&}__title {
+    font-size: $page-title-font-size;
+    font-weight: $page-title-font-weight;
+  }
 
-.page__header-wrapper,
-.page__content-wrapper {
-  margin: 0 1rem;
+  @at-root #{&}__header-wrapper,
+           #{&}__content-wrapper {
+    margin: 0 1rem;
 
-  @include media($small-screen-up) {
-    margin: 0 auto;
-    width: rem(700);
+    @include media($small-screen-up) {
+      margin: 0 auto;
+      width: rem(700);
+    }
   }
 }
 
 .page__content {
   blockquote {
-    border-left: 0.25rem solid $grey-light;
+    border-left: .25rem solid $grey-light;
     font-size: 1.25rem;
     margin-bottom: 1rem;
     margin-left: 0;
@@ -37,8 +37,8 @@ $page-title-font-weight: 300;
     padding: .25rem .5rem;
 
     p {
-      margin-top: 0;
       margin-bottom: 1rem;
+      margin-top: 0;
     }
 
     cite {
@@ -46,20 +46,19 @@ $page-title-font-weight: 300;
       line-height: 1.5;
     }
   }
-  
+
   pre {
-    overflow: auto;
     border: 1px solid $grey-dark;
+    overflow: auto;
     padding: .5em 1em;
   }
-  
+
   code {
     font-size: .9em;
   }
-  
+
   a {
     overflow-wrap: break-word;
     word-wrap: break-word;
-    hyphens: auto;
   }
 }

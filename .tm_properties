@@ -1,2 +1,2 @@
-include = "{$include,.editorconfig,.travis.yml}"
+include = "{$include,.editorconfig,.travis.yml,.scss-lint.yml,.htmllintrc}"
 exclude = "{$exclude,build,node_modules,bower_components}"

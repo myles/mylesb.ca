@@ -1,12 +1,13 @@
 body {
   background-color: $wild-watermelon;
+  margin: 0;
 }
 
 a {
   @include text-decoration-color(darken($wild-watermelon, 25%));
-  
+
   color: $wild-watermelon;
-  
+
   &:hover {
     color: darken($wild-watermelon, 25%);
   }

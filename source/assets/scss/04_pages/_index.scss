@@ -13,7 +13,7 @@
   color: $white;
   margin: 0;
   text-align: center;
-  
+
   @at-root #{&}__wrapper {
     @include media($small-screen-up) {
       @include display(flex);
@@ -21,22 +21,22 @@
       @include align-items(center);
       @include flex-flow(row wrap);
       @include justify-content(space-between);
-    
-      text-align: left;
+
       height: 100vh;
+      text-align: left;
     }
   }
-  
+
   @at-root #{&}__section {
     @include padding(1rem);
-    
+
     @include media($small-screen-up) {
       @include flex(1 100%);
-      
+
       padding-left: 5rem;
     }
   }
-  
+
   @at-root #{&}__logo {
     height: 16rem;
     overflow: hidden;
@@ -48,37 +48,37 @@
       margin: 0 auto;
       padding: .5rem;
       width: 16rem;
-      
+
       @include media($small-screen-up) {
         margin: 0;
         text-align: center;
       }
     }
-    
+
     @at-root #{&}-image {
       width: 10rem;
     }
   }
-  
+
   @at-root #{&}__heading {
-    margin-top: .25em;
     margin-bottom: .25em;
-    
+    margin-top: .25em;
+
     @at-root #{&}--large {
       font-size: ms(6);
       font-weight: 400;
-      
+
       @include media($small-screen-up) {
         font-size: ms(8);
       }
     }
-    
+
     @at-root #{&}--small {
       font-size: ms(4);
       font-weight: 200;
-      
+
       @include media($small-screen-up) {
-         font-size: ms(6);
+        font-size: ms(6);
       }
     }
   }
