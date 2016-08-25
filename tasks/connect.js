@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     var config = {
         server: {
             options: {
-                port: 4000,
+                port: process.env.PORT || 4000,
                 livereload: true,
                 hostname: '0.0.0.0',
                 base: '<%= config.destination %>'
