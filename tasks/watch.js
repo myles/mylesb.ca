@@ -7,8 +7,7 @@ module.exports = function (grunt) {
         },
         assemble: {
             files: [
-                '<%= config.source %>/data/*.yaml',
-                '<%= config.source %>/data/*.json',
+                '<%= config.source %>/data/*',
                 '<%= config.source %>/helpers/*.js',
                 '<%= config.source %>/pages/*.hbs',
                 '<%= config.source %>/templates/layouts/*.hbs',
@@ -25,16 +24,10 @@ module.exports = function (grunt) {
         },
         javascript: {
             files: [
-                '<%= config.assets %>/javascript/script.js'
+                '<%= config.assets %>/javascript/*.js',
+                '<%= config.assets %>/javascript/**/*.js'
             ],
             tasks: ['uglify']
-        },
-        assets: {
-            files: [
-                '<%= config.source %>/assets/**',
-                '!<%= config.source %>/assets/scss/**'
-            ],
-            tasks: ['copy:assets']
         },
         uploads: {
             files: [

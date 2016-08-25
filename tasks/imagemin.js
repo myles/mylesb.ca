@@ -5,9 +5,9 @@ module.exports = function (grunt) {
         images: {
             files: [{
                 expand: true,
-                cwd: '<%= config.source %>/assets/images/',
+                cwd: '<%= config.source %>',
                 src: ['**/*.{png,jpg,gif,svg,ico}'],
-                dest: '<%= config.destination %>/assets/images/'
+                dest: '<%= config.destination %>'
             }]
         }
     };

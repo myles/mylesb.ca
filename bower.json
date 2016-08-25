@@ -6,6 +6,8 @@
     "neat": "latest",
     "bitters": "latest",
     "modular-scale": "latest",
-    "animatewithsass": "latest"
+    "animatewithsass": "latest",
+    "jquery": "latest",
+    "jquery-pjax": "latest"
   }
 }

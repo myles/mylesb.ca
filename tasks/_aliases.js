@@ -8,7 +8,6 @@ module.exports = function (grunt) {
         'uglify:develop',
         'copy',
         'imagemin',
-        'uglify',
         'connect',
         'watch'
     ]);
@@ -20,8 +19,8 @@ module.exports = function (grunt) {
         'uglify:build',
         'sass:build',
         'htmlmin:build',
-        // 'header:stylesheet',
         'imagemin',
+        'htmlmin',
         'copy'
     ]);
 

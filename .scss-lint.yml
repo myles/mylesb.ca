@@ -11,9 +11,7 @@ linters:
     convention: hyphenated_BEM
 
   NestingDepth:
-    enabled: true
-    exclude:
-      - 'source/assets/scss/02_layout/_footer.scss'
+    enabled: false
 
   SelectorDepth:
     enabled: true
