@@ -1,6 +1,6 @@
 {
   "name": "mylesb.ca-www",
-  "version": "1.0.1",
+  "version": "2.5.0",
   "description": "Myles Braithwaite's Homepage",
   "scripts": {
     "start": "grunt develop",
