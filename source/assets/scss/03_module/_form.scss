@@ -19,7 +19,12 @@
   }
 
   @at-root #{&}__control {
-    font-size: 1rem;
-    min-width: 100%;
+    font-size: 1em;
+    width: 100%;
+  }
+  
+  @at-root #{&}__output {
+    float: right;
+    color: $grey;
   }
 }

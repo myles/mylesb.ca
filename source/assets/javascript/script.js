@@ -14,6 +14,9 @@ function trackOutboundLinkClicks(link) {
     });
 }
 
+$(function () {
+});
+
 $(document).ready(function() {
     'use strict';
 
@@ -31,6 +34,29 @@ $(document).ready(function() {
                 $("#js-navigation-menu").removeAttr("style");
             }
         });
+    });
+
+    $('.js-deadline-input').on('change mousemove', function () {
+        var months = $(this).val(),
+            output_el = $('.js-deadline-output');
+
+        if (months == '0') {
+            output_el.text('Unknown');
+        } else if (months == '1') {
+            output_el.text('1 month');
+        } else {
+            output_el.text(months + ' months');
+        }
+    }).trigger('change');
+
+    $('.js-subject-select').on('change', function () {
+        if ($('.js-subject-select :selected').val() == 'Consulting') {
+            $('.js-deadline').show();
+            $('.js-budget').show();
+        } else {
+            $('.js-deadline').hide();
+            $('.js-budget').hide();
+        }
     });
 
     $('a:not([href*="' + document.domain + '"])').mousedown(function (event) {

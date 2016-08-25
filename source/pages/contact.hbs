@@ -18,20 +18,20 @@ title: Contact Myles Braithwaite
             {{/each}}
         </ul>
         
-        <form action="contact_submit" method="post" accept-charset="utf-8" class="form">
+        <form action="contact_submit" method="get" accept-charset="utf-8" class="form">
                 <div class="grid">
                     <div class="grid__row">
                         <div class="grid__col grid__col--6 grid__col--omega form__group form__group--right-border">
                             <div class="form__group-wrapper">
-                                <label for="id_name" class="form__label">Your Name</label>
-                                <input type="text" name="name" value="" class="form__control" id="id_name" autocomplete="name" placeholder="River Tam">
+                                <label for="id_name" class="form__label form__label--absolute">Your Name</label>
+                                <input type="text" name="name" value="" class="form__control form__control--input" id="id_name" autocomplete="name" placeholder="River Tam">
                             </div>
                         </div>
                 
                         <div class="grid__col grid__col--6 form__group">
                             <div class="form__group-wrapper">
-                                <label for="id_email" class="form__label">Your Email</label>
-                                <input type="email" name="email" value="" id="id_email" autocomplete="email" placeholder="river.tam@serenity.cortex" class="form__control">
+                                <label for="id_email" class="form__label form__label--absolute">Your Email</label>
+                                <input type="email" name="email" value="" id="id_email" autocomplete="email" placeholder="river.tam@serenity.cortex" class="form__control form__control--input">
                             </div>
                         </div>
                     </div>
@@ -40,20 +40,37 @@ title: Contact Myles Braithwaite
                         <div class="grid__col grid__col--12 grid__col--omega form__group">
                             <div class="form__group-wrapper">
                                 <label for="id_subject" class="form__label">Reason for your inquiry</label>
-                                <select name="subject" id="id_subject" class="form__control">
+                                <select name="subject" id="id_subject" class="form__control form__control--select js-subject-select">
                                     {{#each contact.subjects}}
-                                    <option value="{{email}}">{{display}}</option>
+                                    <option value="{{email}}" class="form__select-option">{{display}}</option>
                                     {{/each}}
                                 </select>
                             </div>
                         </div>
                     </div>
-            
-                    <div class="grid__row">
+                    
+                    <div class="gird__row js-deadline">
                         <div class="grid__col grid__col--12 grid__col--omega form__group">
                             <div class="form__group-wrapper">
-                                <label for="id_body" class="form__label">Your message</label>
-                                <textarea name="body" id="id_body" rows="3" placeholder="Type your wonderful message here" class="form__control"></textarea>
+                                <output for="id_deadline"  class="form__output js-deadline-output">3 months</output>
+                                <label for="id_deadline" class="form__label">Deadline</label>
+                                <input type="range" name="deadline" id="id_deadline" min="0" max="18" value="3" step="1" class="form__control form__control--input js-deadline-input">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid__row js-budget">
+                        <div class="grid__col grid__col--12 grid__col--omega form__group">
+                            <div class="form__group-wrapper">
+                                <label for="id_budget" class="form__label">Budget</label>
+                                <select name="budget" id="id_budget" class="form__control form__control--select">
+                                    <option class="form__select-option">$1,000 to $5,000</option>
+                                    <option class="form__select-option">$5,000 to $10,000</option>
+                                    <option class="form__select-option">$10,000 to $15,000</option>
+                                    <option class="form__select-option">$15,000 to $25,000</option>
+                                    <option class="form__select-option">$25,000+</option>
+                                    <option class="form__select-option">Not Sure</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -61,7 +78,16 @@ title: Contact Myles Braithwaite
                     <div class="grid__row">
                         <div class="grid__col grid__col--12 grid__col--omega form__group">
                             <div class="form__group-wrapper">
-                                <button name="submit" type="submit" class="form__control">Send your message</button>
+                                <label for="id_body" class="form__label">Your message</label>
+                                <textarea name="body" id="id_body" rows="3" placeholder="Type your wonderful message here" class="form__control form__control--textarea"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid__row">
+                        <div class="grid__col grid__col--12 grid__col--omega form__group">
+                            <div class="form__group-wrapper">
+                                <button name="submit" type="submit" class="form__control form__control--button">Send your message</button>
                             </div>
                         </div>
                     </div>

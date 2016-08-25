@@ -27,7 +27,7 @@ module.exports = function (grunt) {
                 '<%= config.assets %>/javascript/*.js',
                 '<%= config.assets %>/javascript/**/*.js'
             ],
-            tasks: ['uglify']
+            tasks: ['uglify:develop']
         },
         uploads: {
             files: [

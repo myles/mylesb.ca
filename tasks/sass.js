@@ -22,7 +22,6 @@ module.exports = function (grunt) {
         develop: {
             options: {
                 loadPath: loadPath,
-                sourcemap: true,
                 style: 'expanded'
             },
             files: files
