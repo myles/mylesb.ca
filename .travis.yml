@@ -3,3 +3,4 @@ node_js:
 - '5'
 before_script:
 - npm install grunt-cli -g
+- gem install scss_lint
