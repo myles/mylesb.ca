@@ -30,10 +30,10 @@ The following is a setup guide for developing [my homepage](https://mylesb.ca "M
 
 * Node.js
 * Ruby
-* Bower - `npm install -g bower`
-* Grunt - `npm install -g grunt-cli`
-* SASS - `gem install sass`
-* scss-lint - `gem install scss_lint`
+* Bower - `sudo npm install -g bower`
+* Grunt - `sudo npm install -g grunt-cli`
+* SASS - `sudo gem install sass`
+* scss-lint - `sudo gem install scss_lint`
 
 ### Clone the Repository
 
