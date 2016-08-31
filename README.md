@@ -21,3 +21,38 @@ This command will build and run a simple web server for viewing the web site loc
 ### `grunt deploy`
 
 This command will build, compress, and deploy the web site.
+
+## Development Environment Setup
+
+The following is a setup guide for developing [my homepage](https://mylesb.ca "Myles Braithwaite").
+
+### Requirements
+
+* Node.js
+* Ruby
+* Bower - `npm install -g bower`
+* Grunt - `npm install -g grunt-cli`
+* SASS - `gem install sass`
+* scss-lint - `gem install scss_lint`
+
+### Clone the Repository
+
+```shell
+$ git clone git@github.com:myles/mylesb.ca.git mylesb.ca
+$ cd mylesb.ca
+mylesb.ca $ 
+```
+
+### Install the Dependencies
+
+Install the Node.js dependencies:
+
+```shell
+mylesb.ca $ npm install
+```
+
+Install the Bower assets:
+
+```shell
+mylesb.ca $ bower install
+```
