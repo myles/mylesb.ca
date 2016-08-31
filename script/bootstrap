@@ -1,16 +1,30 @@
 #!/bin/sh
 
-if ! [ -f `which npm` ]; then
+if ! [ -f `which npm` ];
+then
     echo 'npm is required';
 fi
 
-if ! [ -f `which bower` ]; then
+if ! [ -f `which bower` ];
+then
     echo 'bower is required';
+fi
+
+if ! [ -f `which sassc` ];
+then
+    echo 'ruby gem sass is required';
+fi
+
+if ! [ -f `which grunt` ];
+then
+    echo 'grunt-cli is required';
+fi
+
+if ! [ -f `which scss_lint` ];
+then
+    echo 'ruby gem scss_lint is required';
 fi
 
 npm install
 bower install
 
-if ! [ -f `which grunt` ]; then
-    echo 'Grunt is required';
-fi
