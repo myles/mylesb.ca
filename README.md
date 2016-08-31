@@ -6,6 +6,13 @@ Hi! This is the source code for [my homepage](https://mylesb.ca/ "Myles Braithwa
 uses the Node.js static web site generator [Assemble](http://assemble.io/) and a bunch of
 other Grunt tasks (see the [package.json](package.json) for more information).
 
+## Objectives
+
+1. A webpage for linking to all my other webpages and social network profiles.
+2. Contact information.
+3. [GnuPG Public Key](https://mylesb.ca/gpg/ "Myles Braithwaite's GnuPG Public Key"), [SSH Public Key](https://mylesb.ca/ssh/ "Myles Braithwaite's SSH Public Key"), and [XMPP OTR Fingerprints](https://mylesb.ca/otr "Myles Braithwaite's XMPP OTR Fingerprints") information page.
+4. List of my avatars.
+
 ## Usage
 
 You will need to have Node.js, NPM, and Grunt installed to work on this website.
