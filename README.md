@@ -10,21 +10,27 @@ other Grunt tasks (see the [package.json](package.json) for more information).
 
 You will need to have Node.js, NPM, and Grunt installed to work on this website.
 
-### `grunt build`
+### `grunt build` or `./script/build`
 
 This command will build the web site.
 
-### `grunt develop`
+### `grunt develop` or `./script/server`
 
 This command will build and run a simple web server for viewing the web site locally.
 
-### `grunt deploy`
+### `grunt test` or `./script/test`
+
+This command will run the tests.
+
+### `grunt deploy` or `./script/deploy`
 
 This command will build, compress, and deploy the web site.
 
 ## Development Environment Setup
 
-The following is a setup guide for developing [my homepage](https://mylesb.ca "Myles Braithwaite").
+You can run `./script/bootstrap` in the project path to setup your environment.
+
+The following is a step by step guide for developing [my homepage](https://mylesb.ca "Myles Braithwaite").
 
 ### Requirements
 
