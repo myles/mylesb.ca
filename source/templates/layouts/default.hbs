@@ -21,6 +21,10 @@
         
         <link rel="canonical" href="{{ config.url }}{{ config.baseurl }}{{canonical page.dest}}">
         <link rel="onion" href="http://jx5z7chkv7wuvobn.onion{{canonical page.dest}}">
+        
+        {{#if page.recaptcha}}
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        {{/if}}
     </head>
     <body class="body--{{basename}}">
         {{> body}}

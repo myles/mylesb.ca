@@ -1,5 +1,6 @@
 ---
 title: Contact Myles Braithwaite
+recaptcha: true
 ---
 
 <div class="page__header">
@@ -18,7 +19,7 @@ title: Contact Myles Braithwaite
             {{/each}}
         </ul>
         
-        <form action="contact_submit" method="get" accept-charset="utf-8" class="form">
+        <form class="form" action="https://raven.mylesb.ca/api/cf0ccf42-6b91-11e6-bbe8-34363bd0c9bc" method="post" accept-charset="utf-8">
                 <div class="grid">
                     <div class="grid__row">
                         <div class="grid__col grid__col--6 grid__col--omega form__group form__group--right-border">
@@ -87,6 +88,14 @@ title: Contact Myles Braithwaite
                     <div class="grid__row">
                         <div class="grid__col grid__col--12 grid__col--omega form__group">
                             <div class="form__group-wrapper">
+                                <div class="g-recaptcha form__control form__control--recaptcha" data-sitekey="6LfRiigTAAAAADn4oUneyMYcV7wMNB6k9VkvdY0_"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid__row">
+                        <div class="grid__col grid__col--12 grid__col--omega form__group">
+                            <div class="form__group-wrapper">
                                 <button name="submit" type="submit" class="form__control form__control--button">Send your message</button>
                             </div>
                         </div>
@@ -96,4 +105,3 @@ title: Contact Myles Braithwaite
         </form>
     </div>
 </div>
-

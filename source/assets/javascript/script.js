@@ -36,6 +36,16 @@ $(document).ready(function() {
         });
     });
 
+    $('.js-subject-select').on('change', function () {
+        if ($('.js-subject-select :selected').val() == 'Interested in Hiring for a Project') {
+            $('.js-deadline').show();
+            $('.js-budget').show();
+        } else {
+            $('.js-deadline').hide();
+            $('.js-budget').hide();
+        }
+    }).trigger('change');
+
     $('.js-deadline-input').on('change mousemove', function () {
         var months = $(this).val(),
             output_el = $('.js-deadline-output');
@@ -48,16 +58,6 @@ $(document).ready(function() {
             output_el.text(months + ' months');
         }
     }).trigger('change');
-
-    $('.js-subject-select').on('change', function () {
-        if ($('.js-subject-select :selected').val() == 'Consulting') {
-            $('.js-deadline').show();
-            $('.js-budget').show();
-        } else {
-            $('.js-deadline').hide();
-            $('.js-budget').hide();
-        }
-    });
 
     $('a:not([href*="' + document.domain + '"])').mousedown(function (event) {
         // Just in case, be safe and don't do anything
