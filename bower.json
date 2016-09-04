@@ -8,6 +8,7 @@
     "modular-scale": "latest",
     "animatewithsass": "latest",
     "jquery": "latest",
-    "jquery-pjax": "latest"
+    "jquery-pjax": "latest",
+    "jquery-validation": "latest"
   }
 }

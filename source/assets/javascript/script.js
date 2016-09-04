@@ -59,6 +59,35 @@ $(document).ready(function() {
         }
     }).trigger('change');
 
+    var form = $('.js-contact-form'),
+        error_alert = $('.js-contact-form-error'),
+        sucess_alert = $('.js-contact-form-error');
+
+    form.on('submit', function(e) {
+        e.preventDefault();
+    
+        if (form.validate()) {
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function(data) {
+                    if (data['sent'] === 'ok') {
+                        form.hide();
+                        sucess_alert.show();
+                    } else {
+                        form.hide();
+                        error_alert.show();
+                    }
+                },
+                error: function(data) {
+                    form.hide();
+                    error_alert.show();
+                }
+            });
+        }
+    });
+
     $('a:not([href*="' + document.domain + '"])').mousedown(function (event) {
         // Just in case, be safe and don't do anything
         if (ga === undefined) {

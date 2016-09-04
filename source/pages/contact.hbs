@@ -19,7 +19,15 @@ recaptcha: true
             {{/each}}
         </ul>
         
-        <form class="form" action="https://raven.mylesb.ca/api/cf0ccf42-6b91-11e6-bbe8-34363bd0c9bc" method="post" accept-charset="utf-8">
+        <div class="alert alert--success js-contact-form-sucess" role="alert" style="display:none">
+            <strong>Thanks!</strong> Your message has been successfully sent. I will contact you very soon!
+        </div>
+        
+        <div class="alert alert--error js-contact-form-error" role="alert" style="display:none">
+            <strong>Oh snap!</strong> Something went wrong.
+        </div>
+        
+        <form class="form js-contact-form" action="https://raven.mylesb.ca/api/cf0ccf42-6b91-11e6-bbe8-34363bd0c9bc" method="post" accept-charset="utf-8">
                 <div class="grid">
                     <div class="grid__row">
                         <div class="grid__col grid__col--6 grid__col--omega form__group form__group--right-border">
@@ -88,7 +96,7 @@ recaptcha: true
                     <div class="grid__row">
                         <div class="grid__col grid__col--12 grid__col--omega form__group">
                             <div class="form__group-wrapper">
-                                <div class="g-recaptcha form__control form__control--recaptcha" data-sitekey="6LfRiigTAAAAADn4oUneyMYcV7wMNB6k9VkvdY0_"></div>
+                                <div class="g-recaptcha form__control form__control--recaptcha" data-sitekey="6Lf8-ygTAAAAAKWdLY5sYOgduRZo7mjTPHwhAVp3"></div>
                             </div>
                         </div>
                     </div>
