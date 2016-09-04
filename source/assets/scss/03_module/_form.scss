@@ -23,14 +23,16 @@
     width: 100%;
 
     @at-root #{&}--recaptcha {
+      // scss-lint:disable SelectorDepth
       div {
         margin: 0 auto;
       }
+      // scss-lint:enable SelectorDepth
     }
   }
-  
+
   @at-root #{&}__output {
-    float: right;
     color: $grey;
+    float: right;
   }
 }

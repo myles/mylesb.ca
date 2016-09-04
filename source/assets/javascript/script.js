@@ -14,9 +14,6 @@ function trackOutboundLinkClicks(link) {
     });
 }
 
-$(function () {
-});
-
 $(document).ready(function() {
     'use strict';
 
@@ -65,14 +62,14 @@ $(document).ready(function() {
 
     form.on('submit', function(e) {
         e.preventDefault();
-    
+
         if (form.validate()) {
             $.ajax({
                 type: form.attr('method'),
                 url: form.attr('action'),
                 data: form.serialize(),
                 success: function(data) {
-                    if (data['sent'] === 'ok') {
+                    if (data.sent === 'ok') {
                         form.hide();
                         sucess_alert.show();
                     } else {
@@ -100,7 +97,7 @@ $(document).ready(function() {
 
     var regexNumber = /(\d+)/g;
 
-    $('.fingerprint').each(function(index) {
+    $('.fingerprint').each(function() {
         var codeFingerprintText = $(this).text();
         $(this).html(
             codeFingerprintText.replace(
