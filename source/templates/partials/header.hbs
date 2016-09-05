@@ -1,3 +1,7 @@
+---
+component: header
+---
+
 <div class="header header--{{basename}}">
     <div class="header__wrapper">
         <a href="/" class="header__logo--mobile">
@@ -8,7 +12,7 @@
         
         <nav role="navigation" class="navigation">
             <ul class="navigation__list navigation__list--show" id="js-navigation-menu">
-                {{#each nav}}
+            {{#each nav}}
                 {{#if logo}}
                 <li class="navigation__item navigation__item--link navigation__item--logo">
                     <a href="{{url}}" class="navigation__link header__logo" tilte="{{title}}">
@@ -22,7 +26,7 @@
                     </a>
                 </li>
                 {{/if}}
-                {{/each}}
+            {{/each}}
             </ul>
         </nav>
     </div>

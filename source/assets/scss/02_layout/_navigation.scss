@@ -53,6 +53,10 @@
       padding-right: 1em;
     }
 
+    @at-root #{&}--active {
+      color: transparentize($header-color, 0.2);
+    }
+
     &:focus,
     &:hover {
       color: transparentize($header-color, 0);

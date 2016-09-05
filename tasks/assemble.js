@@ -21,7 +21,9 @@ module.exports = function (grunt) {
                 '<%= config.source %>/data/*.{json,yml}'
             ],
             flatten: true,
-            helpers: '<%= config.source %>/helpers/helpers-*.js',
+            helpers: [
+                '<%= config.source %>/helpers/helpers-*.js'
+            ],
             layoutdir: '<%= config.source %>/templates/layouts',
             partials: [
                 '<%= config.source %>/templates/partials/*.hbs'
