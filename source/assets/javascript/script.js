@@ -58,7 +58,7 @@ $(document).ready(function() {
 
     var form = $('.js-contact-form'),
         error_alert = $('.js-contact-form-error'),
-        sucess_alert = $('.js-contact-form-error');
+        sucess_alert = $('.js-contact-form-sucess');
 
     form.on('submit', function(e) {
         e.preventDefault();
