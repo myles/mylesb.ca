@@ -54,7 +54,7 @@
     }
 
     @at-root #{&}--active {
-      color: transparentize($header-color, 0.2);
+      color: transparentize($header-color, .2);
     }
 
     &:focus,
