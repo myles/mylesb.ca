@@ -36,7 +36,6 @@
     "grunt-htmllint": "^0.2.7",
     "grunt-rsync": "^2.0.0",
     "grunt-scss-lint": "^0.5.0",
-    "handlebars-helper-isactive": "^0.1.1",
     "matchdep": "^1.0.1"
   }
 }
