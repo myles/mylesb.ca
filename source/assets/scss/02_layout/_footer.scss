@@ -78,9 +78,11 @@
       vertical-align: middle;
       width: $footer-copy-font-size * 1.5;
 
+      // scss-lint:disable SelectorDepth
       * {
         fill: $wild-watermelon;
       }
+      // scss-lint:enable SelectorDepth
     }
   }
 }

@@ -1,8 +1,8 @@
 /*jslint todo: true */
 
-'use strict';
-
 module.exports.register = function (Handlebars, options, params) {
+    'use strict';
+
     /**
      * {{canonical}}
      * @param  {String} dest

@@ -11,22 +11,31 @@ recaptcha: true
 
 <div class="page__content">
     <div class="page__content-wrapper">
-        <p>You can email me at <a href="mailto:me@mylesb.ca">me@mylesb.ca</a>.</p>
-        
+        <p>
+            You can email me at <a href="mailto:me@mylesb.ca">me@mylesb.ca</a>.
+        </p>
+
         <ul class="list list--inline">
             {{#each social}}
-            <li class="list__item list__item--inline"><a href="{{url}}" title="{{description}}">{{title}}</a></li>
+            <li class="list__item list__item--inline">
+                <a href="{{url}}" title="{{description}}">
+                    {{title}}
+                </a>
+            </li>
             {{/each}}
         </ul>
-        
+
         <div class="alert alert--success js-contact-form-sucess" role="alert" style="display:none">
-            <strong>Thanks!</strong> Your message has been successfully sent. I will contact you very soon!
+            <strong>Thanks!</strong>
+            Your message has been successfully sent. I will contact you very
+            soon!
         </div>
-        
+
         <div class="alert alert--error js-contact-form-error" role="alert" style="display:none">
-            <strong>Oh snap!</strong> Something went wrong.
+            <strong>Oh snap!</strong>
+            Something went wrong.
         </div>
-        
+
         <form class="form js-contact-form" action="https://raven.mylesb.ca/api/cf0ccf42-6b91-11e6-bbe8-34363bd0c9bc" method="post" accept-charset="utf-8">
                 <div class="grid">
                     <div class="grid__row">
@@ -36,7 +45,7 @@ recaptcha: true
                                 <input type="text" name="name" value="" class="form__control form__control--input" id="id_name" autocomplete="name" placeholder="River Tam">
                             </div>
                         </div>
-                
+
                         <div class="grid__col grid__col--6 form__group">
                             <div class="form__group-wrapper">
                                 <label for="id_email" class="form__label form__label--absolute">Your Email</label>
@@ -44,7 +53,7 @@ recaptcha: true
                             </div>
                         </div>
                     </div>
-            
+
                     <div class="grid__row">
                         <div class="grid__col grid__col--12 grid__col--omega form__group">
                             <div class="form__group-wrapper">
@@ -57,7 +66,7 @@ recaptcha: true
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="gird__row js-deadline">
                         <div class="grid__col grid__col--12 grid__col--omega form__group">
                             <div class="form__group-wrapper">
@@ -67,7 +76,7 @@ recaptcha: true
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="grid__row js-budget">
                         <div class="grid__col grid__col--12 grid__col--omega form__group">
                             <div class="form__group-wrapper">
@@ -83,7 +92,7 @@ recaptcha: true
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="grid__row">
                         <div class="grid__col grid__col--12 grid__col--omega form__group">
                             <div class="form__group-wrapper">
@@ -92,7 +101,7 @@ recaptcha: true
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="grid__row">
                         <div class="grid__col grid__col--12 grid__col--omega form__group">
                             <div class="form__group-wrapper">
@@ -100,7 +109,7 @@ recaptcha: true
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="grid__row">
                         <div class="grid__col grid__col--12 grid__col--omega form__group">
                             <div class="form__group-wrapper">
