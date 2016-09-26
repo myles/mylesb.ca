@@ -1,3 +1,8 @@
+- logo: true
+  title: Myles Braithwaite
+  url: /
+  image: /assets/images/favicons/favicon-152x152.png
+
 - slug: about
   title: About
   url: /about/
@@ -12,11 +17,6 @@
   title: Avatars
   url: /avatars/
   footer: true
-
-- logo: true
-  title: Myles Braithwaite
-  url: /
-  image: /assets/images/favicons/favicon-152x152.png
 
 - slug: gpg
   title: GPG Key
