@@ -13,23 +13,23 @@
 
   @at-root #{&}__media {
     background: darken(#f5f5f5, 5%);
-    overflow: hidden;
-    max-width: 20em;
-    max-height: 20em;
     margin: 0 auto;
+    max-height: 20em;
+    max-width: 20em;
+    overflow: hidden;
 
     @include media($small-screen-up) {
-      min-width: 15em;
-      min-height: 15em;
-      max-width: 40em;
       max-height: 40em;
+      max-width: 40em;
+      min-height: 15em;
+      min-width: 15em;
     }
   }
-  
+
   @at-root #{&}__image {
     width: 100%;
   }
-  
+
   @at-root #{&}__header,
            #{&}__copy {
     padding-left: .5em;
