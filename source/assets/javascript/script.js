@@ -34,7 +34,7 @@ $(document).ready(function() {
     });
 
     $('.js-subject-select').on('change', function () {
-        if ($('.js-subject-select :selected').val() == 'Interested in Hiring for a Project') {
+        if ($('.js-subject-select :selected').val() == 'I\'m interested in hiring you for a project') {
             $('.js-deadline').show();
             $('.js-budget').show();
         } else {
