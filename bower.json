@@ -1,14 +1,14 @@
 {
   "name": "mylesb.ca-www",
-  "version": "2.5.0",
+  "version": "2.2",
   "dependencies": {
-    "bourbon": "latest",
-    "neat": "latest",
-    "bitters": "latest",
-    "modular-scale": "latest",
     "animatewithsass": "latest",
+    "bitters": "latest",
+    "bourbon": "latest",
     "jquery": "latest",
-    "jquery-pjax": "latest",
-    "jquery-validation": "latest"
+    "jquery-validation": "latest",
+    "modular-scale": "latest",
+    "neat": "latest",
+    "signet": "latest"
   }
 }

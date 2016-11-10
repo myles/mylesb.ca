@@ -3,34 +3,36 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        
+
         <title>{{#if page.title}}{{ page.title }}{{else}}{{ config.site_title }}{{/if}}</title>
-        
+
+        <meta name="application-name" content="Myles Braithwaite">
         <meta name="description" content="{{ config.site_description }}">
+        <meta name="author" content="Myles Braithwaite">
         <meta name="keywords" content="{{ config.site_title }}{{#each config.site_keywords}}, {{ this }}{{/each}}">
-        
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <link rel="stylesheet" href="/assets/css/style.css">
-        
+
         {{> favicons }}
-        
+
         {{> opengraph }}
-        
+
         {{> schema }}
-        
+
         <link rel="canonical" href="{{ config.url }}{{ config.baseurl }}{{canonical page.dest}}">
         <link rel="onion" href="http://jx5z7chkv7wuvobn.onion{{canonical page.dest}}">
-        
+
         {{#if page.recaptcha}}
         <script src='https://www.google.com/recaptcha/api.js'></script>
         {{/if}}
     </head>
     <body class="body--{{basename}}">
         {{> body }}
-        
+
         {{> analytics }}
-        
+
         <script src="{{ config.baseurl }}assets/javascript/libs.js"></script>
         <script src="{{ config.baseurl }}assets/javascript/script.js"></script>
     </body>
