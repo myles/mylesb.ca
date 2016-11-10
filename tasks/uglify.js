@@ -6,7 +6,8 @@ module.exports = function (grunt) {
     files = {
         '<%= config.destination %>/assets/javascript/libs.js': [
             './bower_components/jquery/dist/jquery.min.js',
-            './bower_components/jquery-validation/dist/jquery.validate.min.js'
+            './bower_components/jquery-validation/dist/jquery.validate.min.js',
+            './bower_components/signet/titleSignet/titleSignet.min.js'
         ],
         '<%= config.destination %>/assets/javascript/script.js': [
             '<%= config.assets %>/javascript/script.js'
