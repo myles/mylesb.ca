@@ -3,7 +3,7 @@
 
 var signetOptions = {
     author: 'https://github.com/myles/mylesb.ca/'
-}
+};
 
 function trackOutboundLinkClicks(link) {
     'use strict';

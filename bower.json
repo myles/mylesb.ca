@@ -1,6 +1,6 @@
 {
   "name": "mylesb.ca-www",
-  "version": "2.2",
+  "version": "2.2.0",
   "dependencies": {
     "animatewithsass": "latest",
     "bitters": "latest",
