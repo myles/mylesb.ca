@@ -60,17 +60,18 @@ $(document).ready(function() {
         }
     }).trigger('change');
 
-    var form = $('.js-contact-form'),
-        error_alert = $('.js-contact-form-error'),
+    var error_alert = $('.js-contact-form-error'),
         sucess_alert = $('.js-contact-form-sucess');
 
-    form.on('submit', function(e) {
+    $('.js-contact-form').on('submit', function(e) {
         e.preventDefault();
 
-        if (form.validate()) {
-            $.post(form.attr("action"),
-                   form.serialize()).then(function() {
-                form.hide();
+        $form = $(this);
+
+        if ($form.validate()) {
+            $.post($form.attr("action"),
+                   $form.serialize()).then(function() {
+                $form.hide();
                 sucess_alert.show();
             });
         };
