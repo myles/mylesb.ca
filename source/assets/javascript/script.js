@@ -68,24 +68,11 @@ $(document).ready(function() {
         e.preventDefault();
 
         if (form.validate()) {
-            $.ajax({
-                type: form.attr('method'),
-                url: form.attr('action'),
-                data: form.serialize(),
-                success: function(data) {
-                    if (data.sent === 'ok') {
-                        form.hide();
-                        sucess_alert.show();
-                    } else {
-                        form.hide();
-                        error_alert.show();
-                    }
-                },
-                error: function(data) {
-                    form.hide();
-                    error_alert.show();
-                }
-            });
+            $.post(form.attr("action"),
+                   form.serialize()).then(function() {
+                form.hide();
+                sucess_alert.show();
+            }
         }
     });
 
