@@ -72,8 +72,8 @@ $(document).ready(function() {
                    form.serialize()).then(function() {
                 form.hide();
                 sucess_alert.show();
-            }
-        }
+            });
+        };
     });
 
     $('a:not([href*="' + document.domain + '"])').mousedown(function (event) {
