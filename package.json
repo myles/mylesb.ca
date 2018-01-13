@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/myles/mylesb.ca#readme",
   "devDependencies": {
+    "animatewithsass": "^3.2.1",
     "assemble": "^0.17.1",
     "grunt": "^1.0.1",
     "grunt-assemble": "^0.5.0",
@@ -28,14 +29,22 @@
     "grunt-contrib-htmlmin": "^2.0.0",
     "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-exec": "^1.0.0",
     "grunt-favicons": "^0.8.0",
     "grunt-htmllint": "^0.2.7",
     "grunt-rsync": "^2.0.1",
+    "grunt-sass": "^2.0.0",
     "grunt-scss-lint": "^0.5.0",
     "matchdep": "^1.0.1"
+  },
+  "dependencies": {
+    "bourbon": "^4.3.4",
+    "bourbon-neat": "^1.9.0",
+    "jquery": "^3.2.1",
+    "jquery-validation": "^1.17.0",
+    "modularscale-sass": "^3.0.4",
+    "signet": "^6.5.1"
   }
 }

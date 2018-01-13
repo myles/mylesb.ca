@@ -14,14 +14,14 @@ module.exports = function (grunt) {
     }];
 
     loadPath = [
-        './bower_components/',
+        './node_modules/',
         '<%= config.source %>/assets/scss/'
     ];
 
     config = {
         develop: {
             options: {
-                loadPath: loadPath,
+                includePaths: loadPath,
                 style: 'expanded'
             },
             files: files
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
         build: {
             options: {
                 style: 'compressed',
-                loadPath: loadPath,
+                includePaths: loadPath,
                 sourcemap: 'none'
             },
             files: files
