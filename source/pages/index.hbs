@@ -2,19 +2,19 @@
 layout: default.hbs
 ---
 
-<div class="page--index landing">
+<div class="page--index landing h-card">
     <div class="landing__wrapper">
         <div class="landing__logo landing__section">
             <div class="landing__logo-wrapper">
                 <img class="landing__logo-image" alt="{{ config.site_title }}" src="/assets/images/avatar.svg">
             </div>
         </div>
-    
+
         <div class="landing__header landing__section">
-            <h1 class="landing__heading landing__heading--large">{{ config.site_title }}</h1>
+            <h1 class="landing__heading landing__heading--large p-name">{{ config.site_title }}</h1>
             <h2 class="landing__heading landing__heading--small">{{ config.site_description }}</h2>
         </div>
-    
+
         <div class="landing__footer landing__section">
             <ul class="button-group button-group--horizontal">
                 {{#each nav}}
@@ -25,7 +25,7 @@ layout: default.hbs
                 {{/unless}}
                 {{/each}}
             </ul>
-        
+
             <ul class="button-group button-group--horizontal">
                 {{#each elsewhere}}
                 {{#unless disabled}}
