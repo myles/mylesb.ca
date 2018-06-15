@@ -1,0 +1,71 @@
+<h2>Contact</h2>
+
+<form class="c-form" name="contact" netlify>
+
+  <div class="c-form__group c-form__group--half">
+    <label for="id_name" class="c-form__label">
+      Your Name
+    </label>
+
+    <input type="text" name="name" id="id_name" value="" class="c-form__control" placeholder="River Tam">
+  </div>
+
+  <div class="c-form__group c-form__group--half">
+    <label for="id_email" class="c-form__label">
+      Your Email
+    </label>
+
+    <input type="email" name="email" id="id_email" value="" class="c-form__control" placeholder="river.tam@serenity.cortex">
+  </div>
+
+  <div class="c-form__group c-form__group--full">
+    <label for="id_subject" class="c-form__label">
+      Reason for your inquiry
+    </label>
+
+    <select class="c-form__control c-form__control--select" name="subject" id="id_subjet">
+      <option value="Just wanted to say hello" class="c-form_select-option" selected>You would just like to say hello.</option>
+      <option value="I'm interested in hiring you for a project" class="c-form_select-option">You are intersted in hiring me for a project.</option>
+      <option value="I'm interested in hiring you full-time" class="c-form_select-option">You are interested in hiring me full-time.</option>
+      <option value="I'm intereested in you speaking at my event" class="c-form_select-option">You are interested in booking me to speak at your event.</option>
+    </select>
+  </div>
+
+  <div class="c-form__group c-form__group--full js-deadline" style="display:none">
+    <output for="id_deadline" class="c-form__output js-deadline-output">
+      3 months
+    </output>
+
+    <label for="id_deadline" class="c-form__label">
+      Deadline
+    </label>
+
+    <input type="range" name="deadline" id="id_deadline" min="0" max="18" value="3" step="1" class="c-form__control c-form__control--input-range js-deadline-input">
+  </div>
+
+  <div class="c-form__group c-form__group--full js-budget" style="display:none">
+    <label for="id_budget" class="c-form__label">
+      Budget
+    </label>
+
+    <select class="c-form__control c-form__control--select" name="budget" id="id_budget">
+      <option class="c-form_select-option">$1,000 to $5,000</option>
+      <option class="c-form_select-option">$5,000 to $10,000</option>
+      <option class="c-form_select-option">$10,000 to $20,000</option>
+      <option class="c-form_select-option">$25,000+</option>
+      <option class="c-form_select-option">Not Sure</option>
+    </select>
+  </div>
+
+  <div class="c-form__group c-form__group--full">
+    <label for="id_message" class="c-form__label">
+      Your Message
+    </label>
+
+    <textarea name="message" id="id_message" value="" class="c-form__control c-form__control--textarea" placeholder="Type your wonderful message here"></textarea>
+  </div>
+
+  <div class="c-form__group c-form__group--full c-form__group--center">
+    <button type="submit" name="submit" class="c-form__button">Send your message</button>
+  </div>
+</form>

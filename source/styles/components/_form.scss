@@ -1,0 +1,48 @@
+.c-form {
+  @include grid-container;
+  @include grid-collapse;
+
+  &__group {
+    margin-bottom: .5em;
+
+    &--half {
+      @include grid-column(6);
+    }
+
+    &--full {
+      @include grid-column(12);
+    }
+
+    &--center {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 1em;
+    font-weight: 200;
+    text-transform: lowercase;
+    width: 100%;
+  }
+
+  &__control {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $colour-grey;
+    display: block;
+    font-size: 1em;
+    font-weight: 400;
+    padding-top: 0 10px;
+    width: 100%;
+
+    &--textarea {
+      height: 5em;
+    }
+  }
+
+  &__button {
+    font-size: 1em;
+  }
+}

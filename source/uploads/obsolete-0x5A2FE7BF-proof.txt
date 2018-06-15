@@ -1,9 +1,9 @@
-Date: 3rd December, 2015
+Date: 8th February, 2018
 
 I am transitioning my GPG key from my old 2048-bit with no expiry to a
-4096-bit with a two year expiry and made in an Air Gap envoriment.
+4096-bit with a two year expiry and made in an Air Gap environment.
 
-The old key, which I am trnsitioning away from, is:
+The old key, which I am transitioning away from, is:
 
 pub   2048R/5A2FE7BF 2013-08-12
       Key fingerprint = 45A5 ED20 B8E8 06FD 8CF8  ED1E 6A4C E837 5A2F E7BF
@@ -32,4 +32,3 @@ sub   4096R/6E2C2D77 2015-06-12 [expires: 2016-06-11]
 
 Myles Braithwaite
 me@mylesbraithwaite.com
-

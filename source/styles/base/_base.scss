@@ -1,0 +1,21 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: 'Open Sans', $font-stack-helvetica;
+  font-size: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.sr-only {
+  @include hide-text;
+}

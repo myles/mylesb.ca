@@ -1,0 +1,14 @@
+@include font-face('Open Sans', 'fonts/OpenSans-Regular') {
+  font-style: normal;
+  font-weight: 400;
+}
+
+@include font-face('Open Sans', 'fonts/OpenSans-SemiBold') {
+  font-style: bold;
+  font-weight: bold;
+}
+
+@include font-face('Font Awesome 5 Brands', 'fonts/fa-brands-400') {
+  font-style: normal;
+  font-weight: normal;
+}

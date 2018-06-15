@@ -1,7 +1,0 @@
-Date: 23rd January, 2015
-
-My name is Myles Braithwaite and I use XMPP's cryptographic protocol OTR.
-
-JID: me@myles.coffee
-    Spider-Gwen: D8E1A450 DA738597 E9418B7A EBA0218C 77BB730B
-    Captain-Marvel: F5DE6724 2D146E01 C684A32A FA93A95F C2B3AA10

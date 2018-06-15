@@ -1,0 +1,20 @@
+// From Generate colour themes with ease thanks to this SCSS mixin
+// by Xavier Bertels: <http://bit.ly/2eQLQiC>
+@function set-text-colour($colour) {
+  @if (.2126 * red($colour) + .7152 * green($colour) + .0722 * blue($colour)) / 255 <= .5 {
+    @return mix($colour-white, $colour, 95%);
+  } @else {
+    @return mix($colour-black, $colour, 70%);
+  }
+}
+
+// URL-encode color SASS function/convert color to hex SASS function
+// by certainlyakey: <https://git.io/vNH5d>
+@function encodecolor($string) {
+	@if type-of($string) == 'color' {
+        $hex: str-slice(ie-hex-str($string), 4);
+        $string:unquote("#{$hex}");
+    }
+    $string: '%23' + $string;
+	@return $string;
+}

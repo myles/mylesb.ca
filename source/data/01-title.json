@@ -1,0 +1,31 @@
+[{
+  "slug": "twitter",
+  "name": "Twitter",
+  "url": "https://twitter.com/mylesb",
+  "rel": "me",
+  "awesome": true
+}, {
+  "slug": "mastodon",
+  "name": "Mastodon",
+  "url": "https://myles.life/@me",
+  "rel": "me",
+  "awesome": true
+}, {
+  "slug": "github",
+  "name": "GitHub",
+  "url": "https://github.com/myles",
+  "rel": "me",
+  "awesome": true
+}, {
+  "slug": "instagram",
+  "name": "Instagram",
+  "url": "https://www.instagram.com/myles/",
+  "rel": "me",
+  "awesome": true
+}, {
+  "slug": "linkedin",
+  "name": "LinkedIn",
+  "url": "https://linkedin.com/in/mylesbraithwaite/",
+  "rel": "me",
+  "awesome": true
+}]

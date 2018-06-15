@@ -1,5 +1,0 @@
-{
-    "underscore": false,
-    "id-class-style": "bem",
-    "id-class-ignore-regex": "{{.*?}}"
-}

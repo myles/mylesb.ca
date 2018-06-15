@@ -1,7 +1,12 @@
-Date: 16th November, 2016
+Date: 8th February, 2018
 
-My name is Myles Braithwaite and I work for the Braithwaite Network companies (Braithwaite Canada, Braithwaite Ireland, and Braithwaite United Kingdom). I use GnuPG for work (0x72C89F91) and personal (0x5B423590).
+My name is Myles Braithwaite and I work for the Braithwaite Network companies
+(Braithwaite Canada, Braithwaite Ireland, Braithwaite UK, and FairTax). I use
+GnuPG for work (0x72C89F91) and personal (0x5B423590).
 
 My public key information is:
   ID: 0x72C89F91
   Fingerprint: 7BD0 89EC CAA6 0BFB 6B38  F67F B1F7 4EB8 72C8 9F91
+
+Myles Braithwaite
+mbraithwaite@braithwaite.network

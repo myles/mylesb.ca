@@ -1,42 +1,63 @@
----
-layout: default.hbs
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Myles Braithwaite</title>
 
-<div class="page--index landing">
-    <div class="landing__wrapper">
-        <div class="landing__logo landing__section">
-            <div class="landing__logo-wrapper">
-                <img class="landing__logo-image" alt="{{ config.site_title }}" src="/assets/images/avatar.svg">
-            </div>
+    <link rel="stylesheet" href="/assets/style.css">
+
+    <link rel="openid.delegate" href="https://mylesb.ca/">
+    <link rel="openid.server" href="https://openid.indieauth.com/openid">
+
+    <link href="https://twitter.com/mylesb" rel="me">
+    <link href="https://facebook.com/mylesbraithwaite" rel="me">
+    <link href="https://github.com/myles" rel="me">
+    <link href="https://mylesb.ca/uploads/0x5B423590.asc" rel="pgpkey">
+
+    <link rel="pingback" href="https://webmention.io/mylesb.ca/xmlrpc">
+    <link rel="webmention" href="https://webmention.io/mylesb.ca/webmention">
+  </head>
+  <body class="mylesb-ca h-card">
+    <div class="c-container">
+      <section class="c-slide c-slide--title" id="title">
+        <div class="c-slide__wrapper">
+          {{> 01-title }}
         </div>
-    
-        <div class="landing__header landing__section">
-            <h1 class="landing__heading landing__heading--large">{{ config.site_title }}</h1>
-            <h2 class="landing__heading landing__heading--small">{{ config.site_description }}</h2>
+      </section>
+
+      <section class="c-slide c-slide--work" id="work">
+        <div class="c-slide__wrapper">
+          <div class="c-slide__container">
+            {{> 02-work }}
+          </div>
         </div>
-    
-        <div class="landing__footer landing__section">
-            <ul class="button-group button-group--horizontal">
-                {{#each nav}}
-                {{#unless logo}}
-                <li class="button-group__item">
-                    <a href="{{url}}" class="button{{#if colour}} button--{{colour}}{{/if}}">{{title}}</a>
-                </li>
-                {{/unless}}
-                {{/each}}
-            </ul>
-        
-            <ul class="button-group button-group--horizontal">
-                {{#each elsewhere}}
-                {{#unless disabled}}
-                <li class="button-group__item">
-                    <a href="{{ url }}?utm_source=mylesb.ca&utm_medium=button&utm_campaign=referral"{{#if description}} title="{{ trim description }}"{{/if}}{{#if rel }} rel="{{ rel }}"{{/if}} class="button{{#if colour}} button--{{colour}}{{/if}}">
-                        {{ title }}
-                    </a>
-                </li>
-                {{/unless}}
-                {{/each}}
-            </ul>
+      </section>
+
+      <section class="c-slide c-slide--projects" id="projects">
+        <div class="c-slide__wrapper">
+          <div class="c-slide__container">
+            {{> 03-projects }}
+          </div>
         </div>
+      </section>
+
+      <section class="c-slide c-slide--elsewhere" id="elsewhere">
+        <div class="c-slide__wrapper">
+          <div class="c-slide__container">
+            {{> 05-elsewhere }}
+          </div>
+        </div>
+      </section>
+
+      <section class="c-slide c-slide--contact" id="contact">
+        <div class="c-slide__wrapper">
+          <div class="c-slide__container">
+            {{> 04-contact }}
+          </div>
+        </div>
+      </section>
     </div>
-</div>
+
+    <script src="/assets/script.js"></script>
+  </body>
+</html>

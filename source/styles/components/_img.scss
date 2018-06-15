@@ -1,0 +1,15 @@
+.c-img-avatar {
+  height: 100%;
+  overflow: hidden;
+
+  &__wrapper {
+    @include size(100%);
+
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  &__image {
+    width: 90%;
+  }
+}

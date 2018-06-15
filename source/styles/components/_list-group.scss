@@ -1,0 +1,36 @@
+@mixin list-group-variant($parent, $modifier, $colour) {
+  $container-bg-colour: mix($colour, $colour-white, 5%);
+  $container-text-colour: set-text-colour($container-bg-colour);
+
+  #{$parent} {
+    &--#{$modifier} {
+      #{$parent}__item {
+        color: $container-text-colour !important;
+      }
+    }
+  }
+}
+
+@each $name, $colour in $slide-varients {
+  @include list-group-variant('.c-list-group', $name, $colour);
+}
+
+.c-list-group {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    display: block;
+    padding: .75rem 1.25rem;
+    margin: -1px;
+    border: 1px solid rbga(0, 0, 0, .125);
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+      background-color: rbga(0, 0, 0, .5);
+    }
+  }
+}

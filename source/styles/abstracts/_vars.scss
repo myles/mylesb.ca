@@ -1,0 +1,18 @@
+// bourbon
+$bourbon: (
+  "contrast-switch-dark-color": $colour-black,
+  "contrast-switch-light-color": $colour-white,
+  "global-font-file-formats": ("ttf", "woff"),
+  "modular-scale-base": 1em,
+  "modular-scale-ratio": $major-third,
+);
+
+// components/slide
+$slide-varients: (
+  'title': $colour-lochmara,
+  'work': $colour-carnation,
+  'projects': $colour-saffron,
+  'contact': $colour-caribbean-green,
+  'elsewhere': $colour-mulberry,
+  'public-keys': $colour-chambray,
+)

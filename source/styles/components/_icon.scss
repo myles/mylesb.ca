@@ -1,0 +1,49 @@
+.c-icon {
+  @include size(.25em);
+
+  font-size: 2em;
+  padding: .75em;
+  margin: 0;
+
+  &--twitter {
+    &::before {
+      content: '\f081';
+      font-family: 'Font Awesome 5 Brands';
+    }
+  }
+
+  &--facebook {
+    &::before {
+      content: '\f082';
+      font-family: 'Font Awesome 5 Brands';
+    }
+  }
+
+  &--github {
+    &::before {
+      content: '\f092';
+      font-family: 'Font Awesome 5 Brands';
+    }
+  }
+
+  &--linkedin {
+    &::before {
+      content: '\f08c';
+      font-family: 'Font Awesome 5 Brands';
+    }
+  }
+
+  &--instagram {
+    &::before {
+      content: '\f16d';
+      font-family: 'Font Awesome 5 Brands';
+    }
+  }
+
+  &--email {
+    &::before {
+      content: '\f1fa';
+      font-family: 'Font Awesome 5';
+    }
+  }
+}
