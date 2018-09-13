@@ -40,7 +40,7 @@ gulp.task('fonts', function() {
       .pipe(ttf2woff())
       .pipe(gulp.dest('build/assets/fonts/'));
 
-  gulp.src('node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/fa-*.+(eot|svg|ttf|woff|woff2)')
+  gulp.src('node_modules/@fortawesome/fontawesome-pro/webfonts/fa-*.+(eot|svg|ttf|woff|woff2)')
     .pipe(gulp.dest('build/assets/fonts/'));
 });
 
