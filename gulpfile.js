@@ -1,6 +1,8 @@
-var gulp = require('gulp'),
+var fs = require('fs'),
+    gulp = require('gulp'),
     sass = require('gulp-sass'),
-    handlebars = require('gulp-static-handlebars')
+    nunjucksRender = require('gulp-nunjucks-render'),
+    data = require('gulp-data'),
     rename = require('gulp-rename'),
     htmltidy = require('gulp-htmltidy'),
     exec = require('child_process').exec,
@@ -37,6 +39,9 @@ gulp.task('fonts', function() {
   gulp.src(['source/fonts/**/*.ttf'])
       .pipe(ttf2woff())
       .pipe(gulp.dest('build/assets/fonts/'));
+
+  gulp.src('node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/fa-*.+(eot|svg|ttf|woff|woff2)')
+    .pipe(gulp.dest('build/assets/fonts/'));
 });
 
 gulp.task('svgImages', function() {
@@ -54,27 +59,39 @@ gulp.task('images', ['svgImages'], function() {
 
 // Pages
 // -----
+function getData(file) {
+  return {
+    title: JSON.parse(fs.readFileSync('source/data/01-title.json')),
+    elsewhere: JSON.parse(fs.readFileSync('source/data/05-elsewhere.json'))
+  };
+}
+
 gulp.task('pages', function() {
-  gulp.src('source/pages/*.hbs')
-      .pipe(handlebars(
-        {
-          title: require('./source/data/01-title.json'),
-          elsewhere: require('./source/data/05-elsewhere.json')
-        }, {
-          helpers: gulp.src('source/pages/_helpers/*.js'),
-          partials: gulp.src(['source/slides/*.hbs',
-                              'source/pages/_partials/*.hbs'])
-        }))
-      .pipe(htmltidy({
+  return gulp.src(['source/pages/*.njk'])
+    .pipe(data(getData))
+    .pipe(nunjucksRender({
+      path: 'source/pages/'
+    }))
+    .pipe(htmltidy(
+      {
         doctype: 'html5',
         hideComments: true,
         indent: true,
         indentSpaces: 4,
         wrap: 80*100
-      }))
-      .pipe(rename({extname: '.html'}))
-      .pipe(gulp.dest('build/'))
-      .pipe(reload({ stream: true }));
+      }
+    ))
+    .pipe(rename(
+      {
+        extname: '.html'
+      }
+    ))
+    .pipe(gulp.dest('build/'))
+    .pipe(reload(
+      {
+        stream: true
+      }
+    ));
 });
 
 // Uploads

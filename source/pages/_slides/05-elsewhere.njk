@@ -1,0 +1,44 @@
+<h2 class="c-slide__title">Elsewhere</h2>
+
+<div class="c-slide__row">
+  <div class="c-slide__col-6">
+    <div class="c-list-group c-list-group--elsewhere">
+      {% for item in elsewhere.web %}
+      <a class="c-list-group__item c-list-group__item--{{ item.slug }} u-url" href="{{ item.url }}"{% if item.rel %} rel="{{ item.rel }}"{% endif %} alt="{{ item.name }}">
+        <div class="c-list-group__header">
+          <h3 class="c-list-group__title">
+            {% if item.icon %}
+            <i class="c-list-group__icon {{ item.icon }}">&nbsp;</i>
+            {% endif %}
+
+            {{ item.name }}
+          </h3>
+          <small class="c-list-group__url">
+          {% if this.display_url %}
+            {{ item.display_url }}
+          {% else %}
+            {{ item.url }}
+          {% endif %}
+          </small>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="c-slide__col-6">
+    <div class="c-list-group c-list-group--elsewhere">
+      {% for item in elsewhere.social %}
+      <a class="c-list-group__item c-list-group__item--{{ item.slug }} u-url" href="{{ item.url }}"{% if item.rel %} rel="{{ item.rel }}"{% endif %}>
+        <h3 class="c-list-group__title">
+          {% if item.icon %}
+          <i class="c-list-group__icon {{ item.icon }}">&nbsp;</i>
+          {% endif %}
+
+          {{ item.name }}
+        </h3>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

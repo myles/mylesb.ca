@@ -15,13 +15,18 @@
   @include list-group-variant('.c-list-group', $name, $colour);
 }
 
+$c-list-group-item-border: 1px solid $colour-grey-lighter;
+
 .c-list-group {
   display: flex;
   flex-direction: column;
   padding: 0;
+  padding-top: 1rem;
   margin: 0;
 
   &__item {
+    border: $c-list-group-item-border;
+    border-top: none;
     display: block;
     padding: .75rem 1.25rem;
     margin: -1px;
@@ -29,8 +34,12 @@
     position: relative;
     text-decoration: none;
 
+    &:first-of-type {
+      border: $c-list-group-item-border;
+    }
+
     &:hover {
-      background-color: rbga(0, 0, 0, .5);
+      background-color: $colour-grey-lighter;
     }
   }
 }

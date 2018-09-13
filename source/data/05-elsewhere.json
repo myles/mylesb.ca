@@ -22,7 +22,8 @@
     "slug": "twitter",
     "name": "Twitter",
     "url": "https://twitter.com/mylesb",
-    "rel": "me"
+    "rel": "me",
+    "icon": "fab fa-twitter-square"
   }, {
     "slug": "github",
     "name": "GitHub",

@@ -21,14 +21,14 @@
     <div class="c-container">
       <section class="c-slide c-slide--title" id="title">
         <div class="c-slide__wrapper">
-          {{> 01-title }}
+          {% include "_slides/01-title.njk" %}
         </div>
       </section>
 
       <section class="c-slide c-slide--work" id="work">
         <div class="c-slide__wrapper">
           <div class="c-slide__container">
-            {{> 02-work }}
+            {% include "_slides/02-work.njk" %}
           </div>
         </div>
       </section>
@@ -36,7 +36,7 @@
       <section class="c-slide c-slide--projects" id="projects">
         <div class="c-slide__wrapper">
           <div class="c-slide__container">
-            {{> 03-projects }}
+            {% include "_slides/03-projects.njk" %}
           </div>
         </div>
       </section>
@@ -44,7 +44,7 @@
       <section class="c-slide c-slide--elsewhere" id="elsewhere">
         <div class="c-slide__wrapper">
           <div class="c-slide__container">
-            {{> 05-elsewhere }}
+            {% include "_slides/05-elsewhere.njk" %}
           </div>
         </div>
       </section>
@@ -52,7 +52,7 @@
       <section class="c-slide c-slide--contact" id="contact">
         <div class="c-slide__wrapper">
           <div class="c-slide__container">
-            {{> 04-contact }}
+            {% include "_slides/04-contact.njk" %}
           </div>
         </div>
       </section>

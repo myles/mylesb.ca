@@ -1,14 +1,24 @@
+// Bourbon
 @import 'bourbon/core/bourbon';
 @import 'bourbon-neat/core/neat';
 
+// Abstracts
 @import 'abstracts/colours';
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
 @import 'abstracts/vars';
 
+// Font Awesome
+@import '@fortawesome/fontawesome-free-webfonts/scss/fontawesome';
+@import '@fortawesome/fontawesome-free-webfonts/scss/fa-brands';
+@import '@fortawesome/fontawesome-free-webfonts/scss/fa-regular';
+@import '@fortawesome/fontawesome-free-webfonts/scss/fa-solid';
+
+// Base
 @import 'base/fonts';
 @import 'base/base';
 
+// Components
 @import 'components/btn';
 @import 'components/container';
 @import 'components/form';

@@ -1,4 +1,4 @@
-// bourbon
+// Bourbon
 $bourbon: (
   "contrast-switch-dark-color": $colour-black,
   "contrast-switch-light-color": $colour-white,
@@ -6,6 +6,9 @@ $bourbon: (
   "modular-scale-base": 1em,
   "modular-scale-ratio": $major-third,
 );
+
+// Font Awesome
+$fa-font-path: 'fonts';
 
 // components/slide
 $slide-varients: (
@@ -15,4 +18,4 @@ $slide-varients: (
   'contact': $colour-caribbean-green,
   'elsewhere': $colour-mulberry,
   'public-keys': $colour-chambray,
-)
+);
