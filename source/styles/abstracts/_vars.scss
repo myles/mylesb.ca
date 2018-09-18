@@ -10,6 +10,16 @@ $bourbon: (
 // Font Awesome
 $fa-font-path: 'fonts';
 
+// Brand Colours
+$brand-colours: (
+  'twitter': $bc-twitter,
+  'github': $bc-github,
+  'instagram': $bc-instagram,
+  'facebook': $bc-facebook,
+  'mastodon': rgb(43, 144, 217),
+  'linkedin': $bc-linkedin
+);
+
 // components/slide
 $slide-varients: (
   'title': $colour-lochmara,

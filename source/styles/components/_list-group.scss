@@ -1,5 +1,5 @@
-@mixin list-group-variant($parent, $modifier, $colour) {
-  $container-bg-colour: mix($colour, $colour-white, 5%);
+@mixin list-group-variant($parent, $modifier, $value) {
+  $container-bg-colour: mix($value, $colour-white, 5%);
   $container-text-colour: set-text-colour($container-bg-colour);
 
   #{$parent} {
@@ -7,12 +7,20 @@
       #{$parent}__item {
         color: $container-text-colour !important;
       }
+
+      #{$parent}__icon {
+        color: $value;
+      }
     }
   }
 }
 
-@each $name, $colour in $slide-varients {
-  @include list-group-variant('.c-list-group', $name, $colour);
+@each $key, $value in $brand-colours {
+  @include list-group-variant('.c-list-group', $key, $value);
+}
+
+@each $key, $value in $slide-varients {
+  @include list-group-variant('.c-list-group', $key, $value);
 }
 
 $c-list-group-item-border: 1px solid $colour-grey-lighter;

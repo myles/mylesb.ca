@@ -28,26 +28,31 @@
     "slug": "github",
     "name": "GitHub",
     "url": "https://github.com/myles",
-    "rel": "me"
+    "rel": "me",
+    "icon": "fab fa-github"
   },{
     "slug": "instagram",
     "name": "Instagram",
     "url": "https://instagram.com/myles",
-    "rel": "me"
+    "rel": "me",
+    "icon": "fab fa-instagram"
   }, {
     "slug": "facebook",
     "name": "Facebook",
     "url": "https://facebook.com/mylesbraithwaite",
-    "rel": "me"
+    "rel": "me",
+    "icon": "fab fa-facebook"
   }, {
     "slug": "mastodon",
     "name": "Mastodon",
     "url": "https://myles.life/@me",
-    "rel": "me"
+    "rel": "me",
+    "icon": "fab fa-mastodon"
   }, {
     "slug": "linkedin",
     "name": "LinkedIn",
     "url": "https://linkedin.com/in/mylesbraithwaite/",
-    "rel": "me"
+    "rel": "me",
+    "icon": "fab fa-linkedin"
   }]
 }
