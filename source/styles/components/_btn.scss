@@ -14,10 +14,12 @@
 }
 
 .c-btn-group {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  @include break {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   .c-btn {
     margin: .5rem;

@@ -2,8 +2,11 @@
   #{$parent} {
     &--#{$modifier} {
       background-color: $colour;
-      border: 25px solid darken($colour, 5%);
       color: set-text-colour($colour);
+
+      @include break {
+        border: 25px solid darken($colour, 5%);
+      }
 
       a {
         color: set-text-colour($colour);
@@ -37,21 +40,34 @@
 }
 
 .c-slide {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
+  padding: 1em 0;
   box-sizing: border-box;
 
+  @include break {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+  }
+
   &__wrapper {
-    padding: 1rem 3rem;
-    width: 800px;
+    padding: 5px 20px;
+    max-width: 800px;
+
+    @include break {
+      padding: 1rem 3rem;
+    }
   }
 
   &__container {
-    @include grid-container;
+    padding: 10px 20px;
 
-    padding: 30px 60px;
+    @include break {
+      @include grid-container;
+
+      padding: 30px 60px;
+    }
 
     h3 {
       padding: 0;
@@ -65,22 +81,43 @@
     padding-top: 0;
     padding-bottom: .25em;
     margin-bottom: .25em;
+
+    @include break {
+      margin-left: _retrieve-neat-setting($neat-grid, 'gutter');
+      margin-right: _retrieve-neat-setting($neat-grid, 'gutter');
+    }
   }
 
   &__row {
-    @include grid-container;
+    margin-bottom: .25em;
+
+    @include break {
+      @include grid-container;
+    }
   }
 
   &__col-3 {
-    @include grid-column(3);
+    height: 100%;
+
+    @include break {
+      @include grid-column(3);
+    }
   }
 
   &__col-6 {
-    @include grid-column(6);
+    height: 100%;
+
+    @include break {
+      @include grid-column(6);
+    }
   }
 
   &__col-9 {
-    @include grid-column(9);
+    height: 100%;
+
+    @include break {
+      @include grid-column(9);
+    }
   }
 
   &--work {

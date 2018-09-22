@@ -1,10 +1,10 @@
 // Bourbon
 $bourbon: (
-  "contrast-switch-dark-color": $colour-black,
-  "contrast-switch-light-color": $colour-white,
-  "global-font-file-formats": ("ttf", "woff"),
-  "modular-scale-base": 1em,
-  "modular-scale-ratio": $major-third,
+  'contrast-switch-dark-color': $colour-black,
+  'contrast-switch-light-color': $colour-white,
+  'global-font-file-formats': ('ttf', 'woff'),
+  'modular-scale-base': 1em,
+  'modular-scale-ratio': $major-third,
 );
 
 // Font Awesome
@@ -19,6 +19,9 @@ $brand-colours: (
   'mastodon': rgb(43, 144, 217),
   'linkedin': $bc-linkedin
 );
+
+// Media Breakpoint
+$breakpoint: 768px;
 
 // components/slide
 $slide-varients: (

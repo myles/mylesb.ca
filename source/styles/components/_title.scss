@@ -6,21 +6,35 @@
   }
 
   &__name {
-    font-size: modular-scale(6);
+    font-size: modular-scale(4);
+
+    @include break {
+      font-size: modular-scale(6);
+    }
   }
 
   &__slogan {
-    font-size: modular-scale(2);
+    font-size: modular-scale(1);
+
+    @include break {
+      font-size: modular-scale(2);
+    }
   }
 
   &__copy {
-    font-size: modular-scale(1);
     margin-top: 1em;
+
+    @include break {
+      font-size: modular-scale(1);
+    }
   }
 
   &__btn-group {
-    font-size: modular-scale(1);
     margin-top: 1em;
     text-align: center;
+
+    @include break {
+      font-size: modular-scale(1);
+    }
   }
 }
