@@ -9,6 +9,7 @@ var fs = require('fs'),
     each = require('gulp-each'),
     ttf2woff = require('gulp-ttf2woff'),
     svgmin = require('gulp-svgmin'),
+    postcss = require('gulp-postcss'),
     webpack = require('webpack-stream'),
     browserSync = require('browser-sync');
 
@@ -19,9 +20,22 @@ var reload = browserSync.reload;
 gulp.task('styles', function() {
   gulp.src('source/styles/style.scss')
       .pipe(sass({includePaths: ['node_modules/']})
-        .on('error', sass.logError))
+        .on('error', sass.logError)
+      )
       .pipe(gulp.dest('build/assets/'))
       .pipe(reload({ stream: true }));
+});
+
+gulp.task('styles-post', function() {
+  gulp.src('build/assets/style.css')
+      .pipe(postcss([
+        require('postcss-uncss')({
+          html: ['build/**/*.html'],
+          js: ['build/assets/**/*.js']
+        }),
+        require('cssnano')
+      ]))
+      .pipe(gulp.dest('build/assets/'))
 });
 
 gulp.task('scripts', function() {
@@ -191,7 +205,8 @@ gulp.task(
     'fonts',
     'images',
     'pages',
-    'uploads'
+    'uploads',
+    'styles-post'
   ]
 );
 
