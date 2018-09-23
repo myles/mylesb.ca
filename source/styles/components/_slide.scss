@@ -53,11 +53,11 @@
 
   &__wrapper {
     padding: 5px 20px;
-    max-width: 800px;
+    max-width: 750px;
 
     @include break {
       padding: 1rem 3rem;
-      min-width: 800px;
+      min-width: 750px;
     }
   }
 
