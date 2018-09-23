@@ -195,6 +195,14 @@ gulp.task(
   ]
 );
 
+// Icons
+// -----
+gulp.task('icons', function() {
+  gulp.src(['source/icons/**/*'])
+      .pipe(gulp.dest('build/'))
+      .pipe(reload({ stream: true }));
+});
+
 // Commands
 // --------
 gulp.task(
@@ -206,6 +214,7 @@ gulp.task(
     'images',
     'pages',
     'uploads',
+    'icons',
     'styles-post'
   ]
 );
