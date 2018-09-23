@@ -19,3 +19,8 @@ body {
 .sr-only {
   @include hide-text;
 }
+
+.c-separator {
+  border: 0;
+  border-bottom: 1px solid $colour-grey-lighter;
+}
