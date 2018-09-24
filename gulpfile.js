@@ -11,7 +11,7 @@ var fs = require('fs'),
     ttf2woff = require('gulp-ttf2woff'),
     svgmin = require('gulp-svgmin'),
     postcss = require('gulp-postcss'),
-    download = require('gulp-download'),
+    remoteSrc = require('gulp-remote-src'),
     webpack = require('webpack-stream'),
     browserSync = require('browser-sync');
 
@@ -27,6 +27,7 @@ var config = function() {
     sourcePath: sourcePath,
     buildPath: buildPath,
     nodeModulesPath: path.join(basePath, 'node_modules'),
+
     dataPath: path.join(sourcePath, 'data/'),
     fontsPath: path.join(sourcePath, 'fonts/'),
     iconsPath: path.join(sourcePath, 'icons/'),
@@ -108,7 +109,7 @@ function getData(file) {
   };
 }
 
-gulp.task('pages', function() {
+gulp.task('pages', ['downloadData'], function() {
   var dateFilter = require('nunjucks-date-filter');
 
   var manageEnvironment = function(environment) {
@@ -140,11 +141,11 @@ gulp.task('pages', function() {
 // Download Data
 // -------------
 gulp.task('downloadData', function() {
-  download('https://talks.mylesb.ca/feed.json')
-      .pipe(rename({
-        'basename': '07-talks'
-      }))
-      .pipe(gulp.dest(config.dataPath));
+  remoteSrc(['feed.json'], {
+    base: 'https://talks.mylesb.ca/'
+  })
+  .pipe(rename('07-talks.json'))
+  .pipe(gulp.dest(config.dataPath))
 });
 
 // Uploads
@@ -247,7 +248,6 @@ gulp.task('icons', function() {
 gulp.task(
   'build',
   [
-    'downloadData',
     'styles',
     'scripts',
     'fonts',
