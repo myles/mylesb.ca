@@ -1,0 +1,23 @@
+<h2 class="c-slide__title">Talks</h2>
+
+<div class="c-talk-list">
+  {%- for talks in talks.items | slice(4) | first | slice(2) %}
+  <div class="c-talk-list__row c-talk-list__row--{{ loop.index }}">
+    {%- for talk in talks %}
+    <a href="{{ talk.url }}" class="c-talk c-talk-list__item" title="{{ talk.title }}">
+      {% if talk.image %}
+      <img src="{{ talk.image }}" alt="{{ talk.title }}" class="c-talk__image">
+      {% endif %}
+
+      <div class="c-talk__body">
+        <h3 class="c-talk__title">{{ talk.title }}</h3>
+        <h4 class="c-talk__date">{{ talk.date_published | date("Do MMMM YYYY") }}</h4>
+        {% if talk.tags %}
+        <p class="c-talk__tags">{{ talk.tags | join(", ") }}</p>
+        {% endif %}
+      </div>
+    </a>
+    {%- endfor %}
+  </div>
+  {%- endfor %}
+</div>

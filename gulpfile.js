@@ -10,6 +10,7 @@ var fs = require('fs'),
     ttf2woff = require('gulp-ttf2woff'),
     svgmin = require('gulp-svgmin'),
     postcss = require('gulp-postcss'),
+    download = require('gulp-download'),
     webpack = require('webpack-stream'),
     browserSync = require('browser-sync');
 
@@ -76,15 +77,23 @@ gulp.task('images', ['svgImages'], function() {
 function getData(file) {
   return {
     title: JSON.parse(fs.readFileSync('source/data/01-title.json')),
-    elsewhere: JSON.parse(fs.readFileSync('source/data/05-elsewhere.json'))
+    elsewhere: JSON.parse(fs.readFileSync('source/data/05-elsewhere.json')),
+    talks: JSON.parse(fs.readFileSync('source/data/07-talks.json'))
   };
 }
 
 gulp.task('pages', function() {
+  var dateFilter = require('nunjucks-date-filter');
+
+  var manageEnvironment = function(environment) {
+    environment.addFilter('date', dateFilter);
+  };
+
   return gulp.src(['source/pages/*.njk'])
     .pipe(data(getData))
     .pipe(nunjucksRender({
-      path: 'source/pages/'
+      path: ['source/pages/'],
+      manageEnv: manageEnvironment
     }))
     .pipe(htmltidy(
       {
@@ -95,17 +104,25 @@ gulp.task('pages', function() {
         wrap: 80*100
       }
     ))
-    .pipe(rename(
-      {
-        extname: '.html'
-      }
-    ))
+    .pipe(rename({
+      extname: '.html'
+    }))
     .pipe(gulp.dest('build/'))
     .pipe(reload(
       {
         stream: true
       }
     ));
+});
+
+// Download Data
+// -------------
+gulp.task('downloadData', function() {
+  download('https://talks.mylesb.ca/feed.json')
+      .pipe(rename({
+        'basename': '07-talks'
+      }))
+      .pipe(gulp.dest('source/data/'));
 });
 
 // Uploads
@@ -208,6 +225,7 @@ gulp.task('icons', function() {
 gulp.task(
   'build',
   [
+    'downloadData',
     'styles',
     'scripts',
     'fonts',
@@ -226,7 +244,9 @@ gulp.task('runServer', ['build'], function() {
     }
   });
 
-  gulp.watch('source/**/*', ['build']);
+  gulp.watch('source/styles/**/*', ['styles']);
+  gulp.watch('source/scripts/**/*', ['scripts']);
+  gulp.watch('source/pages/**/*', ['pages']);
 });
 
 gulp.task('default', ['build']);
