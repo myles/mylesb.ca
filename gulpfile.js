@@ -1,4 +1,5 @@
 var fs = require('fs'),
+    path = require('path'),
     gulp = require('gulp'),
     sass = require('gulp-sass'),
     nunjucksRender = require('gulp-nunjucks-render'),
@@ -16,34 +17,57 @@ var fs = require('fs'),
 
 var reload = browserSync.reload;
 
+var config = function() {
+  var basePath = __dirname,
+      sourcePath = path.join(basePath, 'source/'),
+      buildPath = path.join(basePath, 'build/');
+
+  return {
+    basePath: basePath,
+    sourcePath: sourcePath,
+    buildPath: buildPath,
+    nodeModulesPath: path.join(basePath, 'node_modules'),
+    dataPath: path.join(sourcePath, 'data/'),
+    fontsPath: path.join(sourcePath, 'fonts/'),
+    iconsPath: path.join(sourcePath, 'icons/'),
+    imagesPath: path.join(sourcePath, 'images/'),
+    pagesPath: path.join(sourcePath, 'pages/'),
+    scriptsPath: path.join(sourcePath, 'scripts/'),
+    stylesPath: path.join(sourcePath, 'styles/'),
+    uploadsPath: path.join(sourcePath, 'uploads/'),
+  }
+}
+
+config = config();
+
 // Assets
 // ------
 gulp.task('styles', function() {
-  gulp.src('source/styles/style.scss')
-      .pipe(sass({includePaths: ['node_modules/']})
+  gulp.src(`${config.stylesPath}/style.scss`)
+      .pipe(sass({includePaths: [config.nodeModulesPath]})
         .on('error', sass.logError)
       )
-      .pipe(gulp.dest('build/assets/'))
+      .pipe(gulp.dest(`${config.buildPath}/assets/`))
       .pipe(reload({ stream: true }));
 });
 
 gulp.task('styles-post', function() {
-  gulp.src('build/assets/style.css')
+  gulp.src(`${config.buildPath}/assets/style.css`)
       .pipe(postcss([
         require('postcss-uncss')({
-          html: ['build/**/*.html'],
-          js: ['build/assets/**/*.js']
+          html: [`${config.buildPath}/**/*.html`],
+          js: [`${config.buildPath}/assets/**/*.js`]
         }),
         require('cssnano')
       ]))
-      .pipe(gulp.dest('build/assets/'))
+      .pipe(gulp.dest(`${config.buildPath}/assets/`))
 });
 
 gulp.task('scripts', function() {
-  gulp.src('source/scripts/index.js')
+  gulp.src(`${config.scriptsPath}/index.js`)
       .pipe(webpack())
       .pipe(rename({basename: 'script'}))
-      .pipe(gulp.dest('build/assets/'))
+      .pipe(gulp.dest(`${config.buildPath}/assets/`))
       .pipe(reload({ stream: true }));
 });
 
@@ -76,9 +100,11 @@ gulp.task('images', ['svgImages'], function() {
 // -----
 function getData(file) {
   return {
-    title: JSON.parse(fs.readFileSync('source/data/01-title.json')),
-    elsewhere: JSON.parse(fs.readFileSync('source/data/05-elsewhere.json')),
-    talks: JSON.parse(fs.readFileSync('source/data/07-talks.json'))
+    title: JSON.parse(fs.readFileSync(`${config.dataPath}/01-title.json`)),
+    elsewhere: JSON.parse(
+      fs.readFileSync(`${config.dataPath}/05-elsewhere.json`)
+    ),
+    talks: JSON.parse(fs.readFileSync(`${config.dataPath}/07-talks.json`))
   };
 }
 
@@ -95,24 +121,20 @@ gulp.task('pages', function() {
       path: ['source/pages/'],
       manageEnv: manageEnvironment
     }))
-    .pipe(htmltidy(
-      {
-        doctype: 'html5',
-        hideComments: true,
-        indent: true,
-        indentSpaces: 4,
-        wrap: 80*100
-      }
-    ))
+    .pipe(htmltidy({
+      doctype: 'html5',
+      hideComments: true,
+      indent: true,
+      indentSpaces: 4,
+      wrap: 80*100
+    }))
     .pipe(rename({
       extname: '.html'
     }))
     .pipe(gulp.dest('build/'))
-    .pipe(reload(
-      {
-        stream: true
-      }
-    ));
+    .pipe(reload({
+      stream: true
+    }));
 });
 
 // Download Data
@@ -122,7 +144,7 @@ gulp.task('downloadData', function() {
       .pipe(rename({
         'basename': '07-talks'
       }))
-      .pipe(gulp.dest('source/data/'));
+      .pipe(gulp.dest(config.dataPath));
 });
 
 // Uploads
@@ -240,13 +262,13 @@ gulp.task(
 gulp.task('runServer', ['build'], function() {
   browserSync({
     server: {
-      baseDir: 'build/'
+      baseDir: config.buildPath
     }
   });
 
-  gulp.watch('source/styles/**/*', ['styles']);
-  gulp.watch('source/scripts/**/*', ['scripts']);
-  gulp.watch('source/pages/**/*', ['pages']);
+  gulp.watch(`${config.stylesPath}/**/*`, ['styles']);
+  gulp.watch(`${config.scriptsPath}/**/*`, ['scripts']);
+  gulp.watch(`${config.pagesPath}/**/*`, ['pages']);
 });
 
 gulp.task('default', ['build']);
