@@ -22,10 +22,14 @@
     "nunjucks-date-filter": "^0.1.1",
     "postcss-uncss": "^0.16.1",
     "uncss": "^0.16.2",
-    "webpack-stream": "^5.1.1"
+    "webpack-stream": "^5.1.1",
+    "snyk": "^1.97.1"
   },
   "scripts": {
     "build": "gulp build",
-    "start": "gulp runServer"
-  }
+    "start": "gulp runServer",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
