@@ -1,0 +1,27 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - gulp-remote-src > request > hawk > hoek:
+        patched: '2018-11-05T13:38:06.141Z'
+    - gulp-remote-src > request > hawk > boom > hoek:
+        patched: '2018-11-05T13:38:06.141Z'
+    - gulp-remote-src > request > hawk > sntp > hoek:
+        patched: '2018-11-05T13:38:06.141Z'
+    - gulp-remote-src > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-11-05T13:38:06.141Z'
+  'npm:lodash:20180130':
+    - gulp-nunjucks-render > lodash:
+        patched: '2018-11-05T13:38:06.141Z'
+  'npm:minimatch:20160620':
+    - gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2018-11-05T13:38:06.141Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2018-11-05T13:38:06.141Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2018-11-05T13:38:06.141Z'
+  'npm:tunnel-agent:20170305':
+    - gulp-remote-src > request > tunnel-agent:
+        patched: '2018-11-05T13:38:06.141Z'
