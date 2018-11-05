@@ -254,7 +254,7 @@ gulp.task(
     'pages',
     'uploads',
     'icons',
-    'styles-post'
+    // 'styles-post'
   ]
 );
 
