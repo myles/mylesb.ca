@@ -104,12 +104,11 @@ function getData(file) {
     title: JSON.parse(fs.readFileSync(`${config.dataPath}/01-title.json`)),
     elsewhere: JSON.parse(
       fs.readFileSync(`${config.dataPath}/05-elsewhere.json`)
-    ),
-    talks: JSON.parse(fs.readFileSync(`${config.dataPath}/07-talks.json`))
+    )
   };
 }
 
-gulp.task('pages', ['downloadData'], function() {
+gulp.task('pages', function() {
   var dateFilter = require('nunjucks-date-filter');
 
   var manageEnvironment = function(environment) {
