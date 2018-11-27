@@ -13,7 +13,7 @@
     "gulp-htmltidy": "0.2.4",
     "gulp-nunjucks-render": "2.2.2",
     "gulp-postcss": "8.0.0",
-    "gulp-remote-src": "0.4.3",
+    "gulp-remote-src": "0.4.4",
     "gulp-rename": "1.4.0",
     "gulp-sass": "4.0.2",
     "gulp-svgmin": "2.1.0",
