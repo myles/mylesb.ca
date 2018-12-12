@@ -122,7 +122,8 @@ function getData(file) {
     title: JSON.parse(fs.readFileSync(`${config.dataPath}/01-title.json`)),
     elsewhere: JSON.parse(
       fs.readFileSync(`${config.dataPath}/05-elsewhere.json`)
-    )
+    ),
+    talks: JSON.parse(fs.readFileSync(`${config.dataPath}/07-talks.json`))
   };
 }
 
@@ -302,9 +303,9 @@ gulp.task('runServer', gulp.series('build', function(done) {
     }
   });
 
-  gulp.watch(`${config.stylesPath}/**/*`, ['styles']);
-  gulp.watch(`${config.scriptsPath}/**/*`, ['scripts']);
-  gulp.watch(`${config.pagesPath}/**/*`, ['pages']);
+  gulp.watch(`${config.stylesPath}/**/*`, gulp.series('styles'));
+  gulp.watch(`${config.scriptsPath}/**/*`, gulp.series('scripts'));
+  gulp.watch(`${config.pagesPath}/**/*`, gulp.series('pages'));
 
   done();
 }));
