@@ -13,7 +13,8 @@ var fs = require('fs'),
     postcss = require('gulp-postcss'),
     remoteSrc = require('gulp-remote-src'),
     webpack = require('webpack-stream'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync')
+    compiler = require('webpack');
 
 var reload = browserSync.reload;
 
@@ -43,16 +44,18 @@ config = config();
 
 // Assets
 // ------
-gulp.task('styles', function() {
+gulp.task('styles', function(done) {
   gulp.src(`${config.stylesPath}/style.scss`)
       .pipe(sass({includePaths: [config.nodeModulesPath]})
         .on('error', sass.logError)
       )
       .pipe(gulp.dest(`${config.buildPath}/assets/`))
       .pipe(reload({ stream: true }));
+
+  done();
 });
 
-gulp.task('styles-post', function() {
+gulp.task('styles-post', function(done) {
   gulp.src(`${config.buildPath}/assets/style.css`)
       .pipe(postcss([
         require('postcss-uncss')({
@@ -61,18 +64,27 @@ gulp.task('styles-post', function() {
         }),
         require('cssnano')
       ]))
-      .pipe(gulp.dest(`${config.buildPath}/assets/`))
+      .pipe(gulp.dest(`${config.buildPath}/assets/`));
+
+  done();
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function(done) {
   gulp.src(`${config.scriptsPath}/index.js`)
-      .pipe(webpack())
-      .pipe(rename({basename: 'script'}))
+      .pipe(webpack({
+        output: {
+          filename: 'script.js'
+        }
+      }, compiler, function(err, stats) {
+        /* Use stats to do more things if needed */
+      }))
       .pipe(gulp.dest(`${config.buildPath}/assets/`))
       .pipe(reload({ stream: true }));
+
+  done();
 });
 
-gulp.task('fonts', function() {
+gulp.task('fonts', function(done) {
   gulp.src(['source/fonts/**/*.ttf'])
       .pipe(gulp.dest('build/assets/fonts'));
 
@@ -82,20 +94,26 @@ gulp.task('fonts', function() {
 
   gulp.src('node_modules/@fortawesome/fontawesome-pro/webfonts/fa-*.+(eot|svg|ttf|woff|woff2)')
     .pipe(gulp.dest('build/assets/fonts/'));
+
+  done();
 });
 
-gulp.task('svgImages', function() {
+gulp.task('svgImages', function(done) {
   gulp.src(['source/images/**/*.svg'])
       .pipe(svgmin())
       .pipe(gulp.dest('build/assets/img/'))
       .pipe(reload({ stream: true }));
+
+  done();
 });
 
-gulp.task('images', ['svgImages'], function() {
+gulp.task('images', gulp.series('svgImages', function(done) {
   gulp.src('source/images/**/*.+(jpg|jpeg|gif|png)')
       .pipe(gulp.dest('build/assets/img/'))
       .pipe(reload({ stream: true }));
-});
+
+  done();
+}));
 
 // Pages
 // -----
@@ -108,7 +126,7 @@ function getData(file) {
   };
 }
 
-gulp.task('pages', function() {
+gulp.task('pages', function(done) {
   var dateFilter = require('nunjucks-date-filter');
 
   var manageEnvironment = function(environment) {
@@ -135,24 +153,30 @@ gulp.task('pages', function() {
     .pipe(reload({
       stream: true
     }));
+
+  done();
 });
 
 // Download Data
 // -------------
-gulp.task('downloadData', function() {
+gulp.task('downloadData', function(done) {
   remoteSrc(['feed.json'], {
     base: 'https://talks.mylesb.ca/'
   })
   .pipe(rename('07-talks.json'))
   .pipe(gulp.dest(config.dataPath))
+
+  done();
 });
 
 // Uploads
 // -------
-gulp.task('uploads', function() {
+gulp.task('uploads', function(done) {
   gulp.src(['source/uploads/**/*'])
       .pipe(gulp.dest('build/uploads/'))
       .pipe(reload({ stream: true }));
+
+  done();
 });
 
 var gpg_short_id = '0x5B423590',
@@ -166,16 +190,18 @@ var gpg_keys = obsolete_gpg_short_id.concat([
   bgi_gpg_short_id
 ]);
 
-gulp.task('exportPublicKeys', function() {
+gulp.task('exportPublicKeys', function(done) {
   gpg_keys.forEach(function(gpg_key) {
     exec(`gpg --armor --export ${gpg_key} > source/uploads/${gpg_key}.asc`, function(err, stdout, stderr) {
       console.log(stdout);
       console.log(stderr);
     });
   });
+
+  done();
 });
 
-gulp.task('signSSHKeys', function() {
+gulp.task('signSSHKeys', function(done) {
   gulp.src('source/uploads/myles-braithwaite-*.pub')
       .pipe(each(function(content, file, callback) {
         exec(`gpg --yes -u ${gpg_short_id} --clearsign ${file.path}`,
@@ -190,18 +216,22 @@ gulp.task('signSSHKeys', function() {
     console.log(stdout);
     console.log(stderr);
   });
+
+  done();
 });
 
-gulp.task('signObsoleteProof', function() {
+gulp.task('signObsoleteProof', function(done) {
   obsolete_gpg_short_id.forEach(function(gpg_key) {
     exec(`gpg --clearsign -u ${gpg_key} -u ${gpg_short_id} source/uploads/obsolete-${gpg_key}-proof.txt`, function(err, stdout, stderr) {
       console.log(stdout);
       console.log(stderr);
     });
   });
+
+  done();
 });
 
-gulp.task('signProofOfIdentity', function() {
+gulp.task('signProofOfIdentity', function(done) {
   exec(`gpg --yes -u ${gpg_short_id} --clearsign source/uploads/proof-of-identity.txt`,
        function(err, stdout, stderr) {
     console.log(stdout);
@@ -222,43 +252,50 @@ gulp.task('signProofOfIdentity', function() {
     console.log(stdout);
     console.log(stderr);
   });
+
+  done();
 });
 
 gulp.task(
   'processUploads',
-  [
+  gulp.series(
     'exportPublicKeys',
     'signSSHKeys',
     'signObsoleteProof',
     'signProofOfIdentity'
-  ]
+  )
 );
 
 // Icons
 // -----
-gulp.task('icons', function() {
+gulp.task('icons', function(done) {
   gulp.src(['source/icons/**/*'])
       .pipe(gulp.dest('build/'))
       .pipe(reload({ stream: true }));
+
+  done();
 });
 
 // Commands
 // --------
 gulp.task(
   'build',
-  [
-    'styles',
+  gulp.series(
+    'downloadData',
     'scripts',
-    'fonts',
-    'images',
-    'pages',
-    'uploads',
-    'icons',
-    // 'styles-post'
-  ]
+    gulp.parallel(
+      'styles',
+      'fonts',
+      'images',
+      'pages',
+      'uploads',
+      'icons'
+    ),
+    'styles-post'
+  )
 );
 
-gulp.task('runServer', ['build'], function() {
+gulp.task('runServer', gulp.series('build', function(done) {
   browserSync({
     server: {
       baseDir: config.buildPath
@@ -268,6 +305,8 @@ gulp.task('runServer', ['build'], function() {
   gulp.watch(`${config.stylesPath}/**/*`, ['styles']);
   gulp.watch(`${config.scriptsPath}/**/*`, ['scripts']);
   gulp.watch(`${config.pagesPath}/**/*`, ['pages']);
-});
 
-gulp.task('default', ['build']);
+  done();
+}));
+
+gulp.task('default', gulp.series('build'));
