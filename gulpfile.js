@@ -122,8 +122,7 @@ function getData(file) {
     title: JSON.parse(fs.readFileSync(`${config.dataPath}/01-title.json`)),
     elsewhere: JSON.parse(
       fs.readFileSync(`${config.dataPath}/05-elsewhere.json`)
-    ),
-    talks: JSON.parse(fs.readFileSync(`${config.dataPath}/07-talks.json`))
+    )
   };
 }
 
