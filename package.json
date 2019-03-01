@@ -18,7 +18,7 @@
     "gulp-sass": "4.0.2",
     "gulp-svgmin": "2.1.0",
     "gulp-ttf2woff": "1.1.1",
-    "gulp-uglify": "3.0.1",
+    "gulp-uglify": "3.0.2",
     "nunjucks-date-filter": "0.1.1",
     "postcss-uncss": "0.16.1",
     "uncss": "0.16.2",
