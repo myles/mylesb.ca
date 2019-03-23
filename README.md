@@ -1,9 +1,41 @@
-# Myles Braithwaite's Homepage
+# :ghost: [MylesB.ca][homepage]
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cc609ea6-27a4-4844-86cb-c696bdd7b0f9/deploy-status)](https://app.netlify.com/sites/myles/deploys)
 
-Hi, this is the source for [my homepage](https://mylesb.ca/ "Myles Braithwaite").
+Hi, this is the source for [my homepage][homepage].
 
-## Insperation
+[![Screenshot of MylesB.ca][screenshot-thumb]][screenshot-full]
 
-*   [Sacha Greif](http://sachagreif.com/)
+## Requirements
+
+-   Node
+-   Gulp
+
+## Development
+
+```bash
+$ npm install
+```
+
+### Commands
+
+Build the website:
+
+```bash
+$ npm run-script build
+```
+
+Start a development web server:
+
+```bash
+$ npm run-script start
+```
+
+## Inspiration
+
+-   [Sacha Greif](http://sachagreif.com/)
+
+[homepage]: https://mylesb.ca/ "Myles Braithwaite"
+[screenshot-thumb]: design/screenshot/thumbnail.png
+[screenshot-full]: design/screenshot/full.png
+
