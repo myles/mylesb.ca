@@ -20,7 +20,7 @@
     "gulp-ttf2woff": "1.1.1",
     "gulp-uglify": "3.0.2",
     "nunjucks-date-filter": "0.1.1",
-    "postcss-uncss": "0.16.1",
+    "postcss-uncss": "0.17.0",
     "uncss": "0.16.2",
     "webpack-stream": "5.2.1"
   },
