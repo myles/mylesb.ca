@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^5.8.1",
-    "bourbon": "5.1.0",
+    "bourbon": "6.0.0",
     "bourbon-neat": "3.0.1",
     "brand-colors": "2.0.1",
     "browser-sync": "2.26.3",
