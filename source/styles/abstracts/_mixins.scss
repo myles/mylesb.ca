@@ -1,5 +1,0 @@
-@mixin break {
-  @media (min-width: #{$breakpoint}) {
-    @content;
-  }
-}
