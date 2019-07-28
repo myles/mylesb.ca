@@ -6,7 +6,6 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
-    "@fortawesome/fontawesome-free-brands": "^5.0.13",
     "@ibm/plex": "^2.0.0",
     "autoprefixer": "^9.6.1",
     "bourbon": "^6.0.0",
