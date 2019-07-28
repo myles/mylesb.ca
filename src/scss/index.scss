@@ -1,0 +1,120 @@
+// Colours
+$colour-white: rgba(250, 250, 250, 1);
+$colour-black: rgba(0, 0, 0, 1);
+
+$colour-platte: (
+  'black': $colour-black,
+  'white': $colour-white
+);
+
+// Font
+$font-prefix: "~@ibm/plex/";
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+
+@import "~bourbon/core/bourbon";
+@import "~bourbon-neat/core/neat";
+@import "~@ibm/plex/scss/sans/regular/index";
+@import "~@ibm/plex/scss/sans/bold/index";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+// From Generate colour themes with ease thanks to this SCSS mixin
+// by Xavier Bertels: <http://bit.ly/2eQLQiC>
+@function set-text-colour($colour) {
+  @if (.2126 * red($colour) + .7152 * green($colour) + .0722 * blue($colour)) / 255 <= .5 {
+    @return mix($colour-white, $colour, 95%);
+  } @else {
+    @return mix($colour-black, $colour, 70%);
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: "IBM Plex Sans", $font-stack-helvetica;
+  font-size: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.sr-only {
+  @include hide-visually();
+}
+
+.slide-deck {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.slide {
+  height: 100vh;
+  width: 100vw;
+}
+
+@each $name, $colour in $colour-platte {
+  .slide--#{$name} {
+    background-color: $colour;
+    color: set-text-colour($colour);
+
+    a {
+      color: lighten(set-text-colour($colour), 50%);
+
+      &:hover {
+        color: lighten(set-text-colour($colour), 25%);
+      }
+    }
+  }
+}
+
+.slide-container {
+  margin: 25px;
+}
+
+.slide-title {
+  display: flex;
+  height: 100%;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__header {
+    margin-bottom: .5rem;
+
+    h1,
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &__link-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      display: block;
+      font-size: 2rem;
+      padding: 0 1rem;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
