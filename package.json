@@ -12,7 +12,7 @@
     "gulp-each": "0.5.0",
     "gulp-htmltidy": "0.2.4",
     "gulp-nunjucks-render": "2.2.3",
-    "gulp-postcss": "8.0.0",
+    "gulp-postcss": "9.0.1",
     "gulp-remote-src": "0.4.4",
     "gulp-rename": "1.4.0",
     "gulp-sass": "4.0.2",
